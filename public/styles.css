@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Crimson Text', sans-serif;
     background: url('background.webp') no-repeat center center/cover;
     height: 100vh;
     display: flex;
@@ -30,12 +30,14 @@ h1 {
 }
 
 .tagline {
+    font-family: 'Pacifico', cursive;
     font-size: 1.2rem;
     margin-bottom: 10px;
     color: #4A4A4A;
 }
 
 .description {
+    font-family: 'Pacifico', cursive;
     margin-bottom: 20px;
     color: #6D6D6D;
 }
@@ -54,6 +56,7 @@ h1 {
 .follow-us {
     margin-bottom: 10px;
     color: #6D6D6D;
+    font-size: 1rem;
 }
 
 .social-icons a {
@@ -61,20 +64,44 @@ h1 {
 }
 
 .social-icons img {
-    width: 30px;
+    width: 50px;
 }
 
 @media (max-width: 768px) {
+    body{
+        overflow-x: hidden;
+    }
+
+    body{
+        background-image: url('background.webp') no-repeat cover;
+    }
     .container {
         width: 90%;
         max-width: none;
     }
 
     h1 {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     .tagline, .description {
         font-size: 1rem;
+    }
+
+    .construction-btn {
+        padding: 5px 10px;
+        border: none;
+        border-radius: 2.5px;
+        cursor: pointer;
+        margin-bottom: 10px;
+        font-size: 0.75rem;
+    }
+
+    .follow-us {
+        font-size: 0.75rem;
+    }
+
+    .social-icons img {
+        width: 30px;
     }
 }
