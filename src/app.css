@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Crimson Text', sans-serif;
-    background: url('background.webp') no-repeat center center/cover;
+    background: url('lib/images/background.webp') no-repeat center center/cover;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -73,7 +73,7 @@ h1 {
     }
 
     body{
-        background-image: url('background.webp') no-repeat cover;
+        background-image: url('lib/images/background.webp') no-repeat cover;
     }
     .container {
         width: 90%;
