@@ -8,11 +8,19 @@
 
 body {
     font-family: 'Crimson Text', sans-serif;
+    overflow-x:inherit;
+}
+
+.home-page-container{
     background: url('lib/images/background.webp') no-repeat center center/cover;
-    height: 100vh;
+}
+
+.page-container{
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh;
+
 }
 
 .container {
@@ -79,6 +87,11 @@ h1 {
     }
     .container {
         width: 90%;
+    }
+
+    .button{
+        display : flex;
+        flex-direction : column;
     }
 
     h1 {
