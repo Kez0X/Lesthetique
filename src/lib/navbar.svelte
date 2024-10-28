@@ -27,20 +27,29 @@
 		</div>
 	</div>
 
-	<!-- Menu déroulant (slide-in) -->
+	<!-- Fond sombre qui couvre toute la page lorsque le menu est ouvert -->
 	{#if isMenuOpen}
-	<div class="menu-overlay" on:click={toggleMenu}></div>
-	<div class="menu-content">
-		<div class="menu-close" on:click={toggleMenu}>✕</div>
-		<h1>L'esthétique by Anaïs & Alexandrine</h1>
-		<div class="menu-item">Onglerie</div>
-		<div class="menu-item">Épilations</div>
-		<div class="menu-item">Massages</div>
-		<div class="menu-item">Soins Visages</div>
-		<div class="menu-item">Réhaussement de Cils</div>
-		<div class="menu-item">Forfaits</div>
-	</div>
+		<div class="menu-overlay" on:click={toggleMenu}></div>
 	{/if}
+
+	<!-- Menu déroulant (slide-in) -->
+	<div class="menu-content {isMenuOpen ? 'show' : ''}">
+		<div class="menu-close" on:click={toggleMenu}>✕</div>
+		<h1>L'esthétiqueAA</h1>
+
+		<!-- Catégories avec images de fond -->
+		<div class="menu-item" style="background-image: url('/src/lib/images/onglerie.png');">Onglerie</div>
+		<div class="menu-item" style="background-image: url('/src/lib/images/epilations.png');">Épilations</div>
+		<div class="menu-item" style="background-image: url('/src/lib/images/massages.png');">Massages</div>
+		<div class="menu-item" style="background-image: url('/src/lib/images/soins-visages.png');">Soins Visages</div>
+		<div class="menu-item" style="background-image: url('/src/lib/images/rehaussement-cils.png');">Réhaussement de Cils</div>
+		<div class="menu-item" style="background-image: url('/src/lib/images/forfaits.png');">Forfaits</div>
+
+		<!-- Lien de contact direct en bas du menu -->
+		<div class="contact-estheticiennes">
+			<a href="#">Contacter les esthéticiennes</a>
+		</div>
+	</div>
 </div>
 
 <style>
@@ -57,10 +66,6 @@
 		align-items: center;
 		justify-content: center;
 	}
-
-    .container {
-        background-color: rgba(255, 255, 255, 0.8);
-    }
 
 	.navbar-container {
 		width: 100%;
@@ -96,7 +101,7 @@
 		cursor: pointer;
 	}
 
-	/* Menu déroulant pour tous les écrans */
+	/* Fond sombre couvrant toute la page lors de l’ouverture du menu */
 	.menu-overlay {
 		position: fixed;
 		top: 0;
@@ -107,6 +112,7 @@
 		z-index: 9;
 	}
 
+	/* Menu latéral glissant depuis la droite */
 	.menu-content {
 		position: fixed;
 		top: 0;
@@ -122,10 +128,11 @@
 		flex-direction: column;
 		align-items: center;
 		gap: 15px;
-		transform: translateX(100%);
+		transform: translateX(100%); /* Cacher le menu hors de l’écran par défaut */
 		transition: transform 0.3s ease;
 	}
 
+	/* Affiche le menu en glissant */
 	.menu-content.show {
 		transform: translateX(0);
 	}
@@ -137,21 +144,35 @@
 	}
 
 	.menu-item {
+		width: 100%;
+		height: 80px;
+		background-size: cover;
+		background-position: center;
+		color: #fff;
 		font-size: 1.2em;
 		font-weight: bold;
-		padding: 10px 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
 		cursor: pointer;
 	}
 
-	/* Responsive Styles */
-	@media (max-width: 768px) {
-		.contact a {
-			font-size: 0.9em;
-		}
+	.contact-estheticiennes {
+		margin-top: auto;
+		font-size: 1.2em;
+		font-weight: bold;
+	}
 
-		/* Ajustements du conteneur */
-		.container {
-			padding: 0 15px;
+	.contact-estheticiennes a {
+		color: #333;
+		text-decoration: none;
+	}
+
+	/* Styles pour les petits écrans (mobile) */
+	@media (max-width: 768px) {
+		.menu-content {
+			width: 100%; /* Prend toute la largeur sur mobile */
 		}
 	}
 </style>
