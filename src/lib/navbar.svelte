@@ -85,7 +85,7 @@
 	.right {
 		display: flex;
 		align-items: center;
-		gap: 20px;
+		gap: 40px;
 	}
 
 	.contact a {
@@ -118,7 +118,7 @@
 		top: 0;
 		right: 0;
 		width: 80%;
-		max-width: 300px;
+		max-width: 400px;
 		height: 100%;
 		background-color: #fff;
 		box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
