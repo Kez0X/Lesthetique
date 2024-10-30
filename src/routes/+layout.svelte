@@ -3,6 +3,9 @@
 	import Navbar from '$lib/navbar.svelte';
 	import Prestations from '$lib/prestations.svelte';
 	import About from '$lib/about.svelte';
+	import Payment from '$lib/payment.svelte';
+	import Product from '$lib/product.svelte';
+	import Time from '$lib/time.svelte';
 </script>
 <div class="app">
 	<!-- <Header /> -->
@@ -14,7 +17,9 @@
 	</div>
 	<Prestations/>
 	<About/>
-
+	<Payment/>
+	<Product/>
+	<Time/>
 	<!-- <footer>
 		<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
 	</footer> -->

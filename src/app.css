@@ -10,6 +10,7 @@
 body {
     font-family: 'Crimson Text', sans-serif;
     overflow-x:inherit;
+    background-color: #f8f8f8;
 }
 
 .home-page-container{

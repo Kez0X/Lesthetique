@@ -29,12 +29,22 @@
             Réservé uniquement aux femmes</p>
         </div>
     </div>
-    <p class="image-description">Après avoir écouté nos clients et c’est pourquoi au lieu de leur demander de se déplacer, nous nous déplacons directement à domicile afin de leur économiser le maximum de temps. Un entreprise à domicile basé à Oullins pour vous correspondre au mieux.</p>
-    <img alt="Image du métro d'Oullins" src={OullinsMetro}/>
-    <p class="image-description">Oullins nous semblait être le meilleur lieu de départ pour débuter notre activité, en cause de notre clientèle déjà bien établit et de la demande de celle-ci. Nous étions à l’origine esthéticiennes dans l’entreprise Yves Rocher mais après plusieurs années de travail, nous avons décidé de nous lancer à notre compte. Beaucoup de nos clientes nous on confier : préférer des prestations à domicile plutôt qu’en salon. Et nous avons décider de les écouter, c’est pourquoi aujourd’hui, nous proposons uniquement des prestations à domicile pour les femmes souhaitant prendre soin de leurs corps.</p>
-    <img alt="Image de la mairie d'Oullins" src={OullinsMairie}/>
-    <p class="image-description">Pour celles qui ne peuvent ou ne veulent pas avoir des prestations à domicile, nous avons prévu une petite surprise pour vous. Nous avons décider pour plaire au plus grand nombre de réserver un jour par semaine dans votre salon de coiffure à Oullins, en effet vous aurez la possibilité si vous ne pouvez pas ou ne préférez pas faire de prestation à domicile, de venir dans notre institut afin de vous faire chouchouter sur place.</p>
-    <img alt="Image de notre salon de coiffure partenaire" src={SalonCoiffure}/>
+    <div class="image-section">
+        <div class="image-with-description">
+            <img alt="Image du métro d'Oullins" src={OullinsMetro}/>
+            <p>Après avoir écouté nos clients, nous avons décidé de nous déplacer directement à domicile afin de leur économiser le maximum de temps. Une entreprise à domicile basée à Oullins pour vous correspondre au mieux.</p>
+        </div>
+
+        <div class="image-with-description">
+            <img alt="Image de la mairie d'Oullins" src={OullinsMairie}/>
+            <p>Oullins nous semblait être le meilleur lieu de départ pour débuter notre activité, en raison de notre clientèle déjà bien établie et de la demande croissante. Nous étions auparavant esthéticiennes dans l’entreprise Yves Rocher, mais après plusieurs années, nous avons décidé de nous lancer à notre compte pour mieux servir nos clientes.</p>
+        </div>
+
+        <div class="image-with-description">
+            <img alt="Image de notre salon de coiffure partenaire" src={SalonCoiffure}/>
+            <p>Pour celles qui ne peuvent ou ne souhaitent pas avoir de prestations à domicile, nous avons prévu une petite surprise : un jour par semaine réservé dans un salon de coiffure partenaire à Oullins, pour que vous puissiez venir profiter de nos services sur place.</p>
+        </div>
+    </div>
 
 </div>
 
@@ -55,7 +65,7 @@
     }
 
     .section-about p {
-        width: 60%; /* Augmentation de la largeur du paragraphe */
+        width: 75%; /* Augmentation de la largeur du paragraphe */
         margin: 0 auto 30px auto; /* Centrer et espacer le paragraphe */
         line-height: 1.6; /* Amélioration de l'espacement entre les lignes */
         color: #555; /* Couleur du texte */
@@ -99,13 +109,40 @@
         font-size : 0.9em;
     }
 
-    .section-about .image-description{
-        padding : 25px;
+    .image-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        padding : 30px;
     }
 
-    .section-about img{
-        width : 800px;
+    .image-with-description {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        width: 60%;
+        background: #ffffff;
+        border-radius: 15px;
+        padding: 20px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        text-align: left;
     }
+
+    .image-with-description img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        object-fit: cover;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .image-with-description p {
+        margin: 0;
+        color: #666;
+        line-height: 1.4;
+    }
+
 
     /* Responsive design */
     @media (max-width: 768px) {
@@ -115,6 +152,19 @@
         .estheticienne-description {
             width: 100%; /* Occupation de toute la largeur sur les petits écrans */
             margin: 10px 0; /* Ajuster l'espacement pour les petits écrans */
+        }
+        .section-about p, .image-with-description {
+            width: 90%;
+        }
+
+        .image-with-description {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .image-with-description img {
+            margin-bottom: 15px;
         }
     }
 </style>
