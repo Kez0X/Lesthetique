@@ -5,7 +5,6 @@
 	import About from '$lib/about.svelte';
 	import Payment from '$lib/payment.svelte';
 	import Product from '$lib/product.svelte';
-	import Time from '$lib/time.svelte';
 </script>
 <div class="app">
 	<!-- <Header /> -->
@@ -19,7 +18,6 @@
 	<About/>
 	<Payment/>
 	<Product/>
-	<Time/>
 	<!-- <footer>
 		<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
 	</footer> -->
