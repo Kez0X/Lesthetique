@@ -150,18 +150,44 @@
 	}
 
 	.menu-item {
+    width: 100%;
+    height: 80px;
+    background-size: cover;
+    background-position: center;
+    color: #000;
+    font-size: 1.2em;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+    position: relative; /* Position relative pour le pseudo-élément */
+    overflow: hidden; /* Pour cacher le pseudo-élément lorsqu'il est hors écran */
+    transition: background-color 0.3s ease; /* Transition pour le changement de couleur */
+}
+
+	/* Nouveau style pour l'effet de survol */
+	.menu-item:hover {
+		background-color: rgba(255, 255, 255, 0.5); /* Changer le fond au survol */
+	}
+
+	/* Style pour le pseudo-élément */
+	.menu-item::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
 		width: 100%;
-		height: 80px;
-		background-size: cover;
-		background-position: center;
-		color: #000;
-		font-size: 1.2em;
-		font-weight: bold;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
-		cursor: pointer;
+		height: 100%;
+		background-color: rgba(255, 255, 255, 0.5); /* Fond blanc avec opacité */
+		opacity: 0; /* Invisible par défaut */
+		transition: opacity 0.3s ease; /* Transition pour l'opacité */
+	}
+
+	/* Rendre le pseudo-élément visible au survol */
+	.menu-item:hover::before {
+		opacity: 1; /* Afficher l'effet blanc */
 	}
 
 	.menu-item-back{
