@@ -1,4 +1,6 @@
 <script>
+	import Instagram from '$lib/images/Instagram.webp';
+	import Facebook from '$lib/images/Facebook.png';
 	import Logo from '$lib/images/favicon.jpg';
 	let isMenuOpen = false;
 
@@ -38,15 +40,19 @@
 		<h1>L'esthétiqueAA</h1>
 
 		<!-- Catégories avec images de fond -->
-		<div class="menu-item" style="background-image: url('/src/lib/images/onglerie.png');">Onglerie</div>
-		<div class="menu-item" style="background-image: url('/src/lib/images/epilations.png');">Épilations</div>
-		<div class="menu-item" style="background-image: url('/src/lib/images/massages.png');">Massages</div>
-		<div class="menu-item" style="background-image: url('/src/lib/images/soins-visages.png');">Soins Visages</div>
-		<div class="menu-item" style="background-image: url('/src/lib/images/rehaussement-cils.png');">Réhaussement de Cils</div>
-		<div class="menu-item" style="background-image: url('/src/lib/images/forfaits.png');">Forfaits</div>
+		<div class="menu-item" style="background-image: url('/src/lib/images/onglerie.png');"><div class="menu-item-back">Onglerie</div></div>
+		<div class="menu-item" style="background-image: url('/src/lib/images/epilations.png');"><div class="menu-item-back">Épilations</div></div>
+		<div class="menu-item" style="background-image: url('/src/lib/images/massages.png');"><div class="menu-item-back">Massages</div></div>
+		<div class="menu-item" style="background-image: url('/src/lib/images/soins-visages.png');"><div class="menu-item-back">Soins Visages</div></div>
+		<div class="menu-item" style="background-image: url('/src/lib/images/rehaussement-cils.png');"><div class="menu-item-back">Réhaussement de Cils</div></div>
+		<div class="menu-item" style="background-image: url('/src/lib/images/forfaits.png');"><div class="menu-item-back">Forfaits</div></div>
 
 		<!-- Lien de contact direct en bas du menu -->
 		<div class="contact-estheticiennes">
+			<div class="social-icons">
+				<a href=""><img src={Facebook} alt="Facebook"></a>
+				<a href="https://www.instagram.com/anaisdelice.estheticienne69?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img src={Instagram} alt="Instagram"></a>
+			</div>
 			<a href="#">Contacter les esthéticiennes</a>
 		</div>
 	</div>
@@ -148,7 +154,7 @@
 		height: 80px;
 		background-size: cover;
 		background-position: center;
-		color: #fff;
+		color: #000;
 		font-size: 1.2em;
 		font-weight: bold;
 		display: flex;
@@ -158,10 +164,34 @@
 		cursor: pointer;
 	}
 
+	.menu-item-back{
+		background-color : white;
+		background-color: rgba(255, 255, 255, 0.800);
+		border-radius: 5px;
+		padding : 5px 20px;
+		width : 200px;
+		justify-content : center;
+		text-align : center;
+	}
+
 	.contact-estheticiennes {
 		margin-top: auto;
 		font-size: 1.2em;
 		font-weight: bold;
+	}
+
+	.social-icons{
+		justify-items: center;
+		text-align : center;
+		padding-bottom: 10px;
+	}
+
+	.social-icons a {
+    margin: 0 10px;
+	}
+
+	.social-icons img {
+		width: 50px;
 	}
 
 	.contact-estheticiennes a {
