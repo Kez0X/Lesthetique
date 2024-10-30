@@ -42,7 +42,7 @@
 		<!-- Catégories avec images de fond -->
 		<div class="menu-item" style="background-image: url('/src/lib/images/onglerie.png');"><div class="menu-item-back">Onglerie</div></div>
 		<div class="menu-item" style="background-image: url('/src/lib/images/epilations.png');"><div class="menu-item-back">Épilations</div></div>
-		<div class="menu-item" style="background-image: url('/src/lib/images/massages.png');"><div class="menu-item-back">Massages</div></div>
+		<div class="menu-item" style="background-image: url('/src/lib/images/massages.png');"><div class="menu-item-back">Soins corps</div></div>
 		<div class="menu-item" style="background-image: url('/src/lib/images/soins-visages.png');"><div class="menu-item-back">Soins Visages</div></div>
 		<div class="menu-item" style="background-image: url('/src/lib/images/rehaussement-cils.png');"><div class="menu-item-back">Réhaussement de Cils</div></div>
 		<div class="menu-item" style="background-image: url('/src/lib/images/forfaits.png');"><div class="menu-item-back">Forfaits</div></div>
@@ -84,7 +84,7 @@
 
 	/* Logo à gauche */
 	.logo img {
-		height: 70px;
+		height: 50px;
 	}
 
 	/* Bouton de menu et contact à droite */
@@ -191,12 +191,12 @@
 	}
 
 	.social-icons img {
-		width: 50px;
+		width: 40px;
 	}
 
 	.contact-estheticiennes a {
 		color: #333;
-		text-decoration: none;
+		text-decoration: underline;
 	}
 
 	/* Styles pour les petits écrans (mobile) */
