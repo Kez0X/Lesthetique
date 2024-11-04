@@ -1,5 +1,5 @@
 <div class="section-payment">
-    <h2>LE PAIEMENT</h2>
+    <h2>LE REGLEMENT</h2>
     <div class="payment-option">
         <h3><i class="fas fa-credit-card"></i> Carte Bleue</h3>
         <p>Nous disposons d’un TPE pour chacun des rendez-vous effectués avec les clients.</p>

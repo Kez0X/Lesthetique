@@ -62,7 +62,7 @@
 	/* Styles généraux de la navbar */
 	.navbar {
 		width: 100%;
-		height: 80px;
+		height: 70px;
 		background-color: rgba(255, 255, 255, 0.904);
 		position: sticky;
 		top: 0;

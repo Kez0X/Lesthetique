@@ -4,7 +4,7 @@
 	import Prestations from '$lib/prestations.svelte';
 	import About from '$lib/about.svelte';
 	import Payment from '$lib/payment.svelte';
-	import Product from '$lib/product.svelte';
+	import FAQ from '$lib/faq.svelte';
 </script>
 <div class="app">
 	<!-- <Header /> -->
@@ -17,7 +17,7 @@
 	<Prestations/>
 	<About/>
 	<Payment/>
-	<Product/>
+	<FAQ/>
 	<!-- <footer>
 		<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
 	</footer> -->
