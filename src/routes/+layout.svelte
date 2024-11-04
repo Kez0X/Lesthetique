@@ -5,6 +5,7 @@
 	import About from '$lib/about.svelte';
 	import Payment from '$lib/payment.svelte';
 	import FAQ from '$lib/faq.svelte';
+	import Footer from '$lib/footer.svelte';
 </script>
 <div class="app">
 	<!-- <Header /> -->
@@ -18,6 +19,7 @@
 	<About/>
 	<Payment/>
 	<FAQ/>
+	<Footer/>
 	<!-- <footer>
 		<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
 	</footer> -->

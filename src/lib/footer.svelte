@@ -1,0 +1,81 @@
+<script>
+    import Logo from '$lib/images/favicon.jpg';
+</script>
+
+<div class="footer">
+    <div class="footer-container">
+        <div class="section-right">
+            <h3>Nous contacter</h3>
+            <ul>
+                <li>Par mail : </li>
+                <li>Par instagram : </li>
+                <li>Par facebook : </li>
+            </ul>
+            <h3>Nos CGU</h3>
+            <a href="" >Nos conditions générales d'utilisation</a>
+            <h3>Les moyens de paiements</h3>
+            <ul>
+                <li>Carte bleue</li>
+                <li>Espèces</li>
+            </ul>
+        </div>
+        <div class="section-left">
+            <h3>Nos prestations</h3>
+            <ul>
+                <li>Onglerie : mains & pieds</li>
+                <li>Epilation : tout le corps</li>
+                <li>Massage : dos & jambes</li>
+            </ul>
+            <a href="">Télécharger la brochure complète</a>
+            <h3>Notre politique</h3>
+            <a href="">Politique de confidentialité</a>
+            <p>Nous nous assurons aussi de la sécurité du paiement de nos clients</p>
+            <a href="">Sécurité de paiement</a>
+        </div>
+    </div>
+</div>
+
+<style>
+    .footer{
+        background-color: #fbcfd1; /* Rose pastel */
+        width: 100%;
+        color: #333;
+        margin-bottom : 0;
+        margin-top : 10%;
+        padding : 50px;
+    }
+
+    .footer-container{
+        display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Ajuste la largeur de chaque carte */
+		max-width: 1400px; /* Limite la largeur totale de la grille */
+		margin: 0 auto;
+		gap: 20px;
+		padding: 0 5%;
+    }
+
+    .logo{
+        margin : auto 0;
+    }
+
+    .logo img {
+		height: 50px;
+	}
+
+    a{
+    text-decoration: none;
+		color: #333;
+		font-weight: bold;
+		font-size: 1em;
+        text-decoration:underline;
+    }
+
+    .footer h3{
+        font-size: 1.2em;
+        color: #333;
+        margin-bottom: 10px;
+        margin-top : 30px;
+        font-family: 'Dancing Script', cursive;
+    }
+    
+</style>
