@@ -1,60 +1,68 @@
 <script>
+	import onglerie from '$lib/images/onglerie.png';
+	import epilations from '$lib/images/epilations.png';
+	import massages from '$lib/images/massages.png';
+	import soinsVisages from '$lib/images/soins-visages.png';
+	import rehaussementCils from '$lib/images/rehaussement-cils.png';
+	import forfaits from '$lib/images/forfaits.png';
+ 
 	let categories = [
-		{
-			title: "ONGLERIE",
-			backgroundImage: "/src/lib/images/onglerie.png",
-			prestations: [
-				{ name: "Soin des mains", price: "50€" },
-				{ name: "Soin des pieds", price: "55€" },
-				{ name: "Prestation complète", price: "105€" }
-			]
-		},
-		{
-			title: "ÉPILATIONS",
-			backgroundImage: "/src/lib/images/epilations.png",
-			prestations: [
-				{ name: "Forfaits visage complet", price: "45€" },
-				{ name: "Maillot complet", price: "28€" },
-				{ name: "Jambes complètes, complet, aisselles", price: "67€" }
-			]
-		},
-		{
-			title: "SOINS CORPS",
-			backgroundImage: "/src/lib/images/massages.png",
-			prestations: [
-				{ name: "Drainage lymphatique ", price: "65€" },
-				{ name: "Drainage minceur", price: "75€" },
-				{ name: "Relaxant", price: "65€" }
-			]
-		},
-		{
-			title: "SOINS VISAGES",
-			backgroundImage: "/src/lib/images/soins-visages.png",
-			prestations: [
-				{ name: "Express", price: "50€" },
-				{ name: "Personnalisé", price: "65€" },
-				{ name: "Personnalisé anti-age", price: "75€" }
-			]
-		},
-		{
-			title: "REHAUSSEMENT DE CILS",
-			backgroundImage: "/src/lib/images/rehaussement-cils.png",
-			prestations: [
-				{ name: "Avec teinture", price: "50€" },
-				{ name: "Sans teinture", price: "45€" },
-			]
-		},
-		{
-			title: "FORFAITS",
-			backgroundImage: "/src/lib/images/forfaits.png",
-			prestations: [
-				{ name: "Forfaits sourcils lèvres", price: "22€" },
-				{ name: "Cure de 6 séances", price: "420€" },
-				{ name: "1/2 jambes, complet, aisselles", price: "59€" }
-			]
-		}
+	   {
+		  title: "ONGLERIE",
+		  backgroundImage: onglerie,
+		  prestations: [
+			 { name: "Soin des mains", price: "50€" },
+			 { name: "Soin des pieds", price: "55€" },
+			 { name: "Prestation complète", price: "105€" }
+		  ]
+	   },
+	   {
+		  title: "ÉPILATIONS",
+		  backgroundImage: epilations,
+		  prestations: [
+			 { name: "Forfaits visage complet", price: "45€" },
+			 { name: "Maillot complet", price: "28€" },
+			 { name: "Jambes complètes, complet, aisselles", price: "67€" }
+		  ]
+	   },
+	   {
+		  title: "SOINS CORPS",
+		  backgroundImage: massages,
+		  prestations: [
+			 { name: "Drainage lymphatique ", price: "65€" },
+			 { name: "Drainage minceur", price: "75€" },
+			 { name: "Relaxant", price: "65€" }
+		  ]
+	   },
+	   {
+		  title: "SOINS VISAGES",
+		  backgroundImage: soinsVisages,
+		  prestations: [
+			 { name: "Express", price: "50€" },
+			 { name: "Personnalisé", price: "65€" },
+			 { name: "Personnalisé anti-age", price: "75€" }
+		  ]
+	   },
+	   {
+		  title: "REHAUSSEMENT DE CILS",
+		  backgroundImage: rehaussementCils,
+		  prestations: [
+			 { name: "Avec teinture", price: "50€" },
+			 { name: "Sans teinture", price: "45€" },
+		  ]
+	   },
+	   {
+		  title: "FORFAITS",
+		  backgroundImage: forfaits,
+		  prestations: [
+			 { name: "Forfaits sourcils lèvres", price: "22€" },
+			 { name: "Cure de 6 séances", price: "420€" },
+			 { name: "1/2 jambes, complet, aisselles", price: "59€" }
+		  ]
+	   }
 	];
-</script>
+ </script>
+ 
 
 <style>
 	/* Styles pour la section globale */
@@ -178,7 +186,7 @@
 	}
 </style>
 
-<div class="section-prestations">
+<div class="section-prestations" id="prestations">
 	<h2>NOS PRESTATIONS</h2>
 	<div class="grid-container">
 		{#each categories as category}

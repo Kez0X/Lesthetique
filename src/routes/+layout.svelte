@@ -6,6 +6,7 @@
 	import Payment from '$lib/payment.svelte';
 	import FAQ from '$lib/faq.svelte';
 	import Footer from '$lib/footer.svelte';
+	import Reviews from '$lib/review.svelte';
 </script>
 <div class="app">
 	<!-- <Header /> -->
@@ -18,6 +19,7 @@
 	<Prestations/>
 	<About/>
 	<Payment/>
+	<Reviews/>
 	<FAQ/>
 	<Footer/>
 	<!-- <footer>

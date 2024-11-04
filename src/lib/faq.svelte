@@ -41,7 +41,7 @@
 
 <style>
     .faq-section {
-        width: 80%;
+        width: 70%;
         margin: 0 auto;
         text-align: center;
     }
