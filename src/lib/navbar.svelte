@@ -2,6 +2,13 @@
 	import Instagram from '$lib/images/Instagram.webp';
 	import Facebook from '$lib/images/Facebook.png';
 	import Logo from '$lib/images/favicon.jpg';
+	import Onglerie from '$lib/images/onglerie.png';
+	import Epilations from '$lib/images/epilations.png';
+	import Massages from '$lib/images/massages.png';
+	import Rehaussement from '$lib/images/rehaussement-cils.png';
+	import Soins from '$lib/images/soins-visages.png';
+	import Forfaits from '$lib/images/forfaits.png';
+
 	let isMenuOpen = false;
 
 	function toggleMenu() {
@@ -40,12 +47,12 @@
 		<h1>L'esthétiqueAA</h1>
 
 		<!-- Catégories avec images de fond -->
-		<div class="menu-item" style="background-image: url('/src/lib/images/onglerie.png');"><div class="menu-item-back">Onglerie</div></div>
-		<div class="menu-item" style="background-image: url('/src/lib/images/epilations.png');"><div class="menu-item-back">Épilations</div></div>
-		<div class="menu-item" style="background-image: url('/src/lib/images/massages.png');"><div class="menu-item-back">Soins corps</div></div>
-		<div class="menu-item" style="background-image: url('/src/lib/images/soins-visages.png');"><div class="menu-item-back">Soins Visages</div></div>
-		<div class="menu-item" style="background-image: url('/src/lib/images/rehaussement-cils.png');"><div class="menu-item-back">Réhaussement de Cils</div></div>
-		<div class="menu-item" style="background-image: url('/src/lib/images/forfaits.png');"><div class="menu-item-back">Forfaits</div></div>
+		<div class="menu-item" style="background-image: url({Onglerie});"><div class="menu-item-back">Onglerie</div></div>
+		<div class="menu-item" style="background-image: url({Epilations});"><div class="menu-item-back">Épilations</div></div>
+		<div class="menu-item" style="background-image: url({Massages});"><div class="menu-item-back">Soins corps</div></div>
+		<div class="menu-item" style="background-image: url({Soins});"><div class="menu-item-back">Soins Visages</div></div>
+		<div class="menu-item" style="background-image: url({Rehaussement});"><div class="menu-item-back">Réhaussement de Cils</div></div>
+		<div class="menu-item" style="background-image: url({Forfaits});"><div class="menu-item-back">Forfaits</div></div>
 
 		<!-- Lien de contact direct en bas du menu -->
 		<div class="contact-estheticiennes">

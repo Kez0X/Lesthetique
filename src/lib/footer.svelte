@@ -42,7 +42,7 @@
         color: #333;
         margin-bottom : 0;
         margin-top : 10%;
-        padding : 50px;
+        padding : 10px 70px;
     }
 
     .footer-container{
@@ -53,14 +53,6 @@
 		gap: 20px;
 		padding: 0 5%;
     }
-
-    .logo{
-        margin : auto 0;
-    }
-
-    .logo img {
-		height: 50px;
-	}
 
     a{
     text-decoration: none;

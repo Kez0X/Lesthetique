@@ -1,5 +1,4 @@
 <script>
-	// Exemple de données pour chaque catégorie
 	let categories = [
 		{
 			title: "ONGLERIE",
