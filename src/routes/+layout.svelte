@@ -7,22 +7,38 @@
 	import FAQ from '$lib/faq.svelte';
 	import Footer from '$lib/footer.svelte';
 	import Reviews from '$lib/review.svelte';
+	
+	// Import de `page` depuis SvelteKit
+	import { page } from '$app/stores';
+	
+	// Création d’une variable réactive `isContactPage`
+	$: isContactPage = $page.url.pathname === '/contact';
 </script>
+
 <div class="app">
-	<!-- <Header /> -->
 	<Navbar />
-	<div class="home-page-container">
-		<div class="page-container">
+	
+	<!-- Affiche le contenu principal seulement si ce n’est pas la page de contact -->
+	{#if !isContactPage}
+		<!-- Page d'accueil -->
+		<div class="home-page-container">
+			<div class="page-container">
+				<slot />
+			</div>
+		</div>
+
+		<Prestations />
+		<About />
+		<Payment />
+		<FAQ />
+		<Reviews />
+		<Footer />
+	{/if}
+
+	<!-- Affiche le slot uniquement pour la page de contact -->
+	{#if isContactPage}
+		<div class="contact-page-container">
 			<slot />
 		</div>
-	</div>
-	<Prestations/>
-	<About/>
-	<Payment/>
-	<Reviews/>
-	<FAQ/>
-	<Footer/>
-	<!-- <footer>
-		<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
-	</footer> -->
+	{/if}
 </div>
