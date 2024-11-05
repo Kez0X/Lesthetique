@@ -5,11 +5,12 @@
 	import soinsVisages from '$lib/images/soins-visages.png';
 	import rehaussementCils from '$lib/images/rehaussement-cils.png';
 	import forfaits from '$lib/images/forfaits.png';
- 
+
 	let categories = [
 	   {
 		  title: "ONGLERIE",
 		  backgroundImage: onglerie,
+		  link: "/onglerie",
 		  prestations: [
 			 { name: "Soin des mains", price: "50€" },
 			 { name: "Soin des pieds", price: "55€" },
@@ -19,6 +20,7 @@
 	   {
 		  title: "ÉPILATIONS",
 		  backgroundImage: epilations,
+		  link: "/epilations",
 		  prestations: [
 			 { name: "Forfaits visage complet", price: "45€" },
 			 { name: "Maillot complet", price: "28€" },
@@ -28,8 +30,9 @@
 	   {
 		  title: "SOINS CORPS",
 		  backgroundImage: massages,
+		  link: "/soins-corps",
 		  prestations: [
-			 { name: "Drainage lymphatique ", price: "65€" },
+			 { name: "Drainage lymphatique", price: "65€" },
 			 { name: "Drainage minceur", price: "75€" },
 			 { name: "Relaxant", price: "65€" }
 		  ]
@@ -37,6 +40,7 @@
 	   {
 		  title: "SOINS VISAGES",
 		  backgroundImage: soinsVisages,
+		  link: "/soins-visages",
 		  prestations: [
 			 { name: "Express", price: "50€" },
 			 { name: "Personnalisé", price: "65€" },
@@ -46,6 +50,7 @@
 	   {
 		  title: "REHAUSSEMENT DE CILS",
 		  backgroundImage: rehaussementCils,
+		  link: "/rehaussement-cils",
 		  prestations: [
 			 { name: "Avec teinture", price: "50€" },
 			 { name: "Sans teinture", price: "45€" },
@@ -54,6 +59,7 @@
 	   {
 		  title: "FORFAITS",
 		  backgroundImage: forfaits,
+		  link: "/forfaits",
 		  prestations: [
 			 { name: "Forfaits sourcils lèvres", price: "22€" },
 			 { name: "Cure de 6 séances", price: "420€" },
@@ -61,8 +67,27 @@
 		  ]
 	   }
 	];
- </script>
- 
+</script>
+
+<div class="section-prestations" id="prestations">
+	<h2>NOS PRESTATIONS</h2>
+	<div class="grid-container">
+		{#each categories as category}
+			<a href={category.link} class="category" style="background-image: url({category.backgroundImage})">
+				<div class="category-content">
+					<div class="category-title">{category.title}</div>
+					{#each category.prestations as prestation}
+						<div class="prestation">
+							<span>{prestation.name}</span>
+							<span>{prestation.price}</span>
+						</div>
+					{/each}
+					<a href={category.link} class="button">Voir toutes les prestations</a>
+				</div>
+			</a>
+		{/each}
+	</div>
+</div>
 
 <style>
 	/* Styles pour la section globale */
@@ -77,13 +102,14 @@
 		font-size: 2em;
 		margin-bottom: 30px;
 		color: #333;
+		text-decoration: none;
 	}
 
 	/* Disposition en grille pour les catégories */
 	.grid-container {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Ajuste la largeur de chaque carte */
-		max-width: 1400px; /* Limite la largeur totale de la grille */
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		max-width: 1400px;
 		margin: 0 auto;
 		gap: 20px;
 		padding: 0 5%;
@@ -101,6 +127,8 @@
 		transition: transform 0.3s ease, box-shadow 0.3s ease;
 		background-size: cover;
 		background-position: center;
+		text-decoration: none;
+		color: inherit;
 	}
 
 	/* Effet de zoom et ombrage au survol */
@@ -116,13 +144,13 @@
 		left: 0;
 		width: 100%;
 		height: 100%;
-		background-color: rgba(0, 0, 0, 0.3); /* Assombrit l'image */
+		background-color: rgba(0, 0, 0, 0.3);
 		z-index: 1;
 	}
 
 	.category-content {
 		position: relative;
-		z-index: 2; /* Au-dessus de l'overlay */
+		z-index: 2;
 		background-color: rgba(255, 255, 255, 0.8);
 		border-radius: 8px;
 		padding: 20px;
@@ -163,14 +191,20 @@
 		background-color: #ff5a5a;
 	}
 
+	/* Retirer les soulignements pour tous les liens */
+	a {
+		text-decoration: none;
+		color: inherit;
+	}
+
 	/* Responsive design */
 	@media (max-width: 1024px) {
 		.grid-container {
 			grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 		}
-        .category {
-            height: 275px;
-	    }
+		.category {
+			height: 275px;
+		}
 	}
 
 	@media (max-width: 768px) {
@@ -185,23 +219,3 @@
 		}
 	}
 </style>
-
-<div class="section-prestations" id="prestations">
-	<h2>NOS PRESTATIONS</h2>
-	<div class="grid-container">
-		{#each categories as category}
-			<div class="category" style="background-image: url({category.backgroundImage})">
-				<div class="category-content">
-					<div class="category-title">{category.title}</div>
-					{#each category.prestations as prestation}
-						<div class="prestation">
-							<span>{prestation.name}</span>
-							<span>{prestation.price}</span>
-						</div>
-					{/each}
-					<a href="#" class="button">Voir toutes les prestations</a>
-				</div>
-			</div>
-		{/each}
-	</div>
-</div>

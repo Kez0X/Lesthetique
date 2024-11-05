@@ -20,14 +20,14 @@
 	<div class="navbar-container">
 		<!-- Logo à gauche -->
 		<div class="logo">
-			<a href="#"><img src={Logo} alt="logo"></a>
+			<a href="/"><img src={Logo} alt="logo"></a>
 		</div>
 
 		<!-- Menu et contact à droite -->
 		<div class="right">
 			<!-- Lien de contact -->
 			<div class="contact">
-				<a href="#">Nous contacter</a>
+				<a href="/contact">Nous contacter</a>
 			</div>
 			<!-- Bouton de menu toujours visible -->
 			<div class="menu-button" on:click={toggleMenu}>
@@ -46,13 +46,13 @@
 		<div class="menu-close" on:click={toggleMenu}>✕</div>
 		<h1>L'esthétiqueAA</h1>
 
-		<!-- Catégories avec images de fond -->
-		<div class="menu-item" style="background-image: url({Onglerie});"><div class="menu-item-back">Onglerie</div></div>
-		<div class="menu-item" style="background-image: url({Epilations});"><div class="menu-item-back">Épilations</div></div>
-		<div class="menu-item" style="background-image: url({Massages});"><div class="menu-item-back">Soins corps</div></div>
-		<div class="menu-item" style="background-image: url({Soins});"><div class="menu-item-back">Soins Visages</div></div>
-		<div class="menu-item" style="background-image: url({Rehaussement});"><div class="menu-item-back">Réhaussement de Cils</div></div>
-		<div class="menu-item" style="background-image: url({Forfaits});"><div class="menu-item-back">Forfaits</div></div>
+		<!-- Catégories avec images de fond, rendant chaque élément cliquable -->
+		<a href="/onglerie" class="menu-item" style="background-image: url({Onglerie});"><div class="menu-item-back">Onglerie</div></a>
+		<a href="/epilations" class="menu-item" style="background-image: url({Epilations});"><div class="menu-item-back">Épilations</div></a>
+		<a href="/soins-corps" class="menu-item" style="background-image: url({Massages});"><div class="menu-item-back">Soins Corps</div></a>
+		<a href="/soins-visage" class="menu-item" style="background-image: url({Soins});"><div class="menu-item-back">Soins Visages</div></a>
+		<a href="/rehaussement-cils" class="menu-item" style="background-image: url({Rehaussement});"><div class="menu-item-back">Réhaussement de Cils</div></a>
+		<a href="/forfaits" class="menu-item" style="background-image: url({Forfaits});"><div class="menu-item-back">Forfaits</div></a>
 
 		<!-- Lien de contact direct en bas du menu -->
 		<div class="contact-estheticiennes">
@@ -60,7 +60,7 @@
 				<a href=""><img src={Facebook} alt="Facebook"></a>
 				<a href="https://www.instagram.com/anaisdelice.estheticienne69?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img src={Instagram} alt="Instagram"></a>
 			</div>
-			<a href="#">Contacter les esthéticiennes</a>
+			<a href="/contact">Contacter les esthéticiennes</a>
 		</div>
 	</div>
 </div>
@@ -141,7 +141,7 @@
 		flex-direction: column;
 		align-items: center;
 		gap: 15px;
-		transform: translateX(100%); /* Cacher le menu hors de l’écran par défaut */
+		transform: translateX(100%);
 		transition: transform 0.3s ease;
 	}
 
@@ -157,29 +157,25 @@
 	}
 
 	.menu-item {
-    width: 100%;
-    height: 80px;
-    background-size: cover;
-    background-position: center;
-    color: #000;
-    font-size: 1.2em;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
-    cursor: pointer;
-    position: relative; /* Position relative pour le pseudo-élément */
-    overflow: hidden; /* Pour cacher le pseudo-élément lorsqu'il est hors écran */
-    transition: background-color 0.3s ease; /* Transition pour le changement de couleur */
-}
-
-	/* Nouveau style pour l'effet de survol */
-	.menu-item:hover {
-		background-color: rgba(255, 255, 255, 0.5); /* Changer le fond au survol */
+		position: relative;
+		width: 100%;
+		height: 80px;
+		background-size: cover;
+		background-position: center;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: #fff;
+		font-size: 1.2em;
+		font-weight: bold;
+		cursor: pointer;
+		text-decoration: none;
+		color: inherit;
+		overflow: hidden;
+		transition: transform 0.3s ease; /* Transition pour le zoom */
 	}
 
-	/* Style pour le pseudo-élément */
+	/* Overlay assombrissant au survol avec ::before */
 	.menu-item::before {
 		content: "";
 		position: absolute;
@@ -187,24 +183,28 @@
 		left: 0;
 		width: 100%;
 		height: 100%;
-		background-color: rgba(255, 255, 255, 0.5); /* Fond blanc avec opacité */
-		opacity: 0; /* Invisible par défaut */
-		transition: opacity 0.3s ease; /* Transition pour l'opacité */
+		background-color: rgba(0, 0, 0, 0.4);
+		transition: background-color 0.3s ease;
+		z-index: 1;
 	}
 
-	/* Rendre le pseudo-élément visible au survol */
-	.menu-item:hover::before {
-		opacity: 1; /* Afficher l'effet blanc */
-	}
-
-	.menu-item-back{
-		background-color : white;
-		background-color: rgba(255, 255, 255, 0.800);
+	/* Contenu du texte au-dessus de l'overlay */
+	.menu-item-back {
+		position: relative;
+		z-index: 2;
+		background-color: rgba(255, 255, 255, 0.8);
 		border-radius: 5px;
-		padding : 5px 20px;
-		width : 200px;
-		justify-content : center;
-		text-align : center;
+		padding: 5px 20px;
+		text-align: center;
+	}
+
+	/* Effets de zoom et assombrissement lors du survol */
+	.menu-item:hover {
+		transform: scale(1.05); /* Zoom sur l'élément */
+	}
+
+	.menu-item:hover::before {
+		background-color: rgba(0, 0, 0, 0.6); /* Assombrissement plus intense */
 	}
 
 	.contact-estheticiennes {
@@ -213,14 +213,14 @@
 		font-weight: bold;
 	}
 
-	.social-icons{
+	.social-icons {
 		justify-items: center;
-		text-align : center;
+		text-align: center;
 		padding-bottom: 10px;
 	}
 
 	.social-icons a {
-    margin: 0 10px;
+		margin: 0 10px;
 	}
 
 	.social-icons img {
@@ -235,7 +235,7 @@
 	/* Styles pour les petits écrans (mobile) */
 	@media (max-width: 768px) {
 		.menu-content {
-			width: 100%; /* Prend toute la largeur sur mobile */
+			width: 100%;
 		}
 	}
 </style>
