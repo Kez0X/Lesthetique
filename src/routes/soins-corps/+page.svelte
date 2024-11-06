@@ -7,9 +7,12 @@
     import SoinsCorpsImage from '$lib/images/massages.png';
 
     let prestations = [
+        { name: "Drainage lymphatique", time: "1h", price: "65€" },
         { name: "Drainage minceur", time: "1h", price: "75€" },
+        { name: "Cure de 6 séances", time: "1h", price: "420€ - 70€/séance" },
         { name: "Relaxant", time: "1h", price: "65€" },
-        { name: "Drainage lymphatique", time: "1h", price: "65€" }
+        { name: "Forfait bien être 1h visage + 1h corps", time: "2h", price: "117€ au lieu de 130€" },
+        { name: "Forfait Spa 1h visage + 1h corps + gommage corps", time: "2h 30min", price: "150€ au lieu de 165€" }
     ];
 </script>
 
@@ -39,6 +42,7 @@
             </tbody>
         </table>
     </div>
+    <p>Les soins du corps sont réalisées avec des huiles végétales. 🍃</p>
 </div>
 
 
@@ -111,6 +115,15 @@
 
     .prestations-table td, .prestations-table th {
         padding: 12px;
+    }
+
+    p{
+        text-align : center;
+        font-size : 1em;
+        margin-top : 20px;
+        font-family: 'Crimson Text', sans-serif;
+        font-weight : bold;
+        color : #4A4A4A;
     }
 
     @media (max-width: 768px) {

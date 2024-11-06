@@ -30,7 +30,9 @@
 							<b>Prendre rendez-vous 💄</b>
 						</button>
 					</div>
-					<p class="follow-us">Notre secteur d'activité : Oullins, Pierre Bénite, La Mulatière</p>
+					<p class="follow-us-localisation">Notre secteur d'activité : Oullins, Saint-Genis-Laval, Sainte-Foy-lès-Lyon, La Mulatière, Tassin,
+						Craponne, Millery, Charly, Vernaison, Irigny, Francheville, Brignais,
+						Chaponost, Pierre-bénite</p>
 					<p class="follow-us">Nous suivre sur les réseaux sociaux</p>
 					<div class="social-icons">
 						<a href="https://www.facebook.com/profile.php?id=61563897359229"><img src={Facebook} alt="Facebook"></a>

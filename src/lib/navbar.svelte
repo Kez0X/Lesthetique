@@ -48,7 +48,7 @@
 
 		<!-- Catégories avec images de fond, rendant chaque élément cliquable -->
 		<a href="/onglerie" class="menu-item" style="background-image: url({Onglerie});" on:click={toggleMenu}>
-			<div class="menu-item-back">Onglerie</div>
+			<div class="menu-item-back">Onglerie - Manucure - Pédicure</div>
 		</a>
 		<a href="/epilations" class="menu-item" style="background-image: url({Epilations});" on:click={toggleMenu}>
 			<div class="menu-item-back">Épilations</div>

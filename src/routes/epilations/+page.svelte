@@ -105,6 +105,7 @@
             </tbody>
         </table>
     </div>
+    <p>Les épilations sont réalisées avec des cires certifiée bio. 🍃</p>
 </div>
 
 
@@ -184,6 +185,15 @@
         font-size : 1.5em;
         margin-top : 30px;
         font-family: 'Crimson Text', sans-serif;
+    }
+
+    p{
+        text-align : center;
+        font-size : 1em;
+        margin-top : 20px;
+        font-family: 'Crimson Text', sans-serif;
+        font-weight : bold;
+        color : #4A4A4A;
     }
 
     @media (max-width: 768px) {

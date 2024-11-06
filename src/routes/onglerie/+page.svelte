@@ -1,5 +1,5 @@
 <svelte:head>
-    <title>Onglerie - L'esthétique</title>
+    <title>Onglerie - Manucure Pédicure - L'esthétique</title>
     <meta name="description" content="Découvrez nos prestations d'onglerie : soins des mains et des pieds, pose de vernis, et bien plus." />
 </svelte:head>
 
@@ -7,14 +7,13 @@
     import OnglerieImage from '$lib/images/onglerie.png';
 
     let prestations = [
-        { name: "Pose de vernis semi couleur unie", time: "30 min", price: "40€", description: "cuticule, limage, pose de vernis, huile de fin de soin" },
-        { name: "Soin des mains", time: "45 min", price: "50€", description: "" },
-        { name: "Soin des pieds", time: "45 min", price: "55€", description: "" },
-        { name: "Pose de vernis semi-permanent", time: "40 min", price: "40€", description: "" },
-        { name: "Dépose de vernis semi-permanent", time: "20 min", price: "15€", description: "" },
-        { name: "Beauté des pieds", time: "1h", price: "60€", description: "" },
-        { name: "Pose complète gel", time: "1h 30min", price: "80€", description: "" },
-        { name: "Remplissage gel", time: "1h", price: "55€", description: "" }
+        { name: "Pose de vernis semi-permanent couleur unie", time: "30 min", price: "40€", description: "Cuticules, limage, pose de vernis, huile de fin de soin" },
+        { name: "Soin des mains", time: "1h", price: "50€", description: "gommage, limage, massage, hydratation et base" },
+        { name: "Soin des pieds", time: "1h", price: "55€", description: "gommage, râpe, limage, massage, hydratation et base" },
+        { name: "Soin des mains + pose de vernis semi-permanent", time: "-", price: "70€", description: "gommage, limage, massage, hydratation et base, cuticules, limage, pose de vernis, huile de fin de soin" },
+        { name: "Soin des pieds + pose de vernis semi-permanent", time: "-", price: "75€", description: "gommage, râpe, limage, massage, hydratation et base, cuticules, limage, pose de vernis, huile de fin de soin" },
+        { name: "Forfait beauté mains 1h visage + soin des mains + pose de vernis", time: "-", price: "121€ au lieu de 135€", description: "" },
+        { name: "Forfait beauté pied 1h visage + soins des pieds + pose de vernis", time: "-", price: "126€ au lieu de 140€", description : ""}
     ];
 </script>
 
@@ -22,7 +21,7 @@
     <!-- Image de fond et titre -->
     <div class="header-section" style="background-image: url({OnglerieImage});">
         <div class="overlay"></div>
-        <h1>Prestations Onglerie</h1>
+        <h1>Prestations Onglerie - Manucure - Pédicure</h1>
     </div>
 
     <!-- Tableau des prestations -->
@@ -48,6 +47,7 @@
             </tbody>
         </table>
     </div>
+    <p>Les manucures et pédicures sont réalisées avec des produits bio et/ou naturels. 🍃</p>
 </div>
 
 <style>
@@ -111,6 +111,15 @@
         padding: 10px 8px;
         border-bottom: 1px solid #ffe3e9;
         color: #555;
+    }
+
+    p{
+        text-align : center;
+        font-size : 1em;
+        margin-top : 20px;
+        font-family: 'Crimson Text', sans-serif;
+        font-weight : bold;
+        color : #4A4A4A;
     }
 
     .prestations-table tbody tr:nth-child(odd) {

@@ -7,9 +7,11 @@
     import SoinsVisagesImage from '$lib/images/soins-visages.png';
 
     let prestations = [
-        { name: "Express", time: "50 min", price: "50€" },
-        { name: "Personnalisé", time: "1h", price: "65€" },
-        { name: "Personnalisé anti-age", time: "1h 10 min", price: "75€" }
+        { name: "Express", time: "50 min", price: "50€", description : "nettoyage en profondeur, gommage, masque et crème de fin de soin" },
+        { name: "Personnalisé", time: "1h", price: "65€", description : "démaquillage (brosse nettoyante), gommage à grains, points noirs (vapo, ustensil en métal, électrode), massage relaxant manuel + rouleau de jade, masque crème + massage des mains, crème + contour des yeux" },
+        { name: "Personnalisé anti-age", time: "1h 10 min", price: "75€", description : "démaquillage (brosse nettoyante), peeling, points noirs (vapo, ustensil en métal, électrode), massage anti ride manuel, massage relaxant manuel + appareil, masque crème argan + modelage des mains ou cuir chevelu, crème + contour des yeux" },
+        { name: "Forfait bien être 1h visage + 1h corps", time: "2h", price: "117€ au lieu de 130€" },
+        { name: "Forfait Spa 1h visage + 1h corps + gommage corps", time: "2h 30min", price: "150€ au lieu de 165€" }
     ];
 </script>
 
@@ -26,6 +28,7 @@
                     <th>Prestations</th>
                     <th>Temps</th>
                     <th>Prix</th>
+                    <th>Description</th>
                 </tr>
             </thead>
             <tbody>
@@ -34,11 +37,13 @@
                         <td>{prestation.name}</td>
                         <td>{prestation.time}</td>
                         <td>{prestation.price}</td>
+                        <td>{prestation.description ? prestation.description : "-"}</td>
                     </tr>
                 {/each}
             </tbody>
         </table>
     </div>
+    <p>Les soins du visage sont réalisées avec des produits bio français de la marque ClaireJoie. 🍃</p>
 </div>
 
 
@@ -111,6 +116,15 @@
 
     .prestations-table td, .prestations-table th {
         padding: 12px;
+    }
+
+    p{
+        text-align : center;
+        font-size : 1em;
+        margin-top : 20px;
+        font-family: 'Crimson Text', sans-serif;
+        font-weight : bold;
+        color : #4A4A4A;
     }
 
     @media (max-width: 768px) {
