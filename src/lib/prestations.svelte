@@ -40,7 +40,7 @@
 	   {
 		  title: "SOINS VISAGES",
 		  backgroundImage: soinsVisages,
-		  link: "/soins-visages",
+		  link: "/soins-visage",
 		  prestations: [
 			 { name: "Express", price: "50€" },
 			 { name: "Personnalisé", price: "65€" },
