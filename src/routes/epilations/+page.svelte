@@ -6,17 +6,34 @@
 <script>
     import EpilationsImage from '$lib/images/epilations.png';
 
-    let prestations = [
+    let prestations_visage = [
         { name: "Sourcils", time: "15 min", price: "14€"},
         { name: "Lèvres", time: "10 min", price: "10€" },
         { name: "Menton", time: "10 min", price: "10€" },
-        { name: "Joues", time: "10 min", price: "10€" },
+        { name: "Joues", time: "10 min", price: "14€" },
         { name: "Forfaits visage complet", time: "45 min", price: "45€" },
-        { name: "Maillot complet", time: "30 min", price: "28€" },
-        { name: "1/2 jambes", time: "20 min", price: "20€" },
-        { name: "Jambes complètes", time: "30 min", price: "28€" },
-        { name: "Aisselles", time: "20 min", price: "20€" },
-        { name: "Bras", time: "20 min", price: "20€" }
+        { name: "Forfaits sourcils lèvres", time: "25 min", price: "22€" }
+        
+    ];
+
+    let prestations_corps = [
+        { name: "1/2 jambes", time: "20 min", price: "20€"},
+        { name: "Cuisses", time: "20 min", price: "20€"},
+        { name: "Jambes complètes", time: "30 min", price: "28€"},
+        { name: "Bras", time: "20 min", price: "20€"},
+        { name: "1/2 bras", time: "15 min", price: "16€"},
+        { name: "maillot échancré", time: "20 min", price: "20€"},
+        { name: "maillot brésilien", time: "25 min", price: "26€"},
+        { name: "maillot complet", time: "30 min", price: "28€"},
+        { name: "aisselles", time: "15 min", price: "14€"},
+        { name: "bande supplémentaire", time: "10 min", price: "10€"}
+    ];
+
+    let forfaits_corps = [
+        { name: "1/2 jambes, échancré, aisselles", time: "55 min", price: "50€"},
+        { name: "1/2 jambes, complet, aisselles", time: "1 h 05 min", price: "59€"},
+        { name: "jambes complètes, complet, aisselles", time: "1 h 05 min", price: "67€"},
+        { name: "jambes complètes, échancré, aisselles", time: "1 h 15 min", price: "69€"}
     ];
 </script>
 
@@ -25,7 +42,7 @@
         <div class="overlay"></div>
         <h1>Prestations Épilations</h1>
     </div>
-
+    <h3>Epilations visages</h3>
     <div class="prestations-table">
         <table>
             <thead>
@@ -36,7 +53,49 @@
                 </tr>
             </thead>
             <tbody>
-                {#each prestations as prestation}
+                {#each prestations_visage as prestation}
+                    <tr>
+                        <td>{prestation.name}</td>
+                        <td>{prestation.time}</td>
+                        <td>{prestation.price}</td>
+                    </tr>
+                {/each}
+            </tbody>
+        </table>
+    </div>
+    <h3>Epilations corps</h3>
+    <div class="prestations-table">
+        <table>
+            <thead>
+                <tr>
+                    <th>Prestations</th>
+                    <th>Temps</th>
+                    <th>Prix</th>
+                </tr>
+            </thead>
+            <tbody>
+                {#each prestations_corps as prestation}
+                    <tr>
+                        <td>{prestation.name}</td>
+                        <td>{prestation.time}</td>
+                        <td>{prestation.price}</td>
+                    </tr>
+                {/each}
+            </tbody>
+        </table>
+    </div>
+    <h3>Forfaits corps</h3>
+    <div class="prestations-table">
+        <table>
+            <thead>
+                <tr>
+                    <th>Prestations</th>
+                    <th>Temps</th>
+                    <th>Prix</th>
+                </tr>
+            </thead>
+            <tbody>
+                {#each forfaits_corps as prestation}
                     <tr>
                         <td>{prestation.name}</td>
                         <td>{prestation.time}</td>
@@ -118,6 +177,13 @@
 
     .prestations-table td, .prestations-table th {
         padding: 12px;
+    }
+
+    h3{
+        text-align : center;
+        font-size : 1.5em;
+        margin-top : 30px;
+        font-family: 'Crimson Text', sans-serif;
     }
 
     @media (max-width: 768px) {

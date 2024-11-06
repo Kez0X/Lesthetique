@@ -47,20 +47,34 @@
 		<h1>L'esthétiqueAA</h1>
 
 		<!-- Catégories avec images de fond, rendant chaque élément cliquable -->
-		<a href="/onglerie" class="menu-item" style="background-image: url({Onglerie});"><div class="menu-item-back">Onglerie</div></a>
-		<a href="/epilations" class="menu-item" style="background-image: url({Epilations});"><div class="menu-item-back">Épilations</div></a>
-		<a href="/soins-corps" class="menu-item" style="background-image: url({Massages});"><div class="menu-item-back">Soins Corps</div></a>
-		<a href="/soins-visage" class="menu-item" style="background-image: url({Soins});"><div class="menu-item-back">Soins Visages</div></a>
-		<a href="/rehaussement-cils" class="menu-item" style="background-image: url({Rehaussement});"><div class="menu-item-back">Réhaussement de Cils</div></a>
-		<a href="/forfaits" class="menu-item" style="background-image: url({Forfaits});"><div class="menu-item-back">Forfaits</div></a>
+		<a href="/onglerie" class="menu-item" style="background-image: url({Onglerie});" on:click={toggleMenu}>
+			<div class="menu-item-back">Onglerie</div>
+		</a>
+		<a href="/epilations" class="menu-item" style="background-image: url({Epilations});" on:click={toggleMenu}>
+			<div class="menu-item-back">Épilations</div>
+		</a>
+		<a href="/soins-corps" class="menu-item" style="background-image: url({Massages});" on:click={toggleMenu}>
+			<div class="menu-item-back">Soins Corps</div>
+		</a>
+		<a href="/soins-visage" class="menu-item" style="background-image: url({Soins});" on:click={toggleMenu}>
+			<div class="menu-item-back">Soins Visages</div>
+		</a>
+		<a href="/rehaussement-cils" class="menu-item" style="background-image: url({Rehaussement});" on:click={toggleMenu}>
+			<div class="menu-item-back">Réhaussement de Cils</div>
+		</a>
+		<a href="/forfaits" class="menu-item" style="background-image: url({Forfaits});" on:click={toggleMenu}>
+			<div class="menu-item-back">Forfaits</div>
+		</a>
 
 		<!-- Lien de contact direct en bas du menu -->
 		<div class="contact-estheticiennes">
 			<div class="social-icons">
 				<a href=""><img src={Facebook} alt="Facebook"></a>
-				<a href="https://www.instagram.com/anaisdelice.estheticienne69?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img src={Instagram} alt="Instagram"></a>
+				<a href="https://www.instagram.com/anaisdelice.estheticienne69?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
+					<img src={Instagram} alt="Instagram">
+				</a>
 			</div>
-			<a href="/contact">Contacter les esthéticiennes</a>
+			<a href="/contact" on:click={toggleMenu}>Contacter les esthéticiennes</a>
 		</div>
 	</div>
 </div>

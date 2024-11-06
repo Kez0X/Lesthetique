@@ -13,13 +13,13 @@
     <p>Par appel, SMS, email, Facebook ou Instagram (réponse sous 24h à 48h) :</p>
 
     <div class="contact-info">
-        <p><strong>Anaïs :</strong> +33 0 00 00 00 00</p>
+        <p><strong>Anaïs :</strong> +33 6 60 36 34 06</p>
         <p><strong>Alexandrine :</strong> +33 0 00 00 00 00</p>
-        <p>Contactez-nous par mail : <a href="mailto:lesthetiqueA&A@gmail.com">lesthetiqueA&A@gmail.com</a></p>
+        <p>Contactez-nous par mail : <a href="mailto:esthetiqueaa69@gmail.com">esthetiqueaa69@gmail.com</a></p>
     </div>
 
     <div class="social-icons">
-        <a href="#"><img src={FacebookIcon} alt="Facebook" /></a>
+        <a href="https://www.facebook.com/profile.php?id=61563897359229"><img src={FacebookIcon} alt="Facebook" /></a>
         <a href="https://www.instagram.com/anaisdelice.estheticienne69"><img src={InstagramIcon} alt="Instagram" /></a>
     </div>
 

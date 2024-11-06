@@ -7,9 +7,9 @@
         <div class="section-right">
             <h3>Nous contacter</h3>
             <ul>
-                <li>Par mail : </li>
-                <li>Par instagram : </li>
-                <li>Par facebook : </li>
+                <li>Par mail : esthetiqueaa69@gmail.com</li>
+                <li>Par instagram : estheticienne69</li>
+                <li>Par facebook : anaïs delice</li>
             </ul>
             <h3>Nos CGU</h3>
             <a href="" >Nos conditions générales d'utilisation</a>
