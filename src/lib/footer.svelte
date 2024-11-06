@@ -1,7 +1,3 @@
-<script>
-    import Logo from '$lib/images/favicon.jpg';
-</script>
-
 <div class="footer">
     <div class="footer-container">
         <div class="section-right">
@@ -12,7 +8,7 @@
                 <li>Par facebook : anaïs delice</li>
             </ul>
             <h3>Nos CGU</h3>
-            <a href="" >Nos conditions générales d'utilisation</a>
+            <a href="/cgu" >Nos conditions générales d'utilisation</a>
             <h3>Les moyens de paiements</h3>
             <ul>
                 <li>Carte bleue</li>
@@ -28,7 +24,7 @@
             </ul>
             <a href="">Télécharger la brochure complète</a>
             <h3>Notre politique</h3>
-            <a href="">Politique de confidentialité</a>
+            <a href="/politique_de_confidentialite">Politique de confidentialité</a>
             <p>Nous nous assurons aussi de la sécurité du paiement de nos clients</p>
             <a href="">Sécurité de paiement</a>
         </div>
