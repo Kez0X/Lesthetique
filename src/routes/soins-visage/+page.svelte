@@ -7,11 +7,11 @@
     import SoinsVisagesImage from '$lib/images/soins-visages.png';
 
     let prestations = [
-        { name: "Express", time: "50 min", price: "50€", description : "nettoyage en profondeur, gommage, masque et crème de fin de soin" },
-        { name: "Personnalisé", time: "1h", price: "65€", description : "démaquillage (brosse nettoyante), gommage à grains, points noirs (vapo, ustensil en métal, électrode), massage relaxant manuel + rouleau de jade, masque crème + massage des mains, crème + contour des yeux" },
-        { name: "Personnalisé anti-age", time: "1h 10 min", price: "75€", description : "démaquillage (brosse nettoyante), peeling, points noirs (vapo, ustensil en métal, électrode), massage anti ride manuel, massage relaxant manuel + appareil, masque crème argan + modelage des mains ou cuir chevelu, crème + contour des yeux" },
-        { name: "Forfait bien être 1h visage + 1h corps", time: "2h", price: "117€ au lieu de 130€" },
-        { name: "Forfait Spa 1h visage + 1h corps + gommage corps", time: "2h 30min", price: "150€ au lieu de 165€" }
+        { name: "Express", time: "50 min", price: "50€", description : "Nettoyage en profondeur, gommage, masque et crème de fin de soin" },
+        { name: "Personnalisé", time: "1h", price: "65€", description : "Nettoyage en profondeur, gommage à grains, massage relaxant manuel + rouleaux, masque crème + massage des mains, masque led + massage du cuir chevelu, crème + contour des yeux" },
+        { name: "Personnalisé anti-age", time: "1h 10 min", price: "75€", description : "Nettoyage en profondeur, peeling, massage anti ride manuel, massage relaxant manuel, masque crème argan + modelage des mains, masque led + modelage du cuir chevelu, crème + contour des yeux" },
+        { name: "Forfait bien être", time: "2h", price: "117€ au lieu de 130€", description : "1h de soin visage + 1h de soin corps" },
+        { name: "Forfait Spa", time: "2h 30min", price: "150€ au lieu de 165€", description : "1h de soin visage + 1h de soin corps + gommage corps" }
     ];
 </script>
 
@@ -43,7 +43,7 @@
             </tbody>
         </table>
     </div>
-    <p>Les soins du visage sont réalisées avec des produits bio français de la marque ClaireJoie. 🍃</p>
+    <p>Les soins du visage sont réalisés avec des produits bio français de la marque ClaireJoie. 🍃</p>
 </div>
 
 

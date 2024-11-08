@@ -6,7 +6,7 @@
 
 <div class="section-about">
     <h2>À PROPOS DE NOUS</h2>
-    <p>Nous sommes 2 esthéticiennes indépendantes qui se sont lancés en janvier 2025, dans le but de répondre au mieux aux besoins de leurs clientèle. C’est pourquoi nous ferons toujours de notre mieux pour vous faire passer le meilleur moment.</p>
+    <p>Nous sommes 2 esthéticiennes indépendantes qui se sont lancés en décembre 2024, dans le but de répondre au mieux aux besoins de leurs clientèle. C’est pourquoi nous ferons toujours de notre mieux pour vous faire passer le meilleur moment.</p>
     <div class="estheticiennes">
         <div class="estheticienne-description">
             <h3>Anaïs</h3>
@@ -15,7 +15,7 @@
                 des produits et méthodes respectueuses de votre peau. Je prends le temps de comprendre
                 vos besoins pour vous garantir satisfaction et détente. Hâte de vous rencontrer pour
                 partager ce moment beauté avec vous !</p>
-            <button class="construction-btn" on:click={() => window.location.href = '/contact'}><b>Prendre rendez-vous 😄</b></button>
+            <button class="construction-btn" on:click={() => window.location.href = '/contact'}><b>Prendre rendez-vous 😊</b></button>
             <p class="description">Paiement au début de la scéance -
                 (cartes ou espèces, pas de chèques) -
                 Réservé uniquement aux femmes</p>

@@ -8,16 +8,16 @@
 
     let prestations = [
         { name: "Forfaits visage complet épilation", time: "45 min", price: "45€" },
-        { name: "Forfaits sourcils lèvres épilation", time: "25 min", price: "22€" },
+        { name: "Forfaits sourcils + lèvres épilation", time: "25 min", price: "22€" },
         { name: "1/2 jambes, échancré, aisselles", time: "55 min", price: "50€"},
         { name: "1/2 jambes, complet, aisselles", time: "1 h 05 min", price: "59€"},
         { name: "Jambes complètes, complet, aisselles", time: "1 h 05 min", price: "67€"},
         { name: "Jambes complètes, échancré, aisselles", time: "1 h 15 min", price: "69€"},
-        { name: "Cure de 6 séances", time: "-", price: "420€" },
+        { name: "Cure de 6 séances", time: "1h", price: "420€ - 70€/séance" },
         { name: "Forfait bien être 1h visage + 1h corps", time: "2h", price: "117€ au lieu de 130€" },
         { name: "Forfait Spa 1h visage + 1h corps + gommage corps", time: "2h 30min", price: "150€ au lieu de 165€" },
-        { name: "Forfait beauté mains 1h visage + soin des mains + pose de vernis", time: "-", price: "121€ au lieu de 135€"},
-        { name: "Forfait beauté pied 1h visage + soins des pieds + pose de vernis", time: "-", price: "126€ au lieu de 140€"}
+        { name: "Forfait beauté mains 1h visage + soin des mains + pose de vernis", time: "≈ 3h", price: "121€ au lieu de 135€"},
+        { name: "Forfait beauté pied 1h visage + soins des pieds + pose de vernis", time: "≈ 3h", price: "126€ au lieu de 140€"}
 
 
     ];

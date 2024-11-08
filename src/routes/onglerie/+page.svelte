@@ -7,13 +7,13 @@
     import OnglerieImage from '$lib/images/onglerie.png';
 
     let prestations = [
-        { name: "Pose de vernis semi-permanent couleur unie", time: "30 min", price: "40€", description: "Cuticules, limage, pose de vernis, huile de fin de soin" },
-        { name: "Soin des mains", time: "1h", price: "50€", description: "gommage, limage, massage, hydratation et base" },
-        { name: "Soin des pieds", time: "1h", price: "55€", description: "gommage, râpe, limage, massage, hydratation et base" },
-        { name: "Soin des mains + pose de vernis semi-permanent", time: "-", price: "70€", description: "gommage, limage, massage, hydratation et base, cuticules, limage, pose de vernis, huile de fin de soin" },
-        { name: "Soin des pieds + pose de vernis semi-permanent", time: "-", price: "75€", description: "gommage, râpe, limage, massage, hydratation et base, cuticules, limage, pose de vernis, huile de fin de soin" },
-        { name: "Forfait beauté mains 1h visage + soin des mains + pose de vernis", time: "-", price: "121€ au lieu de 135€", description: "" },
-        { name: "Forfait beauté pied 1h visage + soins des pieds + pose de vernis", time: "-", price: "126€ au lieu de 140€", description : ""}
+        { name: "Pose de vernis semi-permanent couleur unie", time: "≈ 1h", price: "40€", description: "Cuticules, limage, pose de vernis, huile de fin de soin" },
+        { name: "Soin des mains", time: "1h", price: "50€", description: "Gommage, limage, massage, hydratation et base" },
+        { name: "Soin des pieds", time: "1h", price: "55€", description: "Gommage, râpe, limage, massage, hydratation et base" },
+        { name: "Soin des mains + pose de vernis semi-permanent", time: "≈ 2h", price: "70€", description: "Gommage, limage, massage, hydratation et base, cuticules, limage, pose de vernis, huile de fin de soin" },
+        { name: "Soin des pieds + pose de vernis semi-permanent", time: "≈ 2h", price: "75€", description: "Gommage, râpe, limage, massage, hydratation et base, cuticules, limage, pose de vernis, huile de fin de soin" },
+        { name: "Forfait beauté mains", time: "≈ 3h", price: "121€ au lieu de 135€", description: " 1h de soin visage personnalisé + soin des mains avec pose de vernis" },
+        { name: "Forfait beauté pieds", time: "≈ 3h", price: "126€ au lieu de 140€", description : "1h de soin visage personnalisé + soin des pieds avec pose de vernis"}
     ];
 </script>
 
@@ -48,6 +48,7 @@
         </table>
     </div>
     <p>Les manucures et pédicures sont réalisées avec des produits bio et/ou naturels. 🍃</p>
+    <p>Le semi-permanent est réalisé avec des produits conventionnels.</p>
 </div>
 
 <style>

@@ -10,12 +10,11 @@
 
 <div class="contact-page">
     <h1>Contactez-nous pour prendre rendez-vous</h1>
-    <p>Par appel, SMS, email, Facebook ou Instagram (réponse sous 24h à 48h) :</p>
+    <p>Par appel, SMS, Facebook ou Instagram (réponse sous 24h à 48h) :</p>
 
     <div class="contact-info">
         <p><strong>Anaïs :</strong> +33 6 60 36 34 06</p>
         <p><strong>Alexandrine :</strong> +33 0 00 00 00 00</p>
-        <p>Contactez-nous par mail : <a href="mailto:esthetiqueaa69@gmail.com">esthetiqueaa69@gmail.com</a></p>
     </div>
 
     <div class="social-icons">

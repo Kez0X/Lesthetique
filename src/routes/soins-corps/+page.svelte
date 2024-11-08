@@ -42,7 +42,7 @@
             </tbody>
         </table>
     </div>
-    <p>Les soins du corps sont réalisées avec des huiles végétales. 🍃</p>
+    <p>Les soins du corps sont réalisés avec des huiles végétales. 🍃</p>
 </div>
 
 

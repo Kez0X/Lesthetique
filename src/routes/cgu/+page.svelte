@@ -53,7 +53,7 @@
     <p>Nous nous réservons le droit de modifier les présentes Conditions Générales d’Utilisation à tout moment. Les modifications prendront effet dès leur publication sur notre site internet ou dès leur communication par tout autre moyen. Il vous appartient de consulter régulièrement ces CGU pour prendre connaissance des éventuelles modifications.</p>
 
     <h2>10. Loi applicable et juridiction compétente</h2>
-    <p>Les présentes CGU sont régies par la loi [indiquez la loi applicable dans votre pays]. Tout litige relatif à l’exécution ou à l’interprétation des présentes CGU relèvera de la compétence des tribunaux [du lieu où se trouve votre entreprise ou un lieu spécifique].</p>
+    <p>Les présentes CGU sont régies par la loi n° 94-665 du 4 août 1994. Tout litige relatif à l’exécution ou à l’interprétation des présentes CGU relèvera de la compétence des tribunaux français.</p>
 
     <h2>11. Contact</h2>
     <p>Pour toute question concernant ces CGU, vous pouvez nous contacter à :</p>
