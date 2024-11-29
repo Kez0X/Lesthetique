@@ -8,6 +8,8 @@
 	import Rehaussement from '$lib/images/rehaussement-cils.png';
 	import Soins from '$lib/images/soins-visages.png';
 	import Forfaits from '$lib/images/forfaits.png';
+	import Maquillage from '$lib/images/maquillage.webp';
+
 
 	let isMenuOpen = false;
 
@@ -64,6 +66,9 @@
 		</a>
 		<a href="/forfaits" class="menu-item" style="background-image: url({Forfaits});" on:click={toggleMenu}>
 			<div class="menu-item-back">Forfaits</div>
+		</a>
+		<a href="/maquillage" class="menu-item" style="background-image: url({Maquillage});" on:click={toggleMenu}>
+			<div class="menu-item-back">Maquillage</div>
 		</a>
 
 		<!-- Lien de contact direct en bas du menu -->

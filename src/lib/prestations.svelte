@@ -5,6 +5,7 @@
 	import soinsVisages from '$lib/images/soins-visages.png';
 	import rehaussementCils from '$lib/images/rehaussement-cils.png';
 	import forfaits from '$lib/images/forfaits.png';
+	import maquillage from '$lib/images/maquillage.webp';
 
 	let categories = [
 	   {
@@ -14,7 +15,7 @@
 		  prestations: [
 			 { name: "Soin des mains", price: "50€" },
 			 { name: "Soin des pieds", price: "55€" },
-			 { name: "Prestation complète", price: "105€" }
+			 { name: "Pose de vernis semi permanent couleur unie", price: "40€" }
 		  ]
 	   },
 	   {
@@ -22,7 +23,7 @@
 		  backgroundImage: epilations,
 		  link: "/epilations",
 		  prestations: [
-			 { name: "Forfaits visage complet", price: "45€" },
+			 { name: "Sourcils", price: "14€" },
 			 { name: "Maillot complet", price: "28€" },
 			 { name: "Jambes complètes, complet, aisselles", price: "67€" }
 		  ]
@@ -32,7 +33,7 @@
 		  backgroundImage: massages,
 		  link: "/soins-corps",
 		  prestations: [
-			 { name: "Drainage lymphatique", price: "65€" },
+			 { name: "Gommage", price: "35€" },
 			 { name: "Drainage minceur", price: "75€" },
 			 { name: "Relaxant", price: "65€" }
 		  ]
@@ -44,7 +45,7 @@
 		  prestations: [
 			 { name: "Express", price: "50€" },
 			 { name: "Personnalisé", price: "65€" },
-			 { name: "Personnalisé anti-age", price: "75€" }
+			 { name: "Relax & Sculpt", price: "60€" }
 		  ]
 	   },
 	   {
@@ -63,7 +64,16 @@
 		  prestations: [
 			 { name: "Forfaits sourcils lèvres", price: "22€" },
 			 { name: "Cure de 6 séances", price: "420€" },
-			 { name: "1/2 jambes, complet, aisselles", price: "59€" }
+			 { name: "Forfait bien être", price: "117€" }
+		  ]
+	   },
+	   {
+		  title: "MAQUILLAGE",
+		  backgroundImage: maquillage,
+		  link: "/maquillage",
+		  prestations: [
+			 { name: "Mariée", price: "80€" },
+			 { name: "Maquillage soirée", price: "40€" }
 		  ]
 	   }
 	];

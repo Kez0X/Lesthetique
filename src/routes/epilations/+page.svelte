@@ -12,7 +12,8 @@
         { name: "Menton", time: "10 min", price: "10€" },
         { name: "Joues", time: "10 min", price: "14€" },
         { name: "Forfaits visage complet", time: "45 min", price: "45€" },
-        { name: "Forfaits sourcils + lèvres", time: "25 min", price: "22€" }
+        { name: "Forfaits sourcils + lèvres", time: "25 min", price: "22€" },
+        { name: "Teinture", time: "10 min", price: "5€" }
         
     ];
 
@@ -32,8 +33,8 @@
     let forfaits_corps = [
         { name: "1/2 jambes, échancré, aisselles", time: "55 min", price: "50€"},
         { name: "1/2 jambes, complet, aisselles", time: "1 h 05 min", price: "59€"},
-        { name: "Jambes complètes, complet, aisselles", time: "1 h 05 min", price: "67€"},
-        { name: "Jambes complètes, échancré, aisselles", time: "1 h 15 min", price: "69€"}
+        { name: "Jambes complètes, échancré, aisselles", time: "1 h 05 min", price: "59€"},
+        { name: "Jambes complètes, complet, aisselles", time: "1 h 15 min", price: "67€"}
     ];
 </script>
 
@@ -106,6 +107,7 @@
         </table>
     </div>
     <p>Les épilations sont réalisées avec des cires certifiées bio. 🍃</p>
+    <p>les épilations visage sans autres prestations se feront directement au sein du salon Line’s coiffure situé au 11 bis boulevard de l’europe , 69600 oullins.</p>
 </div>
 
 

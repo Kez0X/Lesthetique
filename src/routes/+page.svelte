@@ -33,8 +33,8 @@
 					<button class="construction-btn" on:click={() => window.location.href = '/contact'}>
 						<b>Prendre rendez-vous sur planity 💻</b>
 					</button>
-					<p class="follow-us-localisation">Notre secteur d'activité : Oullins, Saint-Genis-Laval, Sainte-Foy-lès-Lyon, La Mulatière, Tassin,
-						Craponne, Millery, Charly, Vernaison, Irigny, Brignais,
+					<p class="follow-us-localisation">Notre secteur d'activité : Oullins, Saint-Genis-Laval, Sainte-Foy-lès-Lyon, La Mulatière, Tassin
+						, Millery, Charly, Vernaison, Irigny, Brignais,
 						Chaponost, Pierre-bénite</p>
 					<p class="follow-us" style="margin-top : 5px">Nous suivre sur les réseaux sociaux</p>
 					<div class="social-icons">

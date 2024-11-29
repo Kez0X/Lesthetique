@@ -1,28 +1,25 @@
 <svelte:head>
-    <title>Soins du Visage - L'esthétique</title>
-    <meta name="description" content="Découvrez nos soins du visage avec des produits bio de la marque ClaireJoie." />
+    <title>Maquillage - L'esthétique</title>
+    <meta name="description" content="Découvrez nos prestations d'onglerie : soins des mains et des pieds, pose de vernis, et bien plus." />
 </svelte:head>
 
 <script>
-    import SoinsVisagesImage from '$lib/images/soins-visages.png';
+    import OnglerieImage from '$lib/images/onglerie.png';
 
     let prestations = [
-        { name: "Relax & Sculpt", time: "1h", price: "60€", description : "Massage du visage tonifiant, relaxant & repulpant" },
-        { name: "Relaxant", time: "30min", price: "35€", description : "Massage relaxant" },
-        { name: "Express", time: "50min", price: "50€", description : "Nettoyage en profondeur, gommage, masque et crème de fin de soin" },
-        { name: "Personnalisé", time: "1h", price: "65€", description : "Nettoyage en profondeur, gommage à grains, massage relaxant manuel + rouleaux, masque crème + massage des mains, masque led + massage du cuir chevelu, crème + contour des yeux" },
-        { name: "Personnalisé anti-age", time: "1h 10 min", price: "75€", description : "Nettoyage en profondeur, peeling, massage anti ride manuel, massage relaxant manuel, masque crème argan + modelage des mains, masque led + modelage du cuir chevelu, crème + contour des yeux" },
-        { name: "Forfait bien être", time: "2h", price: "117€", description : "1h de soin visage + 1h de soin corps" },
-        { name: "Forfait Spa", time: "2h 30min", price: "148€", description : "1h de soin visage + 1h de soin corps + gommage corps" }
+        { name: "Mariée", time: "-", price: "80€", description: "Une séance essaie & jour J" },
+        { name: "Maquillage soirée", time: "45min", price: "40€", description: "-" }
     ];
 </script>
 
-<div class="soins-visages-page">
-    <div class="header-section" style="background-image: url({SoinsVisagesImage})">
+<div class="onglerie-page">
+    <!-- Image de fond et titre -->
+    <div class="header-section" style="background-image: url({OnglerieImage});">
         <div class="overlay"></div>
-        <h1>Prestations Soins du Visage</h1>
+        <h1>Prestations Maquillage</h1>
     </div>
 
+    <!-- Tableau des prestations -->
     <div class="prestations-table">
         <table>
             <thead>
@@ -45,9 +42,8 @@
             </tbody>
         </table>
     </div>
-    <p>Les soins du visage sont réalisés avec des produits bio français de la marque ClaireJoie. 🍃</p>
+    <p>Le maquillage est réalisé avec des produits conventionnels.</p>
 </div>
-
 
 <style>
     .header-section {
@@ -112,14 +108,6 @@
         color: #555;
     }
 
-    .prestations-table tbody tr:nth-child(odd) {
-        background-color: #fff8fa;
-    }
-
-    .prestations-table td, .prestations-table th {
-        padding: 12px;
-    }
-
     p{
         text-align : center;
         font-size : 1em;
@@ -127,6 +115,14 @@
         font-family: 'Crimson Text', sans-serif;
         font-weight : bold;
         color : #4A4A4A;
+    }
+
+    .prestations-table tbody tr:nth-child(odd) {
+        background-color: #fff8fa;
+    }
+
+    .prestations-table td, .prestations-table th {
+        padding: 12px;
     }
 
     @media (max-width: 768px) {

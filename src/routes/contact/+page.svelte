@@ -14,12 +14,12 @@
 
     <div class="contact-info">
         <p><strong>Anaïs :</strong> <a href="tel:+33660363406">+33 6 60 36 34 06</a></p>
-        <p><strong>Alexandrine :</strong> <a href="tel:+33000000000">+33 0 00 00 00 00</a></p>
+        <p><strong>Alexandrine :</strong> <a href="tel:+33000000000">+33 6 24 74 87 16</a></p>
     </div>
 
     <div class="social-icons">
         <a href="https://www.facebook.com/profile.php?id=61563897359229" aria-label="Visitez notre page Facebook">
-            <img src={FacebookIcon} alt="Facebook" />
+            <img src={FacebookIcon} alt="Facebook"/>
         </a>
         <a href="https://www.instagram.com/anaisdelice.estheticienne69" aria-label="Visitez notre page Instagram">
             <img src={InstagramIcon} alt="Instagram" />

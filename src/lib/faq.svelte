@@ -3,7 +3,7 @@
     let faqs = [
         {
             question: "Où vous déplacez vous ?",
-            answer: "Nous sommes basés sur Oullins et nous nous déplaçons dans la région sud-ouest lyonnaise : oullins, ste foy-lès-lyon,saint genis laval, tassin, irigny, pierre bénite, la mulatière, charly, vernaison, millery, chaponost, brignais, Craponne",
+            answer: "Nous sommes basés sur Oullins et nous nous déplaçons dans la région sud-ouest lyonnaise : oullins, sainte foy-lès-lyon,saint genis laval, tassin, irigny, pierre bénite, la mulatière, charly, vernaison, millery, chaponost, brignais",
             open: false
         },
         {
