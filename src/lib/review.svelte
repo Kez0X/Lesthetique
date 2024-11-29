@@ -1,158 +1,128 @@
 <script>
     import { onMount } from "svelte";
-    import { writable } from "svelte/store";
 
-    let reviews = writable([
-        { id: 1, name: "Alice", rating: 5, comment: "Service impeccable, je recommande !" },
-        { id: 2, name: "Bob", rating: 4, comment: "Très satisfaite, à refaire." },
-        // Ajoute d'autres avis pour la démonstration
-        { id: 3, name: "Charlie", rating: 3, comment: "C'était correct." },
-        { id: 4, name: "Diana", rating: 5, comment: "Un service exceptionnel." },
-        { id: 5, name: "Ethan", rating: 2, comment: "Pas terrible." },
-        { id: 6, name: "Fiona", rating: 4, comment: "Très bon rapport qualité/prix." }
-    ]);
+    // Stockage des avis
+    let reviews = [];
+    let isLoading = true; // Indicateur de chargement
 
-    let newRating = 0;
-    let newComment = "";
-    let newName = "";
-
-    function addReview() {
-        if (newRating > 0 && newComment.trim() && newName.trim()) {
-            reviews.update(currentReviews => [
-                ...currentReviews,
-                {
-                    id: Date.now(),
-                    name: newName,
-                    rating: newRating,
-                    comment: newComment,
-                }
-            ]);
-            newRating = 0;
-            newComment = "";
-            newName = "";
+    // Fonction pour récupérer les avis depuis l'API Planity
+    async function fetchReviews() {
+        try {
+            const response = await fetch("https://api.planity.com/reviews"); // URL d'exemple, à adapter
+            if (response.ok) {
+                const data = await response.json();
+                reviews = data.reviews || []; // Adaptez selon la structure des données
+            } else {
+                console.error("Erreur lors de la récupération des avis Planity :", response.status);
+            }
+        } catch (error) {
+            console.error("Impossible de récupérer les avis :", error);
+        } finally {
+            isLoading = false;
         }
     }
 
-    // Fonction pour obtenir les 5 meilleurs avis
-    $: topReviews = $reviews
-        .slice()
-        .sort((a, b) => b.rating - a.rating)
-        .slice(0, 5); // Limite à 5 avis
+    // Charger les avis lors du montage du composant
+    onMount(() => {
+        fetchReviews();
+    });
+
+    // Fonction pour rediriger vers la page Planity
+    function bookAppointment() {
+        window.open("https://www.planity.com", "_blank");
+    }
 </script>
 
 <div class="reviews-section">
-    <h2>Ce que disent nos clients ✨</h2>
+    <h2>Ce que disent nos clients 🌸</h2>
 
-    {#each topReviews as review}
-        <div class="review-card">
-            <div class="review-author">{review.name}</div>
-            <div class="review-rating">{"⭐".repeat(review.rating)}</div>
-            <p>{review.comment}</p>
-        </div>
-    {/each}
-
-    <div class="add-review">
-        <h3>Laissez votre avis</h3>
-        <input
-            type="text"
-            placeholder="Votre nom"
-            bind:value={newName}
-            required
-            style="margin-bottom: 10px; padding: 10px; width: 100%; border-radius: 5px; border: 1px solid #ddd;"
-        />
-
-        <div class="rating-stars">
-            {#each Array(5) as _, i}
-                <span
-                    class="star {i < newRating ? '' : 'inactive'}"
-                    on:click={() => (newRating = i + 1)}
-                >★</span>
+    {#if isLoading}
+        <p>Chargement des avis...</p>
+    {:else if reviews.length === 0}
+        <p>Aucun avis à afficher.</p>
+    {:else}
+        <div class="grid-container">
+            {#each reviews as review}
+                <div class="review-card">
+                    <div class="review-author">{review.authorName}</div>
+                    <div class="review-rating">{"⭐".repeat(review.rating)}</div>
+                    <p>{review.comment}</p>
+                </div>
             {/each}
         </div>
+    {/if}
 
-        <textarea
-            placeholder="Votre avis"
-            bind:value={newComment}
-            rows="4"
-            style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ddd; resize: none;"
-            required
-        ></textarea>
-
-        <button class="submit-btn" on:click={addReview}>Envoyer</button>
-    </div>
+    <button class="button" on:click={bookAppointment}>
+        Prendre rendez-vous sur Planity
+    </button>
 </div>
-
 
 <style>
     .reviews-section {
-        background: linear-gradient(to bottom, #f8f8f8, #ffebf0);
-        padding: 60px;
-        max-width: 800px;
-        margin: 0 auto;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        background-color: #f8f8f8;
+        padding: 50px 0;
         text-align: center;
     }
 
+    h2 {
+        font-size: 2em;
+        margin-bottom: 30px;
+        color: #333;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
     .review-card {
-        background-color: #fff;
-        border-radius: 8px;
+        position: relative;
+        background-color: white;
+        border-radius: 15px;
         padding: 20px;
-        margin-bottom: 20px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s;
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .review-card:hover {
-        transform: scale(1.02);
+        transform: scale(1.03);
+        box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2);
     }
 
     .review-author {
         font-weight: bold;
         color: #333;
-    }
-
-    .review-rating {
-        color: #ff5a5a;
-        font-size: 1.2em;
-    }
-
-    .add-review {
-        margin-top: 40px;
-        padding: 20px;
-        background-color: #fff;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .rating-stars {
-        display: flex;
-        gap: 5px;
-        cursor: pointer;
-        justify-content: center;
         margin-bottom: 10px;
     }
 
-    .star {
-        font-size: 1.5em;
-        color: #ff5a5a;
+    .review-rating {
+        color: #ff7f7f;
+        font-size: 1.2em;
+        margin-bottom: 10px;
     }
 
-    .star.inactive {
-        color: #ccc;
-    }
-
-    button.submit-btn {
-        background-color: #ff7f7f;
-        color: #fff;
+    .button {
+        display: inline-block;
         padding: 10px 20px;
-        border: none;
+        background-color: #ff7f7f;
+        color: white;
         border-radius: 5px;
+        text-align: center;
+        font-weight: bold;
         cursor: pointer;
         transition: background-color 0.3s;
     }
 
-    button.submit-btn:hover {
+    .button:hover {
         background-color: #ff5a5a;
+    }
+
+    p {
+        color: #555;
+        font-size: 1em;
+        margin-top: 20px;
     }
 </style>

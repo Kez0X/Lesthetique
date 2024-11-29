@@ -9,46 +9,56 @@
 </script>
 
 <div class="contact-page">
-    <h1>Contactez-nous pour prendre rendez-vous</h1>
-    <p>Par appel, SMS, Facebook ou Instagram (réponse sous 24h à 48h) :</p>
+    <h1>Contactez-nous</h1>
+    <p>Joignez-nous par appel, SMS, Facebook ou Instagram. Réponse sous 24h à 48h.</p>
 
     <div class="contact-info">
-        <p><strong>Anaïs :</strong> +33 6 60 36 34 06</p>
-        <p><strong>Alexandrine :</strong> +33 0 00 00 00 00</p>
+        <p><strong>Anaïs :</strong> <a href="tel:+33660363406">+33 6 60 36 34 06</a></p>
+        <p><strong>Alexandrine :</strong> <a href="tel:+33000000000">+33 0 00 00 00 00</a></p>
     </div>
 
     <div class="social-icons">
-        <a href="https://www.facebook.com/profile.php?id=61563897359229"><img src={FacebookIcon} alt="Facebook" /></a>
-        <a href="https://www.instagram.com/anaisdelice.estheticienne69"><img src={InstagramIcon} alt="Instagram" /></a>
+        <a href="https://www.facebook.com/profile.php?id=61563897359229" aria-label="Visitez notre page Facebook">
+            <img src={FacebookIcon} alt="Facebook" />
+        </a>
+        <a href="https://www.instagram.com/anaisdelice.estheticienne69" aria-label="Visitez notre page Instagram">
+            <img src={InstagramIcon} alt="Instagram" />
+        </a>
     </div>
 
-    <p class="payment-info">Paiement au début de la séance. Réservé uniquement aux femmes.</p>
+    <p class="payment-info">💳 Paiement au début de la séance. Réservé uniquement aux femmes.</p>
 
-    <!-- Section FAQ avec des exemples de questions -->
+    <a href="https://www.planity.com" target="_blank" class="btn-planity">
+        Prendre rendez-vous sur Planity
+    </a>
+
     <div class="faq-section">
-        <h2>Que dois-je dire lors de l'appel ?</h2>
-        <p>Appelez-nous et indiquez les détails de votre rendez-vous : à domicile ou en institut, votre nom, la date, l’heure, l’adresse (si nécessaire), le nom de votre esthéticienne et la prestation souhaitée. Si vous laissez un message vocal, mentionnez ces informations, et nous vous rappellerons pour confirmer.</p>
+        <h2>Que dire lors de l'appel ?</h2>
+        <p>Appelez-nous et précisez si vous préférez un rendez-vous à domicile ou en institut. Indiquez votre nom, la date, l’heure, l’adresse (si nécessaire), le nom de l’esthéticienne et la prestation souhaitée. Si vous laissez un message vocal, mentionnez ces informations, et nous vous rappellerons pour confirmer.</p>
     </div>
+
     <div class="faq-section">
-        <h2>Voir comment écrire le message</h2>
-        <p>Envoyez un message ou un mail pour prendre rendez-vous. Précisez votre nom, l’heure et le jour souhaités, l’adresse si c'est à domicile, l’esthéticienne et la prestation choisie. Vos données sont sécurisées grâce à notre politique de confidentialité.</p>
+        <h2>Comment écrire un message ?</h2>
+        <p>Envoyez-nous un message ou un e-mail pour réserver. Mentionnez votre nom, l’heure et le jour souhaités, l’adresse si c'est à domicile, l’esthéticienne et la prestation choisie. Vos données sont sécurisées grâce à notre politique de confidentialité.</p>
     </div>
 </div>
 
 <style>
-    /* Styles globaux pour la page de contact */
+    /* Page générale */
     .contact-page {
-        background: linear-gradient(to bottom, #ffebf0, #f8f8f8);
-        padding: 40px;
-        border-radius: 12px;
-        max-width: 700px;
-        margin: 0 auto;
-        font-family: Arial, sans-serif;
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        margin-top: 30px;
+        background: linear-gradient(to bottom, #fff8fa, #ffffff);
+        padding: 40px 20px;
+        border-radius: 16px;
+        max-width: 800px;
+        margin: 30px auto;
+        font-family: "Poppins", sans-serif;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
         text-align: center;
+        line-height: 1.6;
     }
 
-    /* Style pour le titre de la page */
+    /* Titre principal */
     h1 {
         font-size: 2em;
         color: #d45a72;
@@ -56,26 +66,25 @@
         font-weight: bold;
     }
 
-    /* Style pour les paragraphes */
+    /* Paragraphes généraux */
     p {
-        color: #555;
+        color: #444;
         font-size: 1.1em;
         margin-bottom: 15px;
     }
 
-    /* Informations de contact */
+    /* Section des informations de contact */
     .contact-info {
         background-color: #ffe3e9;
         padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        margin-bottom: 20px;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        margin: 20px 0;
     }
 
     .contact-info p {
-        margin: 10px 0;
         font-weight: 500;
-        color: #333;
+        margin: 8px 0;
     }
 
     .contact-info a {
@@ -88,7 +97,27 @@
         text-decoration: underline;
     }
 
-    /* Icônes des réseaux sociaux */
+    /* Bouton Planity */
+    .btn-planity {
+        display: inline-block;
+        margin: 20px 0;
+        padding: 12px 20px;
+        background-color: #ff7f7f;
+        color: white;
+        font-weight: bold;
+        font-size: 1em;
+        text-decoration: none;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .btn-planity:hover {
+        background-color: #fb6f6f;
+        transform: scale(1.05);
+    }
+
+    /* Réseaux sociaux */
     .social-icons {
         margin-top: 20px;
     }
@@ -96,16 +125,16 @@
     .social-icons a {
         display: inline-block;
         margin: 0 10px;
-        transition: transform 0.3s ease;
+        transition: opacity 0.3s ease;
     }
 
     .social-icons a:hover {
-        transform: scale(1.1);
+        opacity: 0.8;
     }
 
     .social-icons img {
-        width: 35px;
-        height: 35px;
+        width: 40px;
+        height: 40px;
     }
 
     /* Informations de paiement */
@@ -116,18 +145,18 @@
         font-size: 1em;
     }
 
-    /* Style de la FAQ */
+    /* Section FAQ */
     .faq-section {
-        background: #ffe3e9;
+        background: #f9f9f9;
         padding: 20px;
-        border-radius: 8px;
-        margin-top: 20px;
+        border-radius: 12px;
+        margin-top: 25px;
         text-align: left;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
     }
 
     .faq-section h2 {
-        font-size: 1.3em;
+        font-size: 1.4em;
         color: #d45a72;
         font-weight: bold;
         margin-bottom: 10px;
@@ -137,6 +166,7 @@
         color: #555;
         font-size: 1em;
         line-height: 1.6;
+        margin-bottom: 0;
     }
 
     /* Responsive design */
@@ -145,13 +175,22 @@
             padding: 20px;
         }
 
-        .social-icons img {
-            width: 30px;
-            height: 30px;
+        h1 {
+            font-size: 1.8em;
         }
 
-        .contact-info, .faq-section {
-            padding: 15px;
+        .faq-section h2 {
+            font-size: 1.3em;
+        }
+
+        .social-icons img {
+            width: 35px;
+            height: 35px;
+        }
+
+        .btn-planity {
+            padding: 10px 18px;
+            font-size: 0.9em;
         }
     }
 </style>
