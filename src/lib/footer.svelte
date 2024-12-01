@@ -1,3 +1,7 @@
+<script>
+    import Brochure from '$lib/images/Beige Organic Beauty and Spa Brochure.pdf.pdf';
+</script>
+
 <div class="footer">
     <div class="footer-container">
         <div class="section-right">
@@ -22,11 +26,9 @@
                 <li>Epilation : tout le corps</li>
                 <li>Massage : dos & jambes</li>
             </ul>
-            <a href="">Télécharger la brochure complète</a>
+            <a href="{Brochure}">Télécharger la brochure complète</a>
             <h3>Notre politique</h3>
             <a href="/politique_de_confidentialite">Politique de confidentialité</a>
-            <p>Nous nous assurons aussi de la sécurité du paiement de nos clients</p>
-            <a href="">Sécurité de paiement</a>
         </div>
     </div>
 </div>

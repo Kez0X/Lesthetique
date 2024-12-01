@@ -15,7 +15,7 @@
 		  prestations: [
 			 { name: "Soin des mains", price: "50€" },
 			 { name: "Soin des pieds", price: "55€" },
-			 { name: "Pose de vernis semi permanent couleur unie", price: "40€" }
+			 { name: "Pose de vernis semi permanent uni", price: "40€" }
 		  ]
 	   },
 	   {
