@@ -1,13 +1,11 @@
 <script>
 	import '../app.css';
+	import Navbar from '$lib/navbar.svelte';
+	import Footer from '$lib/footer.svelte';	
 </script>
 
 <div class="app">
-	<!-- <Header /> -->
-
+	<Navbar />
 	<slot />
-
-	<!-- <footer>
-		<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
-	</footer> -->
+	<Footer />
 </div>

@@ -9,11 +9,22 @@
 
 body {
     font-family: 'Crimson Text', sans-serif;
+    overflow-x:inherit;
+    background-color: #f8f8f8;
+}
+
+.home-page-container{
     background: url('lib/images/background.webp') no-repeat center center/cover;
-    height: 100vh;
+    padding-top: 0; 
+    margin-top: -80px;
+}
+
+.page-container{
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh;
+
 }
 
 .container {
@@ -56,10 +67,22 @@ h1 {
     font-size: 1rem;
 }
 
+.construction-btn:hover {
+    background-color: #ff5a5a; /* Couleur au survol */
+}
+
 .follow-us {
     margin-bottom: 10px;
     color: #6D6D6D;
     font-size: 1rem;
+}
+
+.follow-us-localisation{
+    margin-bottom: 10px;
+    color: #6D6D6D;
+    font-size: 0.8rem;
+    width : 70%;
+    margin: auto;
 }
 
 .social-icons a {
@@ -80,6 +103,11 @@ h1 {
     }
     .container {
         width: 90%;
+    }
+
+    .button{
+        display : flex;
+        flex-direction : column;
     }
 
     h1 {
