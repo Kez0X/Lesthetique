@@ -3,12 +3,12 @@
     let faqs = [
         {
             question: "Où vous déplacez vous ?",
-            answer: "Nous sommes basés sur Oullins et nous nous déplaçons dans la région sud-ouest lyonnaise : oullins, sainte foy-lès-lyon,saint genis laval, tassin, irigny, pierre bénite, la mulatière, charly, vernaison, millery, chaponost, brignais",
+            answer: "Nous sommes basés sur Oullins et nous nous déplaçons dans la région sud-ouest lyonnaise : Oullins, Sainte Foy-lès-lyon, Saint Genis Laval, Tassin, Irigny, Pierre Bénite, la Mulatière, Charly, Vernaison, Millery, Chaponost, Brignais.",
             open: false
         },
         {
             question: "Vous déplacez vous a domicile pour toutes les prestations ?",
-            answer: "Non, les épilations visage sans autres prestations se feront directement au sein du salon Line’s coiffure situé au 11 bis boulevard de l’europe , 69600 oullins.",
+            answer: "Non, les épilations visage sans autres prestations se feront directement au sein du salon Line’s coiffure situé au 11 bis boulevard de l’europe , 69600 oullins. Nous disposons d'un espace dédié là-bas.",
             open: false
         },
         {
@@ -23,7 +23,7 @@
         },
         {
             question: "Les mineurs peuvent t-ils prendrent des prestations ?",
-            answer: "Tous soins corps, drainage du visage, épilations du maillot intégral et brésilien ainsi que les réhaussements de cils et pose de vernis semi permanent ne sont pas pratiqués sur les mineurs. Les soins du visage et les autres prestations sont quant à elles réalisables avec accord et présence parentale au moment du rdv.",
+            answer: "Tous soins corps, drainage du visage, épilations du maillot intégral et brésilien ainsi que les réhaussements de cils et pose de vernis semi permanent ne sont pas pratiqués sur les mineurs. Les soins du visage et les autres prestations sont quant à eux sont réalisables avec accord et présence parentale au moment du rendez-vous.",
             open: false
         },
         {

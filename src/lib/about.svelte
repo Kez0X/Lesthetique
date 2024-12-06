@@ -6,7 +6,7 @@
 
 <div class="section-about">
     <h2>À PROPOS DE NOUS</h2>
-    <p>Nous sommes 2 esthéticiennes indépendantes qui se sont lancés en décembre 2024, dans le but de répondre au mieux aux besoins de leurs clientèle. C’est pourquoi nous ferons toujours de notre mieux pour vous faire passer le meilleur moment.</p>
+    <p>Nous sommes 2 esthéticiennes indépendantes qui se sont lancées en décembre 2024, dans le but de répondre au mieux aux besoins de leur clientèle. C’est pourquoi nous ferons toujours de notre mieux pour vous faire passer le meilleur moment.</p>
     <div class="estheticiennes">
         <div class="estheticienne-description">
             <h3>Anaïs</h3>
@@ -32,17 +32,25 @@
     <div class="image-section">
         <div class="image-with-description">
             <img alt="Image du métro d'Oullins" src={OullinsMetro}/>
-            <p>Après avoir écouté nos clients, nous avons décidé de nous déplacer directement à domicile afin de leur économiser le maximum de temps. Une entreprise à domicile basée à Oullins pour vous correspondre au mieux.</p>
+            <p>Nous avons décidé de nous déplacer à domicile afin de répondre à une demande de gain de
+                temps et d’adaptabilité, tout en recréant l’ambiance relaxante et cocooning d’un institut de
+                beauté au sein de chez vous.</p>
         </div>
 
         <div class="image-with-description">
             <img alt="Image de la mairie d'Oullins" src={OullinsMairie}/>
-            <p>Oullins nous semblait être le meilleur lieu de départ pour débuter notre activité, en raison de notre clientèle déjà bien établie et de la demande croissante. Nous étions auparavant esthéticiennes dans l’entreprise Yves Rocher, mais après plusieurs années, nous avons décidé de nous lancer à notre compte pour mieux servir nos clientes.</p>
+            <p>Oullins était une évidence, car c’est là où tout a commencé pour nous professionnellement.
+                Nous avions donc déjà des liens privilégiés avec les commerçants ainsi qu’avec les
+                habitants de la commune. C’est également un point central pour les autres villes où nous
+                proposons nos services.</p>
         </div>
 
         <div class="image-with-description">
             <img alt="Image de notre salon de coiffure partenaire" src={SalonCoiffure}/>
-            <p>Pour celles qui ne peuvent ou ne souhaitent pas avoir de prestations à domicile, nous avons prévu une petite surprise : un jour par semaine réservé dans un salon de coiffure partenaire à Oullins, pour que vous puissiez venir profiter de nos services sur place.</p>
+            <p>Vous pouvez nous retrouver au sein du salon de coiffure Line’s Coiffure, situé au 11 bis
+                boulevard de l’Europe à Oullins, afin de réaliser : les épilations du visage sans autres
+                prestations, les soins des mains et la pose de vernis semi-permanent.
+                Accessible en transport en commun ou stationnement libre et gratuit au sein de la résidence.</p>
         </div>
     </div>
 
