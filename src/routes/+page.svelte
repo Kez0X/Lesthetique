@@ -4,6 +4,7 @@
 </svelte:head>
 
 <script>
+	import { injectAnalytics } from '@vercel/analytics/sveltekit'
 	import Instagram from '$lib/images/Instagram.webp';
 	import Facebook from '$lib/images/Facebook.png';
 	import Prestations from '$lib/prestations.svelte';
