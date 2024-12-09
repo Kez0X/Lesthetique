@@ -1,7 +1,9 @@
 <svelte:head>
-    <title>Soins du Corps - L'esthétique</title>
-    <meta name="description" content="Découvrez nos soins du corps avec des huiles végétales bio." />
+    <title>Soins du Corps Bio - Esthéticienne à Domicile - L'esthétiqueAA</title>
+    <meta name="description" content="Découvrez nos soins du corps avec des huiles végétales bio pour une expérience de bien-être unique. Profitez de massages relaxants et revitalisants réalisés par nos esthéticiennes à domicile à Oullins, Saint-Genis-Laval, Sainte-Foy-lès-Lyon, et alentours." />
+    <meta name="keywords" content="épilation bio, épilation à domicile, soins de beauté bio, épilation Oullins, épilation Saint-Genis-Laval, épilation Lyon, esthetiqueAA, l'esthetiqueAA, L'EsthetiqueAA, EsthetiqueAA, esthetiqueAA Oullins, l'esthetiqueAA Oullins, L'EsthetiqueAA Oullins, EsthetiqueAA Oullins, esthetique à domicile, esthetiqueAA domicile">
 </svelte:head>
+
 
 <script>
     import SoinsCorpsImage from '$lib/images/massages.png';

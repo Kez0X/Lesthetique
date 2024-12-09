@@ -1,8 +1,11 @@
 <script>
 	import '../app.css';
-	import { injectAnalytics } from '@vercel/analytics/sveltekit'
 	import Navbar from '$lib/navbar.svelte';
-	import Footer from '$lib/footer.svelte';	
+	import Footer from '$lib/footer.svelte';
+	import { injectAnalytics } from '@vercel/analytics/sveltekit';
+
+	// Inject Vercel Analytics lors de l'initialisation
+	injectAnalytics();
 </script>
 
 <div class="app">

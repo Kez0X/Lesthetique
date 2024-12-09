@@ -1,6 +1,7 @@
 <svelte:head>
-    <title>Onglerie - Manucure Pédicure - L'esthétique</title>
-    <meta name="description" content="Découvrez nos prestations d'onglerie : soins des mains et des pieds, pose de vernis, et bien plus." />
+    <title>Onglerie à Domicile - Manucure & Pédicure - L'esthétique</title>
+    <meta name="description" content="Profitez de nos services d'onglerie à domicile : manucure, pédicure, pose de vernis classique ou semi-permanent. Disponible à Oullins, Saint-Genis-Laval, Sainte-Foy-lès-Lyon et les alentours." />
+    <meta name="keywords" content="épilation bio, épilation à domicile, soins de beauté bio, épilation Oullins, épilation Saint-Genis-Laval, épilation Lyon, esthetiqueAA, l'esthetiqueAA, L'EsthetiqueAA, EsthetiqueAA, esthetiqueAA Oullins, l'esthetiqueAA Oullins, L'EsthetiqueAA Oullins, EsthetiqueAA Oullins, esthetique à domicile, esthetiqueAA domicile">
 </svelte:head>
 
 <script>

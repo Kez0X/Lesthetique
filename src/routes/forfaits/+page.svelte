@@ -1,6 +1,7 @@
 <svelte:head>
-    <title>Forfaits - L'esthétique</title>
-    <meta name="description" content="Découvrez nos forfaits de soins pour le visage et le corps." />
+    <title>Forfaits - L'esthétiqueAA</title>
+    <meta name="description" content="Découvrez nos forfaits personnalisés pour des soins du visage et du corps à domicile. Offrez-vous des moments de bien-être à Oullins, Saint-Genis-Laval et les environs." />
+    <meta name="keywords" content="épilation bio, épilation à domicile, soins de beauté bio, épilation Oullins, épilation Saint-Genis-Laval, épilation Lyon, esthetiqueAA, l'esthetiqueAA, L'EsthetiqueAA, EsthetiqueAA, esthetiqueAA Oullins, l'esthetiqueAA Oullins, L'EsthetiqueAA Oullins, EsthetiqueAA Oullins, esthetique à domicile, esthetiqueAA domicile">
 </svelte:head>
 
 <script>

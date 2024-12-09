@@ -1,6 +1,7 @@
 <svelte:head>
-    <title>Rehaussement de Cils - L'esthétique</title>
-    <meta name="description" content="Découvrez nos services de rehaussement de cils pour un regard sublimé." />
+    <title>Rehaussement de Cils - Esthéticienne à Domicile - L'esthétiqueAA</title>
+    <meta name="description" content="Sublimez votre regard avec nos services de rehaussement de cils à domicile. Intervention professionnelle et produits de qualité, disponibles à Oullins, Saint-Genis-Laval, Sainte-Foy-lès-Lyon, et environs." />
+    <meta name="keywords" content="épilation bio, épilation à domicile, soins de beauté bio, épilation Oullins, épilation Saint-Genis-Laval, épilation Lyon, esthetiqueAA, l'esthetiqueAA, L'EsthetiqueAA, EsthetiqueAA, esthetiqueAA Oullins, l'esthetiqueAA Oullins, L'EsthetiqueAA Oullins, EsthetiqueAA Oullins, esthetique à domicile, esthetiqueAA domicile">
 </svelte:head>
 
 <script>

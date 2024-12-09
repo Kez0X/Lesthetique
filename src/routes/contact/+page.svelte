@@ -1,6 +1,7 @@
 <svelte:head>
-    <title>L'esthétique - Contact</title>
+    <title>Contact - L'EsthetiqueAA</title>
     <meta name="description" content="Contactez L'esthétique pour prendre rendez-vous et découvrir nos prestations." />
+    <meta name="keywords" content="épilation bio, épilation à domicile, soins de beauté bio, épilation Oullins, épilation Saint-Genis-Laval, épilation Lyon, esthetiqueAA, l'esthetiqueAA, L'EsthetiqueAA, EsthetiqueAA, esthetiqueAA Oullins, l'esthetiqueAA Oullins, L'EsthetiqueAA Oullins, EsthetiqueAA Oullins, esthetique à domicile, esthetiqueAA domicile">
 </svelte:head>
 
 <script>

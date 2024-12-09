@@ -1,8 +1,8 @@
 <svelte:head>
-    <title>Maquillage - L'esthétique</title>
-    <meta name="description" content="Découvrez nos prestations d'onglerie : soins des mains et des pieds, pose de vernis, et bien plus." />
+    <title>Maquillage Professionnel à Domicile - L'esthétiqueAA</title>
+    <meta name="description" content="Profitez de nos services de maquillage à domicile : maquillage de jour, maquillage de soirée, mariée, et plus. Disponible à Oullins, Saint-Genis-Laval, Sainte-Foy-lès-Lyon et les environs." />
+    <meta name="keywords" content="épilation bio, épilation à domicile, soins de beauté bio, épilation Oullins, épilation Saint-Genis-Laval, épilation Lyon, esthetiqueAA, l'esthetiqueAA, L'EsthetiqueAA, EsthetiqueAA, esthetiqueAA Oullins, l'esthetiqueAA Oullins, L'EsthetiqueAA Oullins, EsthetiqueAA Oullins, esthetique à domicile, esthetiqueAA domicile">
 </svelte:head>
-
 <script>
     import OnglerieImage from '$lib/images/onglerie.png';
 
