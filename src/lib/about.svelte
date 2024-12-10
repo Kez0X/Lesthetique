@@ -11,8 +11,8 @@
         <div class="estheticienne-description">
             <h3>Anaïs</h3>
             <p>Étant diplômée du CAP, BP et BTS esthétique avec plus de 7 ans d’expérience dans
-                le domaine, j’ai décidé d’ouvrir mon entreprise pour vous offrir des soins personnalisés avec
-                des produits et méthodes respectueuses de votre peau. Je prends le temps de comprendre
+                le domaine, j'ai décidé avec ma collaboratrice d’ouvrir notre entreprise pour vous offrir des soins personnalisés avec
+                des produits et méthodes respectueuses de votre peau. Nous prenons le temps de comprendre
                 vos besoins pour vous garantir satisfaction et détente. Hâte de vous rencontrer pour
                 partager ce moment beauté avec vous !</p>
             <button class="construction-btn" on:click={() => window.location.href = '/contact'}><b>Prendre rendez-vous 😊</b></button>
@@ -22,7 +22,7 @@
         </div>
         <div class="estheticienne-description">
             <h3>Alexandrine</h3>
-            <p>Esthéticienne depuis plus de 2 ans, je suis passionnée par la beauté et le bien-être. Mon objectif est de vous offrir des soins personnalisés pour un moment de détente inoubliable. Que ce soit pour des épilations, des soins du visage ou des manucures, je mets tout en œuvre pour répondre à vos attentes. Hâte de vous accueillir et de partager ce moment de beauté avec vous !</p>
+            <p>Esthéticienne depuis plus de 2 ans, je suis passionnée par la beauté et le bien-être. Notre objectif est de vous offrir des soins personnalisés pour un moment de détente inoubliable. Que ce soit pour des épilations, des soins du visage ou des manucures, nous mettons tout en œuvre pour répondre à vos attentes. Hâte de vous accueillir et de partager ce moment de beauté avec vous !</p>
             <button class="construction-btn" on:click={() => window.location.href = '/contact'}><b>Prendre rendez-vous 😊</b></button>
             <p class="description">Paiement au début de la scéance -
             (cartes ou espèces, pas de chèques) -
