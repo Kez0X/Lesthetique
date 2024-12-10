@@ -6,7 +6,7 @@
 
 <div class="section-about">
     <h2>À PROPOS DE NOUS</h2>
-    <p>Nous sommes 2 esthéticiennes indépendantes qui se sont lancées en décembre 2024, dans le but de répondre au mieux aux besoins de leur clientèle. C’est pourquoi nous ferons toujours de notre mieux pour vous faire passer le meilleur moment.</p>
+    <p>Nous sommes 2 esthéticiennes indépendantes qui se sont lancées en décembre 2024, dans le but de répondre au mieux aux besoins de leur clientèle. C’est pourquoi nous ferons toujours de notre mieux pour vous faire passer le meilleur moment. Nous vous invitons à découvrir l'esthétiqueAA, spécialiste de l'esthétique à domicile pour femmes à Oullins et alentours. Prestations de massages, épilations, onglerie à domicile sur les secteurs d'Oullins, Saint-Genis-Laval, Sainte-Foy-lès-Lyon, La Mulatière, Tassin, Millery, Charly, Vernaison, Irigny, Brignais, Chaponost, Pierre-Bénite. Profitez de soins de qualité directement chez vous, dans un cadre de douceur et de professionnalisme.</p>
     <div class="estheticiennes">
         <div class="estheticienne-description">
             <h3>Anaïs</h3>
