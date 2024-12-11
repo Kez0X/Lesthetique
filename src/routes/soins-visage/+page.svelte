@@ -1,7 +1,7 @@
 <svelte:head>
-    <title>Soins du Visage Bio - Esthéticienne à Domicile - L'esthétiqueAA</title>
+    <title>Soins du Visage Bio - Esthéticienne à Domicile - L'esthétique AA</title>
     <meta name="description" content="Découvrez nos soins du visage à base de produits bio de la marque ClaireJoie. Offrez à votre peau un moment de douceur et de bien-être avec nos soins personnalisés, disponibles à domicile à Oullins, Saint-Genis-Laval, Sainte-Foy-lès-Lyon, et alentours." />
-    <meta name="keywords" content="épilation bio, épilation à domicile, soins de beauté bio, épilation Oullins, épilation Saint-Genis-Laval, épilation Lyon, esthetiqueAA, l'esthetiqueAA, L'EsthetiqueAA, EsthetiqueAA, esthetiqueAA Oullins, l'esthetiqueAA Oullins, L'EsthetiqueAA Oullins, EsthetiqueAA Oullins, esthetique à domicile, esthetiqueAA domicile">
+    <meta name="keywords" content="épilation bio, épilation à domicile, soins de beauté bio, épilation Oullins, épilation Saint-Genis-Laval, épilation Lyon, esthetique AA, l'esthétique AA, L'Esthétique AA, Esthetique AA, esthetique AA Oullins, l'esthetiqueAA Oullins, L'EsthetiqueAA Oullins, Esthetique AA Oullins, esthetique à domicile, esthetique AA domicile, l'esthétique AA, esthétique AA, Esthétique AA, L'Esthetique AA, Esthétique AA">
 </svelte:head>
 
 <script>
