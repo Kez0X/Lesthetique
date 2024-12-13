@@ -5,56 +5,83 @@
 </script>
 
 <div class="section-about">
-    <h2>À PROPOS DE NOUS</h2>
-    <p>Nous sommes 2 esthéticiennes indépendantes qui se sont lancées en décembre 2024, dans le but de répondre au mieux aux besoins de leur clientèle. C’est pourquoi nous ferons toujours de notre mieux pour vous faire passer le meilleur moment. Nous vous invitons à découvrir l'esthétique AA, spécialiste de l'esthétique à domicile pour femmes à Oullins et alentours. Prestations de massages, épilations, onglerie à domicile sur les secteurs d'Oullins, Saint-Genis-Laval, Sainte-Foy-lès-Lyon, La Mulatière, Tassin, Millery, Charly, Vernaison, Irigny, Brignais, Chaponost, Pierre-Bénite. Profitez de soins de qualité directement chez vous, dans un cadre de douceur et de professionnalisme.</p>
+    <h2>À PROPOS DE L'ESTHÉTIQUE AA</h2>
+    <p>
+        Bienvenue chez L'Esthétique AA, votre spécialiste de l'esthétique à domicile pour femmes à Oullins et ses environs. 
+        Nous offrons des prestations de qualité adaptées à vos besoins, notamment des massages relaxants, des épilations, 
+        et des soins ongulaires. Grâce à notre service mobile, nous nous déplaçons dans les communes d'Oullins, Saint-Genis-Laval, 
+        Sainte-Foy-lès-Lyon, La Mulatière, Tassin, Millery, Charly, Vernaison, Irigny, Brignais, Chaponost et Pierre-Bénite, 
+        pour recréer l’ambiance d’un institut de beauté directement chez vous.
+    </p>
+    <p>
+        Notre mission est simple : offrir des moments de bien-être, dans un cadre de douceur et de professionnalisme. 
+        Que ce soit pour une épilation parfaite, une manucure élégante ou un massage apaisant, nous veillons à ce que chaque prestation soit une expérience unique et personnalisée.
+    </p>
+
     <div class="estheticiennes">
         <div class="estheticienne-description">
             <h3>Anaïs</h3>
-            <p>Étant diplômée du CAP, BP et BTS esthétique avec plus de 7 ans d’expérience dans
-                le domaine, j'ai décidé avec ma collaboratrice d’ouvrir notre entreprise pour vous offrir des soins personnalisés avec
-                des produits et méthodes respectueuses de votre peau. Nous prenons le temps de comprendre
-                vos besoins pour vous garantir satisfaction et détente. Hâte de vous rencontrer pour
-                partager ce moment beauté avec vous !</p>
-            <button class="construction-btn" on:click={() => window.location.href = '/contact'}><b>Prendre rendez-vous 😊</b></button>
-            <p class="description">Paiement au début de la scéance -
-                (cartes ou espèces, pas de chèques) -
-                Réservé uniquement aux femmes</p>
+            <p>
+                Je suis Anaïs, diplômée du CAP, BP et BTS esthétique, avec plus de 7 ans d'expérience dans le domaine. 
+                Mon objectif est de vous proposer des soins esthétiques respectueux de votre peau et de vos besoins, 
+                en utilisant des produits professionnels de haute qualité. Que vous soyez à Oullins, Saint-Genis-Laval ou 
+                Sainte-Foy-lès-Lyon, je suis à votre service pour vous offrir un moment de détente à domicile. 
+                Hâte de partager ce moment beauté avec vous !
+            </p>
+            <button class="construction-btn" on:click={() => window.location.href = '/contact'}>
+                <b>Prendre rendez-vous 😊</b>
+            </button>
+            <p class="description">
+                Paiement au début de la séance - (cartes ou espèces, pas de chèques) - Réservé uniquement aux femmes.
+            </p>
         </div>
         <div class="estheticienne-description">
             <h3>Alexandrine</h3>
-            <p>Esthéticienne depuis plus de 2 ans, je suis passionnée par la beauté et le bien-être. Notre objectif est de vous offrir des soins personnalisés pour un moment de détente inoubliable. Que ce soit pour des épilations, des soins du visage ou des manucures, nous mettons tout en œuvre pour répondre à vos attentes. Hâte de vous accueillir et de partager ce moment de beauté avec vous !</p>
-            <button class="construction-btn" on:click={() => window.location.href = '/contact'}><b>Prendre rendez-vous 😊</b></button>
-            <p class="description">Paiement au début de la scéance -
-            (cartes ou espèces, pas de chèques) -
-            Réservé uniquement aux femmes</p>
+            <p>
+                Je suis Alexandrine, passionnée par la beauté et le bien-être depuis plus de 2 ans. 
+                J’ai rejoint Anaïs pour créer L'Esthétique AA et offrir des soins personnalisés à nos clientes. 
+                Que vous habitiez à La Mulatière, Tassin, ou Brignais, je mets tout en œuvre pour vous garantir un moment de détente, 
+                qu'il s'agisse de soins des mains, d'épilations ou de massages. Prenons le temps ensemble de célébrer votre beauté !
+            </p>
+            <button class="construction-btn" on:click={() => window.location.href = '/contact'}>
+                <b>Prendre rendez-vous 😊</b>
+            </button>
+            <p class="description">
+                Paiement au début de la séance - (cartes ou espèces, pas de chèques) - Réservé uniquement aux femmes.
+            </p>
         </div>
     </div>
+
     <div class="image-section">
         <div class="image-with-description">
-            <img alt="Image du métro d'Oullins" src={OullinsMetro}/>
-            <p>Nous avons décidé de nous déplacer à domicile afin de répondre à une demande de gain de
-                temps et d’adaptabilité, tout en recréant l’ambiance relaxante et cocooning d’un institut de
-                beauté au sein de chez vous.</p>
+            <img alt="Image du métro d'Oullins" src={OullinsMetro} />
+            <p>
+                Nous avons choisi d’offrir des prestations à domicile pour répondre aux besoins d’une clientèle souhaitant 
+                gagner du temps et profiter d’un service flexible. Que vous soyez à Vernaison, Millery, ou Chaponost, 
+                nous recréons l’ambiance relaxante et cocooning d’un institut de beauté, directement chez vous.
+            </p>
         </div>
 
         <div class="image-with-description">
-            <img alt="Image de la mairie d'Oullins" src={OullinsMairie}/>
-            <p>Oullins était une évidence, car c’est là où tout a commencé pour nous professionnellement.
-                Nous avions donc déjà des liens privilégiés avec les commerçants ainsi qu’avec les
-                habitants de la commune. C’est également un point central pour les autres villes où nous
-                proposons nos services.</p>
+            <img alt="Image de la mairie d'Oullins" src={OullinsMairie} />
+            <p>
+                Oullins, berceau de notre aventure professionnelle, reste au cœur de nos prestations. 
+                C’est un point central qui nous permet de rayonner dans les communes voisines, telles que Pierre-Bénite, 
+                Irigny et Charly, pour offrir nos services esthétiques de qualité à une clientèle variée.
+            </p>
         </div>
 
         <div class="image-with-description">
-            <img alt="Image de notre salon de coiffure partenaire" src={SalonCoiffure}/>
-            <p>Vous pouvez nous retrouver au sein du salon de coiffure Line’s Coiffure, situé au 11 bis
-                boulevard de l’Europe à Oullins, afin de réaliser : les épilations du visage sans autres
-                prestations, les soins des mains et la pose de vernis semi-permanent.
-                Accessible en transport en commun ou stationnement libre et gratuit au sein de la résidence.</p>
+            <img alt="Image de notre salon de coiffure partenaire" src={SalonCoiffure} />
+            <p>
+                Pour certaines prestations spécifiques, comme les épilations du visage, les soins des mains et la pose de 
+                vernis semi-permanent, retrouvez-nous au salon Line’s Coiffure, situé au 11 bis boulevard de l’Europe à Oullins. 
+                Accessible en transport en commun, avec stationnement gratuit, ce lieu nous permet de vous accueillir dans un cadre chaleureux et pratique.
+            </p>
         </div>
     </div>
-
 </div>
+
 
 
 <style>
