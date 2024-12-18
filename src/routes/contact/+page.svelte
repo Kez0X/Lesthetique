@@ -29,7 +29,7 @@
 
     <p class="payment-info">💳 Paiement au début de la séance. Réservé uniquement aux femmes.</p>
 
-    <a href="https://www.planity.com" target="_blank" class="btn-planity">
+    <a href="https://www.planity.com/lesthetique-aa-estheticienne-a-domicile-69600-oullins-pierre-benite" target="_blank" class="btn-planity">
         Prendre rendez-vous sur Planity
     </a>
 

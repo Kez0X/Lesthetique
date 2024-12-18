@@ -8,7 +8,7 @@
     // Fonction pour récupérer les avis depuis l'API Planity
     async function fetchReviews() {
         try {
-            const response = await fetch("https://api.planity.com/reviews"); // URL d'exemple, à adapter
+            const response = await fetch("https://api.planity.com/reviews");
             if (response.ok) {
                 const data = await response.json();
                 reviews = data.reviews || []; // Adaptez selon la structure des données
@@ -29,7 +29,7 @@
 
     // Fonction pour rediriger vers la page Planity
     function bookAppointment() {
-        window.open("https://www.planity.com", "_blank");
+        window.open("https://www.planity.com/lesthetique-aa-estheticienne-a-domicile-69600-oullins-pierre-benite", "_blank");
     }
 </script>
 

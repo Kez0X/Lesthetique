@@ -34,7 +34,7 @@
 						</button>
 					</div>
 					<div class="button">
-						<button class="construction-btn" on:click={() => window.location.href = '/contact'}>
+						<button class="construction-btn" on:click={() => window.location.href = 'https://www.planity.com/lesthetique-aa-estheticienne-a-domicile-69600-oullins-pierre-benite'}>
 							<b>Prendre rendez-vous sur planity 💻</b>
 						</button>
 					</div>
@@ -54,5 +54,5 @@
 	<About />
 	<Payment />
 	<FAQ />
-	<!-- <Reviews /> -->
+	<Reviews />
 </div>
