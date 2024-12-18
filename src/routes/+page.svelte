@@ -54,5 +54,5 @@
 	<About />
 	<Payment />
 	<FAQ />
-	<Reviews />
+	<!-- <Reviews /> -->
 </div>
