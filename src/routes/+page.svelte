@@ -33,11 +33,6 @@
 							<b>Prendre rendez-vous 💄</b>
 						</button>
 					</div>
-					<div class="button">
-						<button class="construction-btn" on:click={() => window.location.href = 'https://www.planity.com/lesthetique-aa-estheticienne-a-domicile-69600-oullins-pierre-benite'}>
-							<b>Prendre rendez-vous sur planity 💻</b>
-						</button>
-					</div>
 					<p class="follow-us-localisation">Notre secteur d'activité : Oullins, Saint-Genis-Laval, Sainte-Foy-lès-Lyon, La Mulatière, Tassin
 						, Millery, Charly, Vernaison, Irigny, Brignais,
 						Chaponost, Pierre-bénite</p>
