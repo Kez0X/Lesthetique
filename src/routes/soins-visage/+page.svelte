@@ -8,8 +8,10 @@
     import SoinsVisagesImage from '$lib/images/soins-visages.png';
 
     let prestations = [
+        { name: "Nettoyage de peau personnalisé", time: "20min", price: "20€", description : "" },
         { name: "Relax & Sculpt", time: "1h", price: "60€", description : "Massage du visage tonifiant, relaxant & repulpant" },
         { name: "Relaxant", time: "30min", price: "35€", description : "Massage relaxant" },
+        { name: "Relaxant", time: "1h", price: "50€", description : "Massage relaxant" },
         { name: "Express", time: "50min", price: "50€", description : "Nettoyage en profondeur, gommage, masque et crème de fin de soin" },
         { name: "Personnalisé", time: "1h", price: "65€", description : "Nettoyage en profondeur, gommage à grains, massage relaxant manuel + rouleaux, masque crème + massage des mains, masque led + massage du cuir chevelu, crème + contour des yeux" },
         { name: "Personnalisé anti-age", time: "1h 10 min", price: "75€", description : "Nettoyage en profondeur, peeling, massage anti ride manuel, massage relaxant manuel, masque crème argan + modelage des mains, masque led + modelage du cuir chevelu, crème + contour des yeux" },

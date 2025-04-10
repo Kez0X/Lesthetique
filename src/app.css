@@ -51,9 +51,11 @@ h1 {
 }
 
 .description {
-    font-family: 'Pacifico', cursive;
+    font-family: 'Crimson Text', serif;
+    font-size: 1rem;
     margin-bottom: 20px;
     color: #6D6D6D;
+    line-height: 1.2;
 }
 
 .construction-btn {
@@ -72,6 +74,7 @@ h1 {
 }
 
 .follow-us {
+    margin-top: 5px;
     margin-bottom: 10px;
     color: #6D6D6D;
     font-size: 1rem;
@@ -80,9 +83,13 @@ h1 {
 .follow-us-localisation{
     margin-bottom: 10px;
     color: #6D6D6D;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     width : 70%;
     margin: auto;
+}
+
+.social-icons{
+    margin-top : 10px;
 }
 
 .social-icons a {

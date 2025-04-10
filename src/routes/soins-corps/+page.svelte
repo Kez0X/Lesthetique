@@ -10,11 +10,11 @@
 
     let prestations = [
         { name: "Gommage", time: "30min", price: "35€" },
-        { name: "Drainage lymphatique", time: "1h", price: "65€" },
+        { name: "Drainage lymphatique", time: "1h", price: "50€" },
         { name: "Drainage minceur", time: "1h", price: "75€" },
         { name: "Cure de 6 séances", time: "1h", price: "420€ - 70€/séance" },
         { name: "Relaxant", time: "30min", price: "35€" },
-        { name: "Relaxant", time: "1h", price: "65€" },
+        { name: "Relaxant", time: "1h", price: "50€" },
         { name: "Forfait bien être 1h visage + 1h corps", time: "2h", price: "117€" },
         { name: "Forfait Spa 1h visage + 1h corps + gommage corps", time: "2h 30min", price: "148€" }
     ];

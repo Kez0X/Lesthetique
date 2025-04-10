@@ -10,10 +10,10 @@
         { name: "Sourcils", time: "15 min", price: "14€"},
         { name: "Lèvres", time: "10 min", price: "10€" },
         { name: "Menton", time: "10 min", price: "10€" },
-        { name: "Joues", time: "10 min", price: "14€" },
+        { name: "Joues", time: "15 min", price: "14€" },
         { name: "Forfaits visage complet", time: "45 min", price: "45€" },
         { name: "Forfaits sourcils + lèvres", time: "25 min", price: "22€" },
-        { name: "Teinture", time: "10 min", price: "5€" }
+        { name: "Teinture", time: "5/10 min", price: "5€" }
         
     ];
 
@@ -21,7 +21,7 @@
         { name: "1/2 jambes", time: "20 min", price: "20€"},
         { name: "Cuisses", time: "20 min", price: "20€"},
         { name: "Jambes complètes", time: "30 min", price: "28€"},
-        { name: "Bras", time: "20 min", price: "20€"},
+        { name: "Bras", time: "20 min", price: "28€"},
         { name: "1/2 bras", time: "15 min", price: "16€"},
         { name: "Maillot échancré", time: "20 min", price: "20€"},
         { name: "Maillot brésilien", time: "25 min", price: "26€"},
@@ -33,7 +33,7 @@
     let forfaits_corps = [
         { name: "1/2 jambes, échancré, aisselles", time: "55 min", price: "50€"},
         { name: "1/2 jambes, complet, aisselles", time: "1 h 05 min", price: "59€"},
-        { name: "Jambes complètes, échancré, aisselles", time: "1 h 05 min", price: "59€"},
+        { name: "Jambes complètes, échancré, aisselles", time: "1 h 15 min", price: "59€"},
         { name: "Jambes complètes, complet, aisselles", time: "1 h 15 min", price: "67€"}
     ];
 </script>
