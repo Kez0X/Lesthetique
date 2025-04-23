@@ -12,7 +12,7 @@
         { name: "Menton", time: "10 min", price: "10€" },
         { name: "Joues", time: "15 min", price: "14€" },
         { name: "Forfaits visage complet", time: "45 min", price: "45€" },
-        { name: "Forfaits sourcils + lèvres", time: "25 min", price: "22€" },
+        { name: "Forfaits sourcils lèvres", time: "25 min", price: "22€" },
         { name: "Teinture", time: "5/10 min", price: "5€" }
         
     ];

@@ -8,21 +8,10 @@
     import ForfaitsImage from '$lib/images/forfaits.png';
 
     let prestations = [
-        { name: "Forfaits visage complet épilation", time: "45 min", price: "45€" },
-        { name: "Forfaits sourcils + lèvres épilation", time: "25 min", price: "22€" },
-        { name: "1/2 jambes, échancré, aisselles", time: "55 min", price: "50€"},
-        { name: "1/2 jambes, complet, aisselles", time: "1 h 05 min", price: "59€"},
-        { name: "Jambes complètes, complet, aisselles", time: "1 h 15 min", price: "67€"},
-        { name: "Jambes complètes, échancré, aisselles", time: "1 h 05 min", price: "59€"},
-        { name: "Cure de 6 séances", time: "1h", price: "420€ - 70€/séance" },
-        { name: "Forfait bien être 1h visage + 1h corps", time: "2h", price: "95€" },
-        { name: "Forfait Spa 1h visage + 1h corps + gommage corps", time: "2h 30min", price: "125€" },
-        { name: "Forfait beauté mains", time: "≈ 2h", price: "95€"},
-        { name: "Forfait beauté pieds", time: "≈ 2h", price: "95€"},
-        { name: "Forfait beauté mains 1h visage + soin des mains + pose de vernis", time: "≈ 3h", price: "121€"},
-        { name: "Forfait beauté pied 1h visage + soins des pieds + pose de vernis", time: "≈ 3h", price: "126€"}
-
-
+        { name: "Forfait bien être", time: "≈ 2h", price: "95€", description: "Nettoyage de peau personnalisé et relaxant" },
+        { name: "Forfait Spa", time: "≈ 2h 30min", price: "125€", description : "Nettoyage de peau personnalisé & relaxant & gommage" },
+        { name: "Forfait beauté des mains", time: "≈ 2h", price: "95€", description : "Soins des mains & nettoyage de peau personnalisé"},
+        { name: "Forfait beauté des pieds", time: "≈ 2h", price: "95€", description : "Soins des pieds & nettoyage de peau personnalisé"}
     ];
 </script>
 
@@ -39,6 +28,7 @@
                     <th>Prestations</th>
                     <th>Temps</th>
                     <th>Prix</th>
+                    <th>Description</th>
                 </tr>
             </thead>
             <tbody>
@@ -47,6 +37,7 @@
                         <td>{prestation.name}</td>
                         <td>{prestation.time}</td>
                         <td>{prestation.price}</td>
+                        <td>{prestation.description ? prestation.description : "-"}</td>
                     </tr>
                 {/each}
             </tbody>
