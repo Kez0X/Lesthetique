@@ -75,7 +75,7 @@
 		<div class="contact-estheticiennes">
 			<div class="social-icons">
 				<a href="https://www.facebook.com/profile.php?id=61563897359229"><img src={Facebook} alt="Facebook"></a>
-				<a href="https://www.instagram.com/anaisdelice.estheticienne69?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
+				<a href="https://www.instagram.com/lesthetiqueaa.69">
 					<img src={Instagram} alt="Instagram">
 				</a>
 			</div>
