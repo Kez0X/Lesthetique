@@ -18,9 +18,9 @@
 		fbq('init', '669075309377526');
 		fbq('track', 'PageView');
 	</script>
-	<noscript><img height="1" width="1" style="display:none"
-	src="https://www.facebook.com/tr?id=669075309377526&ev=PageView&noscript=1"
-	/></noscript>
+	<noscript>
+		<img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=669075309377526&ev=PageView&noscript=1"/>
+	</noscript>
 	<!-- End Meta Pixel Code -->
 </svelte:head>
 

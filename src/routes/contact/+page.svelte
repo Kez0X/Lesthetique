@@ -40,7 +40,7 @@
             <p><strong>Alexandrine :</strong> <a href="tel:+33624748716">+33 6 24 74 87 16</a></p>
         </div>
 
-        <a class="btn-planity" href="https://www.treatwell.fr/salon/l-esthetiqueaa/" target="_blank" rel="noopener noreferrer">
+        <a class="btn-planity" href="https://www.treatwell.fr/salon/l-esthetique-aa-estheticiennes-a-domicile/" target="_blank" rel="noopener noreferrer">
             Réserver via Treatwell
         </a>
 
