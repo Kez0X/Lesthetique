@@ -1,45 +1,68 @@
 <svelte:head>
     <title>Contact - L'EsthetiqueAA</title>
     <meta name="description" content="Contactez L'esthétique pour prendre rendez-vous et découvrir nos prestations." />
-    <meta name="keywords" content="épilation bio, épilation à domicile, soins de beauté bio, épilation Oullins, épilation Saint-Genis-Laval, épilation Lyon, esthetique AA, l'esthétique AA, L'Esthétique AA, Esthetique AA, esthetique AA Oullins, l'esthetiqueAA Oullins, L'EsthetiqueAA Oullins, Esthetique AA Oullins, esthetique à domicile, esthetique AA domicile, l'esthétique AA, esthétique AA, Esthétique AA, L'Esthetique AA, Esthétique AA">
+    <meta name="keywords" content="épilation bio, épilation à domicile, soins de beauté bio, épilation Oullins, épilation Saint-Genis-Laval, épilation Lyon, esthétique AA, l'esthétique AA, Esthetique AA, esthetique AA Oullins, esthetique à domicile">
 </svelte:head>
 
 <script>
     import InstagramIcon from '$lib/images/Instagram.webp';
     import FacebookIcon from '$lib/images/Facebook.png';
+
+    // Images pour le fond
+    import FlowerSummer from '$lib/images/FlowerSummer.svg';
+    import FlowerWinter from '$lib/images/FlowerWinter.svg';
+    import Petale1 from '$lib/images/Petale1.svg';
+    import Petale2 from '$lib/images/Petale2.svg';
+    import Petale3 from '$lib/images/Petale3.svg';
+    import Petale4 from '$lib/images/Petale4.svg';
+    import Petale5 from '$lib/images/Petale5.svg';
+    import Petale6 from '$lib/images/Petale6.svg';
+
 </script>
 
-<div class="contact-page">
-    <h1>Contactez-nous</h1>
-    <p>Joignez-nous par appel, SMS, Facebook ou Instagram. Réponse sous 24h à 48h.</p>
+<div class="contact-wrapper">
+    <!-- Décoration florale -->
+    <img src={FlowerSummer} class="bg-deco deco1" alt="" aria-hidden="true" />
+    <img src={FlowerWinter} class="bg-deco deco2" alt="" aria-hidden="true" />
+    <img src={Petale1} class="bg-deco deco3" alt="" aria-hidden="true" />
+    <img src={Petale2} class="bg-deco deco4" alt="" aria-hidden="true" />
+    <img src={Petale3} class="bg-deco deco5" alt="" aria-hidden="true" />
+    <img src={Petale4} class="bg-deco deco6" alt="" aria-hidden="true" />
+    <img src={Petale5} class="bg-deco deco7" alt="" aria-hidden="true" />
+    <img src={Petale6} class="bg-deco deco8" alt="" aria-hidden="true" />
 
-    <div class="contact-info">
-        <p><strong>Anaïs :</strong> <a href="tel:+33660363406">+33 6 60 36 34 06</a></p>
-        <p><strong>Alexandrine :</strong> <a href="tel:+33624748716">+33 6 24 74 87 16</a></p>
-    </div>
+    <div class="contact-page">
+        <h1>Contactez-nous</h1>
+        <p>Joignez-nous par appel, SMS ou via les réseaux sociaux.</p>
 
-    <div class="social-icons">
-        <a href="https://www.facebook.com/profile.php?id=61563897359229" aria-label="Visitez notre page Facebook">
-            <img src={FacebookIcon} alt="Facebook"/>
+        <div class="contact-info">
+            <p><strong>Anaïs :</strong> <a href="tel:+33660363406">+33 6 60 36 34 06</a></p>
+            <p><strong>Alexandrine :</strong> <a href="tel:+33624748716">+33 6 24 74 87 16</a></p>
+        </div>
+
+        <a class="btn-planity" href="https://www.treatwell.fr/salon/l-esthetiqueaa/" target="_blank" rel="noopener noreferrer">
+            Réserver via Treatwell
         </a>
-        <a href="https://www.instagram.com/lesthetiqueaa.69" aria-label="Visitez notre page Instagram">
-            <img src={InstagramIcon} alt="Instagram" />
-        </a>
-    </div>
 
-    <p class="payment-info">💳 Paiement au début de la séance. Réservé uniquement aux femmes.</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/profile.php?id=61563897359229" aria-label="Facebook"><img src={FacebookIcon} alt="Facebook" /></a>
+            <a href="https://www.instagram.com/lesthetiqueaa.69" aria-label="Instagram"><img src={InstagramIcon} alt="Instagram" /></a>
+        </div>
 
+        <p class="payment-info">💳 Paiement au début de la séance. Réservé uniquement aux femmes.</p>
 
-    <div class="faq-section">
-        <h2>Que dire lors de l'appel ?</h2>
-        <p>Appelez-nous et précisez si vous préférez un rendez-vous à domicile ou en institut. Indiquez votre nom, la date, l’heure, l’adresse (si nécessaire), le nom de l’esthéticienne et la prestation souhaitée. Si vous laissez un message vocal, mentionnez ces informations, et nous vous rappellerons pour confirmer.</p>
-    </div>
+        <div class="faq-section">
+            <h2>Que dire lors de l'appel ?</h2>
+            <p>Précisez si vous souhaitez un rendez-vous à domicile ou en institut, ainsi que vos coordonnées, la date et la prestation. Laissez un message vocal si besoin, nous vous rappellerons.</p>
+        </div>
 
-    <div class="faq-section">
-        <h2>Comment écrire un message ?</h2>
-        <p>Envoyez-nous un message ou un e-mail pour réserver. Mentionnez votre nom, l’heure et le jour souhaités, l’adresse si c'est à domicile, l’esthéticienne et la prestation choisie. Vos données sont sécurisées grâce à notre politique de confidentialité.</p>
+        <div class="faq-section">
+            <h2>Par message ?</h2>
+            <p>Envoyez votre nom, créneau souhaité, adresse (si à domicile), esthéticienne et prestation. Toutes vos données sont confidentielles.</p>
+        </div>
     </div>
 </div>
+
 
 <style>
     /* Page générale */
@@ -191,4 +214,23 @@
             font-size: 0.9em;
         }
     }
+
+
+    .bg-deco {
+        position: absolute;
+        width: 60px;
+        opacity: 0.12;
+        z-index: 0;
+        pointer-events: none;
+    }
+
+    /* Exemple de placements */
+    .deco1 { top: 50px; left: 5%; width: 100px; }
+    .deco2 { top: 200px; right: 5%; width: 80px; }
+    .deco3 { top: 100px; left: 20%; transform: rotate(20deg); }
+    .deco4 { top: 300px; right: 10%; transform: rotate(-10deg); }
+    .deco5 { bottom: 100px; left: 10%; transform: rotate(15deg); }
+    .deco6 { top: 400px; left: 30%; transform: rotate(-5deg); }
+    .deco7 { bottom: 200px; right: 15%; transform: rotate(12deg); }
+    .deco8 { top: 600px; left: 50%; transform: rotate(-18deg); }
 </style>

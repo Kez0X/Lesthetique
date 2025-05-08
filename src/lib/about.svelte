@@ -2,9 +2,47 @@
     import OullinsMetro from '$lib/images/8570_671_Inauguration-Oullins-St-Genis-Laval-51 1.png';
     import OullinsMairie from '$lib/images/implanter2 1.png';
     import SalonCoiffure from '$lib/images/u9lyuns3drewo1gj5p8m 1.png';
+
+    // Images pour le fond
+    import FlowerSummer from '$lib/images/FlowerSummer.svg';
+    import FlowerWinter from '$lib/images/FlowerWinter.svg';
+    import Petale1 from '$lib/images/Petale1.svg';
+    import Petale2 from '$lib/images/Petale2.svg';
+    import Petale3 from '$lib/images/Petale3.svg';
+    import Petale4 from '$lib/images/Petale4.svg';
+    import Petale5 from '$lib/images/Petale5.svg';
+    import Petale6 from '$lib/images/Petale6.svg';
+
 </script>
 
 <div class="section-about">
+  <!-- Images décoratives en fond -->
+    <!-- Décorations florales SVG -->
+    <img src={FlowerSummer} class="bg-deco deco1" alt="" aria-hidden="true" />
+    <img src={FlowerWinter} class="bg-deco deco2" alt="" aria-hidden="true" />
+    <img src={FlowerWinter} class="bg-deco deco9" alt="" aria-hidden="true" />
+    <img src={FlowerSummer} class="bg-deco deco10" alt="" aria-hidden="true" />
+
+    <!-- Pétales en pluie -->
+    <img src={Petale1} class="bg-deco deco3" alt="" aria-hidden="true" />
+    <img src={Petale2} class="bg-deco deco4" alt="" aria-hidden="true" />
+    <img src={Petale3} class="bg-deco deco5" alt="" aria-hidden="true" />
+    <img src={Petale4} class="bg-deco deco6" alt="" aria-hidden="true" />
+    <img src={Petale5} class="bg-deco deco7" alt="" aria-hidden="true" />
+    <img src={Petale6} class="bg-deco deco8" alt="" aria-hidden="true" />
+
+    <!-- Petites duplications aléatoires pour créer un effet de pluie -->
+    <img src={Petale1} class="bg-deco deco11" alt="" aria-hidden="true" />
+    <img src={Petale2} class="bg-deco deco12" alt="" aria-hidden="true" />
+    <img src={Petale3} class="bg-deco deco13" alt="" aria-hidden="true" />
+    <img src={Petale4} class="bg-deco deco14" alt="" aria-hidden="true" />
+    <img src={Petale5} class="bg-deco deco15" alt="" aria-hidden="true" />
+    <img src={Petale6} class="bg-deco deco16" alt="" aria-hidden="true" />
+    <img src={Petale2} class="bg-deco deco17" alt="" aria-hidden="true" />
+    <img src={Petale3} class="bg-deco deco18" alt="" aria-hidden="true" />
+    <img src={Petale5} class="bg-deco deco19" alt="" aria-hidden="true" />
+
+
     <div class="content">
       <h2>À PROPOS DE L'ESTHÉTIQUE AA 💖</h2>
       <p>
@@ -96,7 +134,46 @@
         text-align: center;
         padding: 50px 20px; /* Ajout de padding latéral */
         background-color: #ffffff;
+        position: relative;
+        overflow: hidden;
+
+
     }
+
+    .bg-deco {
+      position: absolute;
+      width: 60px; /* taille réduite */
+      height: auto;
+      opacity: 0.22; /* opacité légèrement augmentée */
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Fleurs principales */
+    .deco1 { top: 40px; left: 5%; width: 100px; }
+    .deco2 { top: 200px; right: 10%; width: 100px; }
+    .deco9 { bottom: 80px; left: 15%; width: 80px; }
+    .deco10 { top: 450px; right: 20%; width: 80px; }
+
+    /* Pétales tombants - taille réduite et rotation douce */
+    .deco3 { top: 120px; left: 10%; transform: rotate(25deg); }
+    .deco4 { top: 250px; left: 35%; transform: rotate(-15deg); }
+    .deco5 { top: 480px; right: 15%; transform: rotate(10deg); }
+    .deco6 { bottom: 100px; right: 5%; transform: rotate(-30deg); }
+    .deco7 { top: 400px; left: 20%; transform: rotate(12deg); }
+    .deco8 { bottom: 220px; left: 40%; transform: rotate(-5deg); }
+
+    /* Duplications supplémentaires */
+    .deco12 { bottom: 250px; right: 10%; transform: rotate(-20deg); }
+    .deco13 { top: 300px; left: 70%; transform: rotate(18deg); }
+    .deco14 { top: 90px; right: 30%; transform: rotate(12deg); }
+    .deco15 { bottom: 180px; left: 25%; transform: rotate(-10deg); }
+    .deco16 { top: 550px; right: 20%; transform: rotate(22deg); }
+    .deco17 { top: 180px; left: 45%; transform: rotate(-8deg); }
+    .deco18 { bottom: 300px; right: 40%; transform: rotate(30deg); }
+    .deco19 { top: 380px; left: 5%; transform: rotate(15deg); }
+
+
 
     .section-about .content{
         max-width : 1400px;
