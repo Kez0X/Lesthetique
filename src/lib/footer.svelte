@@ -65,7 +65,7 @@
 <style>
     .footer {
         margin-top: 200px;
-        background-color: #fff;
+        background-color: #fffbfb;
         color: #111;
         padding: 60px 40px;
         font-family: 'Inter', sans-serif;

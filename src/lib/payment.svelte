@@ -1,5 +1,5 @@
 <div class="section-payment">
-    <h2>LE REGLEMENT</h2>
+    <h2>LE REGLEMENT 💳</h2>
     <div class="payment-option">
         <h3><i class="fas fa-credit-card"></i> Carte Bleue</h3>
         <p>Nous disposons d’un TPE pour chacun des rendez-vous effectués avec les clients.</p>
@@ -26,7 +26,7 @@
     /* Styles pour la section globale */
 .section-payment {
     width: 100%;
-    max-width: 800px;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 50px 20px;
 }

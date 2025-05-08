@@ -111,6 +111,7 @@
 	/* Logo à gauche */
 	.logo img {
 		height: 50px;
+		border-radius : 360px;
 	}
 
 	/* Bouton de menu et contact à droite */

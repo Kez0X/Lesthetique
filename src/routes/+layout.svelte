@@ -6,6 +6,7 @@
 
 	// Inject Vercel Analytics lors de l'initialisation
 	injectAnalytics();
+
 </script>
 
 <div class="app">

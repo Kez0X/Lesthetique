@@ -80,7 +80,7 @@
 </script>
 
 <div class="section-prestations" id="prestations">
-	<h2>NOS PRESTATIONS</h2>
+	<h2>NOS PRESTATIONS ✨</h2>
 	<div class="grid-container">
 		{#each categories as category}
 			<a href={category.link} class="category" style="background-image: url({category.backgroundImage})">
@@ -105,7 +105,7 @@
 		width: 100%;
 		text-align: center;
 		padding: 50px 0;
-		background-color: #f8f8f8;
+		background-color: white;
 	}
 
 	.section-prestations h2 {

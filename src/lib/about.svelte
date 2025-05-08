@@ -5,92 +5,102 @@
 </script>
 
 <div class="section-about">
-    <h2>À PROPOS DE L'ESTHÉTIQUE AA</h2>
-    <p>
+    <div class="content">
+      <h2>À PROPOS DE L'ESTHÉTIQUE AA 💖</h2>
+      <p>
         Bienvenue chez L'Esthétique AA, votre spécialiste de l'esthétique à domicile pour femmes à Oullins et ses environs. 
-        Nous offrons des prestations de qualité adaptées à vos besoins, notamment des massages relaxants, des épilations, 
-        et des soins ongulaires. Grâce à notre service mobile, nous nous déplaçons dans les communes d'Oullins, Saint-Genis-Laval, 
-        Sainte-Foy-lès-Lyon, La Mulatière, Tassin, Millery, Charly, Vernaison, Irigny, Brignais, Chaponost et Pierre-Bénite, 
-        pour recréer l’ambiance d’un institut de beauté directement chez vous.
-    </p>
-    <p>
+        Nous offrons des prestations de qualité adaptées à vos besoins : massages relaxants, épilations, 
+        et soins ongulaires. Grâce à notre service mobile 🚗, nous nous déplaçons dans les communes d'Oullins, 
+        Saint-Genis-Laval, Sainte-Foy-lès-Lyon, La Mulatière, Tassin, Millery, Charly, Vernaison, Irigny, Brignais, 
+        Chaponost et Pierre-Bénite pour recréer l’ambiance d’un institut de beauté directement chez vous.
+      </p>
+      <p>
         Notre mission est simple : offrir des moments de bien-être, dans un cadre de douceur et de professionnalisme. 
-        Que ce soit pour une épilation parfaite, une manucure élégante ou un massage apaisant, nous veillons à ce que chaque prestation soit une expérience unique et personnalisée.
-    </p>
-
-    <div class="estheticiennes">
+        Que ce soit pour une épilation parfaite, une manucure élégante ou un massage apaisant, chaque prestation est une expérience unique et personnalisée ✨.
+      </p>
+  
+      <div class="estheticiennes">
         <div class="estheticienne-description">
-            <h3>Anaïs</h3>
-            <p>
-                Je suis Anaïs, diplômée du CAP, BP et BTS esthétique, avec plus de 7 ans d'expérience dans le domaine. 
-                Mon objectif est de vous proposer des soins esthétiques respectueux de votre peau et de vos besoins, 
-                en utilisant des produits professionnels de haute qualité. Que vous soyez à Oullins, Saint-Genis-Laval ou 
-                Sainte-Foy-lès-Lyon, je suis à votre service pour vous offrir un moment de détente à domicile. 
-                Hâte de partager ce moment beauté avec vous !
-            </p>
-            <button class="construction-btn" on:click={() => window.location.href = '/contact'}>
-                <b>Prendre rendez-vous 😊</b>
-            </button>
-            <p class="description">
-                Paiement au début de la séance - (cartes ou espèces, pas de chèques) - Réservé uniquement aux femmes.
-            </p>
+          <h3>Anaïs</h3>
+          <p>
+            Je suis Anaïs, diplômée du CAP, BP et BTS esthétique, avec plus de 7 ans d'expérience dans le domaine. 
+            Mon objectif est de vous proposer des soins esthétiques respectueux de votre peau, 
+            en utilisant des produits professionnels de haute qualité. Que vous soyez à Oullins, Saint-Genis-Laval ou 
+            Sainte-Foy-lès-Lyon, je suis à votre service pour vous offrir un moment de détente à domicile. 
+            Hâte de partager ce moment beauté avec vous ! 🌸
+          </p>
+          <button class="construction-btn" on:click={() => window.location.href = '/contact'}>
+            <b>Prendre rendez-vous 😊</b>
+          </button>
+          <p class="description">
+            Paiement au début de la séance – (cartes ou espèces, pas de chèques)  
+            <br>Réservé uniquement aux femmes.
+          </p>
         </div>
+  
         <div class="estheticienne-description">
-            <h3>Alexandrine</h3>
-            <p>
-                Je suis Alexandrine, passionnée par la beauté et le bien-être depuis plus de 2 ans. 
-                J’ai rejoint Anaïs pour créer L'Esthétique AA et offrir des soins personnalisés à nos clientes. 
-                Que vous habitiez à La Mulatière, Tassin, ou Brignais, je mets tout en œuvre pour vous garantir un moment de détente, 
-                qu'il s'agisse de soins des mains, d'épilations ou de massages. Prenons le temps ensemble de célébrer votre beauté !
-            </p>
-            <button class="construction-btn" on:click={() => window.location.href = '/contact'}>
-                <b>Prendre rendez-vous 😊</b>
-            </button>
-            <p class="description">
-                Paiement au début de la séance - (cartes ou espèces, pas de chèques) - Réservé uniquement aux femmes.
-            </p>
+          <h3>Alexandrine</h3>
+          <p>
+            Je suis Alexandrine, passionnée par la beauté et le bien-être depuis plus de 2 ans. 
+            J’ai rejoint Anaïs pour créer L'Esthétique AA et offrir des soins personnalisés à nos clientes. 
+            Que vous habitiez à La Mulatière, Tassin ou Brignais, je mets tout en œuvre pour vous garantir un moment de détente, 
+            qu'il s'agisse de soins des mains, d'épilations ou de massages. Prenons le temps ensemble de célébrer votre beauté ! ✨
+          </p>
+          <button class="construction-btn" on:click={() => window.location.href = '/contact'}>
+            <b>Prendre rendez-vous 😊</b>
+          </button>
+          <p class="description">
+            Paiement au début de la séance – (cartes ou espèces, pas de chèques)  
+            <br>Réservé uniquement aux femmes.
+          </p>
         </div>
+      </div>
+  
+      <div class="image-album-section">
+        <div class="album-images">
+          <img class="img1" src={OullinsMetro} alt="Métro Oullins" />
+          <img class="img2" src={OullinsMairie} alt="Mairie Oullins" />
+          <img class="img3" src={SalonCoiffure} alt="Salon partenaire" />
+        </div>
+  
+        <div class="album-text fade-slide-in">
+          <p>
+            Nous avons choisi d’offrir des prestations à domicile 🏠 pour répondre aux besoins d’une clientèle 
+            souhaitant gagner du temps et profiter d’un service flexible. Que vous soyez à Vernaison, Millery, ou Chaponost, 
+            nous recréons l’ambiance relaxante et cocooning d’un institut de beauté, directement chez vous.
+          </p>
+  
+          <p>
+            Oullins, berceau de notre aventure professionnelle 📍, reste au cœur de nos prestations. 
+            C’est un point central qui nous permet de rayonner dans les communes voisines comme Pierre-Bénite, 
+            Irigny et Charly pour offrir nos services esthétiques de qualité à une clientèle variée.
+          </p>
+  
+          <p>
+            Pour certaines prestations spécifiques (épilations visage, soins des mains, vernis semi-permanent), 
+            retrouvez-nous chez notre partenaire Line’s Coiffure 💅, au 11 bis boulevard de l’Europe à Oullins. 
+            Facilement accessible en transport 🚇 avec stationnement gratuit, ce lieu chaleureux vous accueille avec plaisir.
+          </p>
+        </div>
+      </div>
     </div>
-
-    <div class="image-section">
-        <div class="image-with-description">
-            <img alt="Image du métro d'Oullins" src={OullinsMetro} />
-            <p>
-                Nous avons choisi d’offrir des prestations à domicile pour répondre aux besoins d’une clientèle souhaitant 
-                gagner du temps et profiter d’un service flexible. Que vous soyez à Vernaison, Millery, ou Chaponost, 
-                nous recréons l’ambiance relaxante et cocooning d’un institut de beauté, directement chez vous.
-            </p>
-        </div>
-
-        <div class="image-with-description">
-            <img alt="Image de la mairie d'Oullins" src={OullinsMairie} />
-            <p>
-                Oullins, berceau de notre aventure professionnelle, reste au cœur de nos prestations. 
-                C’est un point central qui nous permet de rayonner dans les communes voisines, telles que Pierre-Bénite, 
-                Irigny et Charly, pour offrir nos services esthétiques de qualité à une clientèle variée.
-            </p>
-        </div>
-
-        <div class="image-with-description">
-            <img alt="Image de notre salon de coiffure partenaire" src={SalonCoiffure} />
-            <p>
-                Pour certaines prestations spécifiques, comme les épilations du visage, les soins des mains et la pose de 
-                vernis semi-permanent, retrouvez-nous au salon Line’s Coiffure, situé au 11 bis boulevard de l’Europe à Oullins. 
-                Accessible en transport en commun, avec stationnement gratuit, ce lieu nous permet de vous accueillir dans un cadre chaleureux et pratique.
-            </p>
-        </div>
-    </div>
-</div>
-
-
+  </div>
 
 <style>
     /* Styles pour la section globale */
     .section-about {
+        align-items: center;
+        text-align : center;
+        display : flex;
         width: 100%;
         text-align: center;
         padding: 50px 20px; /* Ajout de padding latéral */
-        background-color: #f8f8f8;
+        background-color: #ffffff;
+    }
+
+    .section-about .content{
+        max-width : 1400px;
+        margin : auto;
     }
 
     .section-about h2 {
@@ -144,39 +154,96 @@
         font-size : 0.9em;
     }
 
-    .image-section {
+    .image-album-section {
         display: flex;
-        flex-direction: column;
+        justify-content: center;
         align-items: center;
-        gap: 30px;
-        padding : 30px;
-    }
+        gap: 50px;
+        flex-wrap: wrap;
+        padding: 60px 20px;
+        }
 
-    .image-with-description {
-        display: flex;
-        align-items: center;
-        gap: 20px;
-        width: 60%;
-        background: #ffffff;
-        border-radius: 15px;
-        padding: 20px;
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-        text-align: left;
-    }
+        .album-images {
+        position: relative;
+        width: 300px;
+        height: 300px;
+        }
 
-    .image-with-description img {
-        width: 120px;
-        height: 120px;
-        border-radius: 50%;
+        .album-images img {
+        position: absolute;
+        width: 200px;
+        height: 200px;
         object-fit: cover;
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    }
+        border-radius: 0px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        transition: transform 0.4s ease;
+        cursor: pointer;
+        }
 
-    .image-with-description p {
-        margin: 0;
-        color: #666;
-        line-height: 1.4;
-    }
+        /* Image 1 */
+        .album-images .img1 {
+        top: 0;
+        left: 0;
+        z-index: 3;
+        transform: rotate(-5deg);
+        }
+
+        /* Image 2 */
+        .album-images .img2 {
+        top: 20px;
+        left: 40px;
+        z-index: 2;
+        transform: rotate(3deg);
+        }
+
+        /* Image 3 */
+        .album-images .img3 {
+        top: 40px;
+        left: 80px;
+        z-index: 1;
+        transform: rotate(-2deg);
+        }
+
+        /* Hover effect to slightly move images */
+        .album-images img:hover {
+        transform: scale(1.05) rotate(0deg);
+        z-index: 4;
+        }
+
+        .album-text {
+        max-width: 600px;
+        font-size: 1.05em;
+        line-height: 1.7;
+        color: #555;
+        }
+
+        /* Animation */
+        .fade-slide-in {
+        opacity: 0;
+        transform: translateY(30px);
+        animation: fadeSlideIn 1s ease forwards;
+        animation-delay: 0.3s;
+        }
+
+        @keyframes fadeSlideIn {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+        .image-album-section {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .album-images {
+            margin-bottom: 30px;
+        }
+        }
+
 
 
     /* Responsive design */

@@ -10,7 +10,8 @@
 body {
     font-family: 'Crimson Text', sans-serif;
     overflow-x:inherit;
-    background-color: #f8f8f8;
+    background-color: #ffffff;
+    ;
 }
 
 .home-page-container{
@@ -59,18 +60,21 @@ h1 {
 }
 
 .construction-btn {
-    background-color: #F4A7B9;
-    color: white;
+    display: inline-block;
     padding: 10px 20px;
-    border: none;
+    background-color: #ff7f7f;
+    color: white;
+    text-decoration: none;
     border-radius: 5px;
-    cursor: pointer;
-    margin-bottom: 20px;
-    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s;
+    border : none;
+    margin-bottom : 10px;
 }
 
 .construction-btn:hover {
-    background-color: #ff5a5a; /* Couleur au survol */
+    background-color: #ff5a5a;
 }
 
 .follow-us {
