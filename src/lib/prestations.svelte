@@ -13,9 +13,9 @@
 		  backgroundImage: onglerie,
 		  link: "/onglerie",
 		  prestations: [
+			 { name: "Pose de vernis semi-permanent", price: "40€" },
 			 { name: "Soin des mains", price: "50€" },
-			 { name: "Soin des pieds", price: "55€" },
-			 { name: "Pose de vernis semi permanent uni", price: "40€" }
+			 { name: "Soin des pieds", price: "55€" }
 		  ]
 	   },
 	   {
@@ -34,8 +34,8 @@
 		  link: "/soins-corps",
 		  prestations: [
 			 { name: "Gommage", price: "35€" },
-			 { name: "Drainage minceur", price: "75€" },
-			 { name: "Relaxant", price: "65€" }
+			 { name: "Drainage minceur", price: "50€" },
+			 { name: "Relaxant", price: "50€" }
 		  ]
 	   },
 	   {
@@ -43,9 +43,9 @@
 		  backgroundImage: soinsVisages,
 		  link: "/soins-visage",
 		  prestations: [
-			 { name: "Express", price: "50€" },
-			 { name: "Personnalisé", price: "65€" },
-			 { name: "Relax & Sculpt", price: "60€" }
+			 { name: "Nettoyage de peau personnalisé", price: "50€" },
+			 { name: "Relaxant 30min", price: "35€" },
+			 { name: "Relaxant 1h", price: "50€" }
 		  ]
 	   },
 	   {
@@ -62,9 +62,9 @@
 		  backgroundImage: forfaits,
 		  link: "/forfaits",
 		  prestations: [
-			 { name: "Forfaits sourcils lèvres", price: "22€" },
-			 { name: "Cure de 6 séances", price: "420€" },
-			 { name: "Forfait bien être", price: "117€" }
+			 { name: "Forfait bien être", price: "95€" },
+			 { name: "Forfait Spa", price: "125€" },
+			 { name: "Forfait beauté des mains", price: "95€" }
 		  ]
 	   },
 	   {
