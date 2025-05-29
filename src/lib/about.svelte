@@ -152,16 +152,9 @@
             C’est un point central qui nous permet de rayonner dans les communes voisines comme Pierre-Bénite, 
             Irigny et Charly pour offrir nos services esthétiques de qualité à une clientèle variée. Voici comment nous rejoindre :
           </p>
-
-          <ul>
-            <li>En transport en commun :</li>
-            <p>Le métro B (station Oullins Centre) vous dépose à deux pas du salon Line’s Coiffure. Des bus desservent également les communes proches comme Saint-Genis-Laval, Pierre-Bénite ou La Mulatière.</p>
-            <li>En voiture :</li>
-            <p>Le salon dispose de places de stationnement gratuites à proximité, vous évitant les tracas habituels du centre-ville.</p>
-            <li>À pied ou à vélo :</li>
-            <p>Depuis le centre d’Oullins, l’accès est facile à pied, et des pistes cyclables facilitent également l’accès en deux roues.</p>
-          </ul>
-
+          <p>En transport en commun :<br/>Le métro B (station Oullins Centre) vous dépose à deux pas du salon Line’s Coiffure. Des bus desservent également les communes proches comme Saint-Genis-Laval, Pierre-Bénite ou La Mulatière.</p>
+          <p>En voiture :<br/>Le salon dispose de places de stationnement gratuites à proximité, vous évitant les tracas habituels du centre-ville.</p>
+          <p>À pied ou à vélo :<br/>Depuis le centre d’Oullins, l’accès est facile à pied, et des pistes cyclables facilitent également l’accès en deux roues.</p>
           <p>Oullins est un point stratégique qui permet à notre équipe d’être rapidement sur place pour vos soins à domicile, ou pour vous accueillir dans les meilleures conditions en salon.</p>
         </div>
         

@@ -2,22 +2,6 @@
     <title>Soins du Corps Bio - Esthéticienne à Domicile - L'esthétiqueAA</title>
     <meta name="description" content="Découvrez nos soins du corps avec des huiles végétales bio pour une expérience de bien-être unique. Profitez de massages relaxants et revitalisants réalisés par nos esthéticiennes à domicile à Oullins, Saint-Genis-Laval, Sainte-Foy-lès-Lyon, et alentours." />
     <meta name="keywords" content="épilation bio, épilation à domicile, soins de beauté bio, épilation Oullins, épilation Saint-Genis-Laval, épilation Lyon, esthetique AA, l'esthétique AA, L'Esthétique AA, Esthetique AA, esthetique AA Oullins, l'esthetiqueAA Oullins, L'EsthetiqueAA Oullins, Esthetique AA Oullins, esthetique à domicile, esthetique AA domicile, l'esthétique AA, esthétique AA, Esthétique AA, L'Esthetique AA, Esthétique AA">
-
-    <!-- Meta Pixel Code -->
-	<script>
-		!function(f,b,e,v,n,t,s)
-		{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-		n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-		if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-		n.queue=[];t=b.createElement(e);t.async=!0;
-		t.src=v;s=b.getElementsByTagName(e)[0];
-		s.parentNode.insertBefore(t,s)}(window, document,'script',
-		'https://connect.facebook.net/en_US/fbevents.js');
-		fbq('init', '669075309377526');
-		fbq('track', 'PageView');
-	</script>
-	<img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=669075309377526&ev=PageView&noscript=1" alt=""/>
-	<!-- End Meta Pixel Code -->
 </svelte:head>
 
 
