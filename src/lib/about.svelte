@@ -137,10 +137,6 @@
           <img class="img1" src={AboutImage4} alt="Salon d'esthétique Oullins" />
           <img class="img2" src={AboutImage1} alt="Salon d'esthétique Oullins" />
           <img class="img3" src={AboutImage5} alt="Salon d'esthétique Oullins" />
-          <img class="img1" src={AboutImage3} alt="Salon d'esthétique Oullins" />
-          <img class="img2" src={AboutImage8} alt="Salon d'esthétique Oullins" />
-          <img class="img3" src={AboutImage7} alt="Salon d'esthétique Oullins" />
-          <img class="img3" src={AboutImage13} alt="Salon d'esthétique Oullins" />
         </div>
         
       </div>
@@ -301,6 +297,7 @@
         height: 200px;
         object-fit: cover;
         border-radius: 0px;
+        border : 2px white solid;
         box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
         transition: transform 0.4s ease;
         cursor: pointer;
