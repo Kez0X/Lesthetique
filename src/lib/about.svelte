@@ -1,7 +1,17 @@
 <script>
-    import OullinsMetro from '$lib/images/8570_671_Inauguration-Oullins-St-Genis-Laval-51 1.png';
-    import OullinsMairie from '$lib/images/implanter2 1.png';
-    import SalonCoiffure from '$lib/images/u9lyuns3drewo1gj5p8m 1.png';
+    import AboutImage1 from '$lib/images/AboutImage1.jpg';
+    import AboutImage2 from '$lib/images/AboutImage2.jpg';
+    import AboutImage3 from '$lib/images/AboutImage3.jpg';
+    import AboutImage4 from '$lib/images/AboutImage4.jpg';
+    import AboutImage5 from '$lib/images/AboutImage5.jpg';
+    import AboutImage6 from '$lib/images/AboutImage6.jpg';
+    import AboutImage7 from '$lib/images/AboutImage7.jpg';
+    import AboutImage8 from '$lib/images/AboutImage8.jpg';
+    import AboutImage9 from '$lib/images/AboutImage9.jpg';
+    import AboutImage10 from '$lib/images/AboutImage10.jpg';
+    import AboutImage11 from '$lib/images/AboutImage11.jpg';
+    import AboutImage12 from '$lib/images/AboutImage12.jpg';
+    import AboutImage13 from '$lib/images/AboutImage13.jpg';
 
     // Images pour le fond
     import FlowerSummer from '$lib/images/FlowerSummer.svg';
@@ -96,30 +106,69 @@
   
       <div class="image-album-section">
         <div class="album-images">
-          <img class="img1" src={OullinsMetro} alt="Métro Oullins" />
-          <img class="img2" src={OullinsMairie} alt="Mairie Oullins" />
-          <img class="img3" src={SalonCoiffure} alt="Salon partenaire" />
+          <img class="img1" src={AboutImage2} alt="Mairie Oullins" />
+          <img class="img2" src={AboutImage6} alt="Oullins Ville" />
+          <img class="img3" src={AboutImage10} alt="Grande rue d'oullins" />
         </div>
   
         <div class="album-text fade-slide-in">
           <p>
             Nous avons choisi d’offrir des prestations à domicile 🏠 pour répondre aux besoins d’une clientèle 
             souhaitant gagner du temps et profiter d’un service flexible. Que vous soyez à Vernaison, Millery, ou Chaponost, 
-            nous recréons l’ambiance relaxante et cocooning d’un institut de beauté, directement chez vous.
+            nous recréons l’ambiance <b>relaxante</b> et <b>cocooning</b> d’un institut de beauté, directement chez vous.
+            <br/>
+            Nos prestations à domicile incluent notamment des soins du visage et du corps, une nouvelle beauté des mains et des pieds, des épilations, des massages bien-être et du maquillage pour événements
+            <br/>
+            Nous mettons un point d'honneur à vous offrir un moment de détente privilégié, dans le confort de votre foyer. Tout est pensé pour que vous puissiez vous offrir une pause beauté, sans contrainte de transport ni de stationnement.
           </p>
-  
-          <p>
-            Oullins, berceau de notre aventure professionnelle 📍, reste au cœur de nos prestations. 
-            C’est un point central qui nous permet de rayonner dans les communes voisines comme Pierre-Bénite, 
-            Irigny et Charly pour offrir nos services esthétiques de qualité à une clientèle variée.
-          </p>
-  
+        </div>
+      </div>
+      <div class="image-album-section">  
+        <div class="album-text fade-slide-in">
           <p>
             Pour certaines prestations spécifiques (épilations visage, soins des mains, vernis semi-permanent), 
             retrouvez-nous chez notre partenaire Line’s Coiffure 💅, au 11 bis boulevard de l’Europe à Oullins. 
             Facilement accessible en transport 🚇 avec stationnement gratuit, ce lieu chaleureux vous accueille avec plaisir.
           </p>
+
+          <p>Ce partenariat nous permet de maintenir notre exigence de qualité tout en vous proposant un cadre accueillant et professionnel. C’est l’occasion de découvrir un salon convivial, facile d’accès, où vous serez reçue avec bienveillance et expertise.</p>
         </div>
+        <div class="album-images">
+          <img class="img1" src={AboutImage4} alt="Salon d'esthétique Oullins" />
+          <img class="img2" src={AboutImage1} alt="Salon d'esthétique Oullins" />
+          <img class="img3" src={AboutImage5} alt="Salon d'esthétique Oullins" />
+          <img class="img1" src={AboutImage3} alt="Salon d'esthétique Oullins" />
+          <img class="img2" src={AboutImage8} alt="Salon d'esthétique Oullins" />
+          <img class="img3" src={AboutImage7} alt="Salon d'esthétique Oullins" />
+          <img class="img3" src={AboutImage13} alt="Salon d'esthétique Oullins" />
+        </div>
+        
+      </div>
+      <div class="image-album-section">
+        <div class="album-images">
+          <img class="img1" src={AboutImage9} alt="Bouche de métro Oullins" />
+          <img class="img2" src={AboutImage11} alt="Place Oullins" />
+          <img class="img3" src={AboutImage12} alt="Métro Oullins" />
+        </div>
+        <div class="album-text fade-slide-in">
+          <p>
+            Oullins, berceau de notre aventure professionnelle 📍, reste au cœur de nos prestations. 
+            C’est un point central qui nous permet de rayonner dans les communes voisines comme Pierre-Bénite, 
+            Irigny et Charly pour offrir nos services esthétiques de qualité à une clientèle variée. Voici comment nous rejoindre :
+          </p>
+
+          <ul>
+            <li>En transport en commun :</li>
+            <p>Le métro B (station Oullins Centre) vous dépose à deux pas du salon Line’s Coiffure. Des bus desservent également les communes proches comme Saint-Genis-Laval, Pierre-Bénite ou La Mulatière.</p>
+            <li>En voiture :</li>
+            <p>Le salon dispose de places de stationnement gratuites à proximité, vous évitant les tracas habituels du centre-ville.</p>
+            <li>À pied ou à vélo :</li>
+            <p>Depuis le centre d’Oullins, l’accès est facile à pied, et des pistes cyclables facilitent également l’accès en deux roues.</p>
+          </ul>
+
+          <p>Oullins est un point stratégique qui permet à notre équipe d’être rapidement sur place pour vos soins à domicile, ou pour vous accueillir dans les meilleures conditions en salon.</p>
+        </div>
+        
       </div>
     </div>
   </div>
