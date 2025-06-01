@@ -3,7 +3,7 @@
     let faqs = [
         {
             question: "Où vous déplacez vous ?",
-            answer: "Nous sommes basés sur Oullins et nous nous déplaçons dans la région sud-ouest lyonnaise : Oullins, Sainte Foy-lès-lyon, Saint Genis Laval, Tassin, Irigny, Pierre Bénite, la Mulatière, Charly, Vernaison, Millery, Chaponost, Brignais. Déplacements possibles dans les communes voisines, n'hésitez pas à nous contacter pour en savoir plus.",
+            answer: "Nous sommes basés sur Oullins et nous nous déplaçons dans la région sud-ouest lyonnaise : Oullins, Sainte Foy-lès-lyon, Saint Genis Laval, Tassin, Irigny, Pierre Bénite, la Mulatière, Charly, Vernaison, Millery, Chaponost, Brignais.",
             open: false
         },
         {

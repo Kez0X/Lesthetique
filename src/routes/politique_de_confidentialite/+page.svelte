@@ -1,6 +1,22 @@
 <svelte:head>
     <title>Politique de confidentialité - L'esthétique</title>
     <meta name="description" content="Découvrez nos services d'épilation réalisés avec des cires bio certifiées." />
+
+    <!-- Meta Pixel Code -->
+	<script>
+		!function(f,b,e,v,n,t,s)
+		{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+		n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+		if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+		n.queue=[];t=b.createElement(e);t.async=!0;
+		t.src=v;s=b.getElementsByTagName(e)[0];
+		s.parentNode.insertBefore(t,s)}(window, document,'script',
+		'https://connect.facebook.net/en_US/fbevents.js');
+		fbq('init', '669075309377526');
+		fbq('track', 'PageView');
+	</script>
+	<img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=669075309377526&ev=PageView&noscript=1" alt=""/>
+	<!-- End Meta Pixel Code -->
 </svelte:head>
 
 <div class="section-about">
@@ -17,7 +33,7 @@
         <li>Informations relatives à la santé ou aux soins esthétiques (allergies, préférences de soin)</li>
         <li>Informations de paiement</li>
     </ul>
-    <p>Ces données sont collectées uniquement dans le but de fournir les soins et services esthétiques adaptés aux besoins de nos clientes, pouvoir promouvoir notre entreprise sur divers média sociaux et pour faciliter la prise de rendez-vous.</p>
+    <p>Ces données sont collectées uniquement dans le but de fournir les soins et services esthétiques adaptés aux besoins de nos clientes et pour faciliter la prise de rendez-vous.</p>
 
     <h2>3. Utilisation des données</h2>
     <p>Les informations collectées sont utilisées uniquement pour les raisons suivantes :</p>
@@ -26,8 +42,6 @@
         <li>Prendre et confirmer des rendez-vous</li>
         <li>Communiquer avec vous à propos de vos soins ou de promotions spéciales (avec votre consentement)</li>
         <li>Tenir un dossier sécurisé de vos préférences et besoins spécifiques en matière de soins</li>
-        <li>Respecter les obligations légales et réglementaires</li>
-        <li>Notre publicité facebook</li>
     </ul>
 
     <h2>4. Confidentialité et secret professionnel</h2>

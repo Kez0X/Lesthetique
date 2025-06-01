@@ -1,8 +1,25 @@
 <svelte:head>
 	<title>L'esthétique AA - Esthéticienne à domicile à Oullins et alentours</title>
-	<meta name="description" content="..." />
-	<meta name="keywords" content="..." />
+	<meta name="description" content="Découvrez L'esthétiqueAA, spécialiste de l'esthétique à domicile pour femmes à Oullins et alentours. Prestations de massages, épilations, onglerie à domicile sur les secteurs d'Oullins, Saint-Genis-Laval, Sainte-Foy-lès-Lyon, La Mulatière, Tassin, Millery, Charly, Vernaison, Irigny, Brignais, Chaponost, Pierre-Bénite. Profitez de soins de qualité directement chez vous, dans un cadre de douceur et de professionnalisme." />
+    <meta name="keywords" content="épilation bio, épilation à domicile, soins de beauté bio, épilation Oullins, épilation Saint-Genis-Laval, épilation Lyon, esthetiqueAA, l'esthetiqueAA, L'EsthetiqueAA, EsthetiqueAA, esthetiqueAA Oullins, l'esthetiqueAA Oullins, L'EsthetiqueAA Oullins, EsthetiqueAA Oullins, esthetique à domicile, esthetiqueAA domicile">
 	<meta name="google-site-verification" content="K9H81I_EzYQIRoguOVlhwiUmBY0jgxy2GawD07KDM8A" />
+
+
+	<!-- Meta Pixel Code -->
+	<script>
+		!function(f,b,e,v,n,t,s)
+		{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+		n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+		if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+		n.queue=[];t=b.createElement(e);t.async=!0;
+		t.src=v;s=b.getElementsByTagName(e)[0];
+		s.parentNode.insertBefore(t,s)}(window, document,'script',
+		'https://connect.facebook.net/en_US/fbevents.js');
+		fbq('init', '669075309377526');
+		fbq('track', 'PageView');
+	</script>
+	<img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=669075309377526&ev=PageView&noscript=1" alt=""/>
+	<!-- End Meta Pixel Code -->
 </svelte:head>
 
 <script>
@@ -16,6 +33,7 @@
 	import { page } from '$app/stores';
 	import Brochure from '$lib/images/Beige Organic Beauty and Spa Brochure.pdf';
 </script>
+	
 
 <div class="page-home">
 	<div class="home-page-container">
@@ -45,7 +63,6 @@
 					<p class="follow-us-localisation">
 						📍 On se déplace sur : Oullins, Saint-Genis-Laval, Sainte-Foy-lès-Lyon, La Mulatière, Tassin, Millery, Charly, Vernaison, Irigny, Brignais, Chaponost, Pierre-Bénite
 					</p>
-					<p class="follow-us-localisation">Déplacements possibles dans les communes voisines, n'hésitez pas à nous contacter pour en savoir plus.</p>
 
 					<div class="social-icons">
 						<a href="https://www.facebook.com/share/HbRySNxzmWmYTA8G/" target="_blank"><img src={Facebook} alt="Facebook" /></a>

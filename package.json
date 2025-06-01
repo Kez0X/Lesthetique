@@ -25,7 +25,6 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@vercel/analytics": "^1.4.1",
-		"tarteaucitronjs": "^1.21.0"
+		"@vercel/analytics": "^1.4.1"
 	}
 }
