@@ -7,7 +7,7 @@
 					clearInterval(interval);
 
 					tarteaucitron.init({
-						privacyUrl: "/politique-de-confidentialite",
+						privacyUrl: "/politique_de_confidentialite",
 						bodyPosition: "top",
 						hashtag: "#tarteaucitron",
 						cookieName: "tarteaucitron",
@@ -60,6 +60,50 @@
 
 					tarteaucitron.job = tarteaucitron.job || [];
 					tarteaucitron.job.push("facebookpixel");
+
+					// Fonction d'envoi vers Cloudflare Worker
+					const sendConversion = async () => {
+						const payload = {
+							event_name: 'PageView',
+							custom_data: {
+								page_path: window.location.pathname
+							}
+						};
+
+						try {
+							const res = await fetch('https://aa-esthetiqueoullins.fow5qcodm.workers.dev', {
+								method: 'POST',
+								headers: {
+									'Content-Type': 'application/json'
+								},
+								body: JSON.stringify(payload)
+							});
+
+							const data = await res.json();
+							console.log('Conversion API response:', data);
+						} catch (e) {
+							console.error('Erreur en envoyant vers Cloudflare Worker:', e);
+						}
+					};
+
+					// Vérifie si consentement déjà donné, sinon attend
+					const checkConsentAndSend = () => {
+						if (window.tarteaucitron.user && window.tarteaucitron.user.facebookpixel === true) {
+							sendConversion();
+						} else {
+							setTimeout(checkConsentAndSend, 1000);
+						}
+					};
+
+					// Lance la vérification
+					checkConsentAndSend();
+
+					// Écoute l'événement tarteaucitron acceptant un service
+					window.addEventListener('tac.accept', (e) => {
+						if (e.detail === 'facebookpixel') {
+							sendConversion();
+						}
+					});
 				}
 			}, 100);
 		});
