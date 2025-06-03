@@ -7,7 +7,7 @@
 					clearInterval(interval);
 
 					tarteaucitron.init({
-						privacyUrl: "/politique-de-confidentialite",
+						privacyUrl: "/politique_de_confidentialite",
 						bodyPosition: "top",
 						hashtag: "#tarteaucitron",
 						cookieName: "tarteaucitron",
@@ -58,8 +58,33 @@
 						fallback: function () {}
 					};
 
+					tarteaucitron.services.capig = {
+						key: "capig",
+						type: "api",
+						name: "Tracking interne (capig.esthetiqueaa.com)",
+						needConsent: true,
+						cookies: [], // ajoute ici les cookies utilisés si besoin
+						js: function () {
+							// Code à exécuter UNIQUEMENT si l'utilisateur accepte
+							fetch("https://capig.aa-esthetiqueoullins.fr/collect", {
+								method: "POST",
+								headers: {
+									"Content-Type": "application/json"
+								},
+								body: JSON.stringify({
+									event: "PageView",
+									timestamp: Date.now()
+								})
+							});
+						},
+						fallback: function () {
+							// Ne rien faire si refus
+						}
+					};
+
 					tarteaucitron.job = tarteaucitron.job || [];
 					tarteaucitron.job.push("facebookpixel");
+					tarteaucitron.job.push("capig");
 				}
 			}, 100);
 		});
