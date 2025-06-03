@@ -1,94 +1,84 @@
 <svelte:head>
-	<script src="https://cdn.jsdelivr.net/npm/tarteaucitronjs@latest/tarteaucitron.min.js" defer></script>
-	<script>
-		window.addEventListener("DOMContentLoaded", () => {
-			const interval = setInterval(() => {
-				if (typeof tarteaucitron !== "undefined") {
-					clearInterval(interval);
+    <script src="https://cdn.jsdelivr.net/npm/tarteaucitronjs@latest/tarteaucitron.min.js"></script>
+    <script>
+        let tarteauReady = false;
+        const interval = setInterval(() => {
+            if (window.tarteaucitron && !tarteauReady) {
+                tarteauReady = true;
+                clearInterval(interval);
 
-					tarteaucitron.init({
-						privacyUrl: "/politique_de_confidentialite",
-						bodyPosition: "top",
-						hashtag: "#tarteaucitron",
-						cookieName: "tarteaucitron",
-						orientation: "middle",
-						groupServices: true,
-						showDetailsOnClick: true,
-						serviceDefaultState: "wait",
-						showAlertSmall: false,
-						closePopup: true,
-						showIcon: true,
-						iconPosition: "BottomRight",
-						DenyAllCta: true,
-						AcceptAllCta: true,
-						highPrivacy: true,
-						mandatory: true,
-						googleConsentMode: true,
-						bingConsentMode: true,
-						partnersList: true
-					});
+                tarteaucitron.services.facebookpixel = {
+                    key: "facebookpixel",
+                    type: "ads",
+                    name: "Facebook Pixel",
+                    needConsent: true,
+                    cookies: ["_fbp"],
+                    js: function () {
+                        !(function(f, b, e, v, n, t, s) {
+                            if (f.fbq) return;
+                            n = f.fbq = function () {
+                                n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+                            };
+                            if (!f._fbq) f._fbq = n;
+                            n.push = n;
+                            n.loaded = !0;
+                            n.version = "2.0";
+                            n.queue = [];
+                            t = b.createElement(e);
+                            t.async = !0;
+                            t.src = v;
+                            s = b.getElementsByTagName(e)[0];
+                            s.parentNode.insertBefore(t, s);
+                        })(window, document, "script", "https://connect.facebook.net/en_US/fbevents.js");
 
-					tarteaucitron.services.facebookpixel = {
-						key: "facebookpixel",
-						type: "ads",
-						name: "Facebook Pixel",
-						needConsent: true,
-						cookies: ["_fbp"],
-						js: function () {
-							!(function(f, b, e, v, n, t, s) {
-								if (f.fbq) return;
-								n = f.fbq = function () {
-									n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
-								};
-								if (!f._fbq) f._fbq = n;
-								n.push = n;
-								n.loaded = !0;
-								n.version = "2.0";
-								n.queue = [];
-								t = b.createElement(e);
-								t.async = !0;
-								t.src = v;
-								s = b.getElementsByTagName(e)[0];
-								s.parentNode.insertBefore(t, s);
-							})(window, document, "script", "https://connect.facebook.net/en_US/fbevents.js");
+                        fbq("init", "669075309377526");
+                        fbq("track", "PageView");
+                    },
+                    fallback: function () {}
+                };
 
-							fbq("init", "669075309377526");
-							fbq("track", "PageView");
-						},
-						fallback: function () {}
-					};
+                tarteaucitron.services.gtm = {
+                    key: "gtm",
+                    type: "api",
+                    name: "Google Tag Manager",
+                    needConsent: true,
+                    cookies: ["_ga"],
+                    js: function () {
+                        (function(w, d, s, l, i) {
+                            w[l] = w[l] || [];
+                            w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+                            var f = d.getElementsByTagName(s)[0],
+                                j = d.createElement(s),
+                                dl = l != 'dataLayer' ? '&l=' + l : '';
+                            j.async = true;
+                            j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+                            f.parentNode.insertBefore(j, f);
+                        })(window, document, 'script', 'dataLayer', 'GTM-TXSZ6PKN'); 
+                    },
+                    fallback: function () { return ''; }
+                };
 
-					tarteaucitron.services.capig = {
-						key: "capig",
-						type: "api",
-						name: "Tracking interne (capig.esthetiqueaa.com)",
-						needConsent: true,
-						cookies: [], // ajoute ici les cookies utilisés si besoin
-						js: function () {
-							// Code à exécuter UNIQUEMENT si l'utilisateur accepte
-							fetch("https://capig.aa-esthetiqueoullins.fr/collect", {
-								method: "POST",
-								headers: {
-									"Content-Type": "application/json"
-								},
-								body: JSON.stringify({
-									event: "PageView",
-									timestamp: Date.now()
-								})
-							});
-						},
-						fallback: function () {
-							// Ne rien faire si refus
-						}
-					};
+                tarteaucitron.init({
+                    privacyUrl: "/politique_de_confidentialite",
+                    hashtag: "#tarteaucitron",
+                    cookieName: "tarteaucitron",
+                    orientation: "bottom",
+                    showAlertSmall: false,
+                    showIcon: true,
+                    iconPosition: "BottomRight",
+                    DenyAllCta: true,
+                    AcceptAllCta: true,
+                    highPrivacy: false,
+                    handleBrowserDNTRequest: false,
+                    mandatory: true
+                });
 
-					tarteaucitron.job = tarteaucitron.job || [];
-					tarteaucitron.job.push("facebookpixel");
-					tarteaucitron.job.push("capig");
-				}
-			}, 100);
-		});
-	</script>
+                tarteaucitron.job = tarteaucitron.job || [];
+                tarteaucitron.job.push("facebookpixel");
+                tarteaucitron.job.push("gtm");
+            }
+        }, 100);
+    </script>
 </svelte:head>
 <script>
 	import '../app.css';
