@@ -31,7 +31,7 @@
             })(window, document, "script");
 
             fbq("init", "669075309377526");
-            fbq("track", "Search");
+            fbq("track", "PageView");
         }
 
         $: {

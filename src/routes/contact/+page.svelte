@@ -11,7 +11,12 @@
         }
 
         function loadFbPixel() {
-            if (window.fbq) return;
+            if (window.fbq) {
+                fbq("track", "Contact");
+                fbq('track', 'Lead');
+
+                return;
+            }
 
             !(function(f, b, e, v, n, t, s) {
                 if (f.fbq) return;
