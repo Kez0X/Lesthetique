@@ -34,7 +34,10 @@
 
             fbq("init", "669075309377526");
             fbq("track", "PageView");
+			fbq('track', 'ViewContent');
+			fbq("track", "Contact");
         }
+
 
         $: {
 

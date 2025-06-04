@@ -32,6 +32,8 @@
 
             fbq("init", "669075309377526");
             fbq("track", "Contact");
+            fbq('track', 'Lead');
+            fbq('track', 'Schedule');
         }
 
         $: {
