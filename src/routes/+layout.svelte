@@ -62,13 +62,13 @@
                     privacyUrl: "/politique_de_confidentialite",
                     hashtag: "#tarteaucitron",
                     cookieName: "tarteaucitron",
-                    orientation: "bottom",
+                    orientation: "middle",
                     showAlertSmall: false,
                     showIcon: true,
                     iconPosition: "BottomRight",
                     DenyAllCta: true,
                     AcceptAllCta: true,
-                    highPrivacy: false,
+                    highPrivacy: true,
                     handleBrowserDNTRequest: false,
                     mandatory: true
                 });
