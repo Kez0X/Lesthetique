@@ -4,52 +4,62 @@
     <meta name="keywords" content="épilation bio, épilation à domicile, soins de beauté bio, épilation Oullins, épilation Saint-Genis-Laval, épilation Lyon, esthetique AA, l'esthétique AA, L'Esthétique AA, Esthetique AA, esthetique AA Oullins, l'esthetiqueAA Oullins, L'EsthetiqueAA Oullins, Esthetique AA Oullins, esthetique à domicile, esthetique AA domicile, l'esthétique AA, esthétique AA, Esthétique AA, L'Esthetique AA, Esthétique AA">
 
      <script>
-        function getCookie(name) {
-            const value = `; ${document.cookie}`;
-            const parts = value.split(`; ${name}=`);
-            if (parts.length === 2) return parts.pop().split(";").shift();
-        }
+        // function getCookie(name) {
+        //     const value = `; ${document.cookie}`;
+        //     const parts = value.split(`; ${name}=`);
+        //     if (parts.length === 2) return parts.pop().split(";").shift();
+        // }
 
-        function loadFbPixel() {
-            if (window.fbq) {
-                fbq("track", "PageView");
-                return;
-            }
+        // function loadFbPixel() {
+        //     if (window.fbq) {
+        //         fbq("track", "PageView");
+        //         return;
+        //     }
 
 
-            !(function(f, b, e, v, n, t, s) {
-                if (f.fbq) return;
-                n = f.fbq = function () {
-                    n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
-                };
-                if (!f._fbq) f._fbq = n;
-                n.push = n;
-                n.loaded = !0;
-                n.version = "2.0";
-                n.queue = [];
-                t = b.createElement(e);
-                t.async = !0;
-                t.src = "https://connect.facebook.net/en_US/fbevents.js";
-                s = b.getElementsByTagName(e)[0];
-                s.parentNode.insertBefore(t, s);
-            })(window, document, "script");
+        //     !(function(f, b, e, v, n, t, s) {
+        //         if (f.fbq) return;
+        //         n = f.fbq = function () {
+        //             n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+        //         };
+        //         if (!f._fbq) f._fbq = n;
+        //         n.push = n;
+        //         n.loaded = !0;
+        //         n.version = "2.0";
+        //         n.queue = [];
+        //         t = b.createElement(e);
+        //         t.async = !0;
+        //         t.src = "https://connect.facebook.net/en_US/fbevents.js";
+        //         s = b.getElementsByTagName(e)[0];
+        //         s.parentNode.insertBefore(t, s);
+        //     })(window, document, "script");
 
-            fbq("init", "669075309377526");
-            fbq("track", "PageView");
-        }
+        //     fbq("init", "669075309377526");
+        //     fbq("track", "PageView");
+        // }
 
-        $: {
+        // $: {
 
-            if (typeof window !== 'undefined') {
-                setTimeout(() => {
-                    if (window.tarteaucitron?.state?.facebookpixel === true) {
-                        loadFbPixel();
-                    }
-                }, 500);
-            }
-        }
-    </script>
-
+        //     if (typeof window !== 'undefined') {
+        //         setTimeout(() => {
+        //             if (window.tarteaucitron?.state?.facebookpixel === true) {
+        //                 loadFbPixel();
+        //             }
+        //         }, 500);
+        //     }
+        // }
+		!function(f,b,e,v,n,t,s)
+		{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+		n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+		if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+		n.queue=[];t=b.createElement(e);t.async=!0;
+		t.src=v;s=b.getElementsByTagName(e)[0];
+		s.parentNode.insertBefore(t,s)}(window, document,'script',
+		'https://connect.facebook.net/en_US/fbevents.js');
+		fbq('init', '669075309377526');
+		fbq('track', 'PageView');
+	</script>
+    <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=669075309377526&ev=PageView&noscript=1" alt=""/>
 </svelte:head>
 
 <script>
@@ -61,7 +71,6 @@
         { name: "Relaxant", time: "1h", price: "50€", description : "Massage relaxant" }
     ];
 </script>
-
 <div class="soins-visages-page">
     <div class="header-section" style="background-image: url({SoinsVisagesImage})">
         <div class="overlay"></div>
