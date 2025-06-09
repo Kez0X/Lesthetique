@@ -10,7 +10,10 @@
         }
 
         function loadFbPixel() {
-            if (window.fbq) return;
+            if (window.fbq) {
+                fbq("track", "PageView");
+                return;
+            }
 
             !(function(f, b, e, v, n, t, s) {
                 if (f.fbq) return;

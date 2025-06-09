@@ -5,7 +5,7 @@
 	<meta name="google-site-verification" content="K9H81I_EzYQIRoguOVlhwiUmBY0jgxy2GawD07KDM8A" />
 
 	
-    <script>
+    <script async>
         function getCookie(name) {
             const value = `; ${document.cookie}`;
             const parts = value.split(`; ${name}=`);
@@ -13,43 +13,86 @@
         }
 
         function loadFbPixel() {
-            if (window.fbq) return;
+			console.log("Checking if Facebook Pixel is already loaded");
+            if (window.fbq) {
+				console.log("Facebook Pixel already loaded");
+                fbq("track", "PageView");
+				fbq('track', 'ViewContent');
+				fbq("track", "Contact");
 
-            !(function(f, b, e, v, n, t, s) {
-                if (f.fbq) return;
-                n = f.fbq = function () {
-                    n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
-                };
-                if (!f._fbq) f._fbq = n;
-                n.push = n;
-                n.loaded = !0;
-                n.version = "2.0";
-                n.queue = [];
-                t = b.createElement(e);
-                t.async = !0;
-                t.src = "https://connect.facebook.net/en_US/fbevents.js";
-                s = b.getElementsByTagName(e)[0];
-                s.parentNode.insertBefore(t, s);
-            })(window, document, "script");
-
-            fbq("init", "669075309377526");
-            fbq("track", "PageView");
-			fbq('track', 'ViewContent');
-			fbq("track", "Contact");
-        }
-
-
-        $: {
-
-            if (typeof window !== 'undefined') {
-                setTimeout(() => {
-					console.log(window.tarteaucitron?.state?.facebookpixel);
-                    if (window.tarteaucitron?.state?.facebookpixel === true) {
-                        loadFbPixel();
-                    }
-                }, 500);
+                return;
             }
-        }
+
+			console.log("Loading Facebook Pixel for the first time");
+
+
+			function loadFbPixel() {
+				console.log("Checking if Facebook Pixel is already loaded");
+				if (window.fbq) {
+					console.log("Facebook Pixel already loaded, sending events");
+					fbq("track", "PageView");
+					console.log("fbq track PageView envoyé");
+					fbq('track', 'ViewContent');
+					console.log("fbq track ViewContent envoyé");
+					fbq("track", "Contact");
+					console.log("fbq track Contact envoyé");
+					return;
+				}
+			}
+
+				console.log("Loading Facebook Pixel for the first time");
+
+				!(function(f, b, e, v, n, t, s) {
+					if (f.fbq) return;
+					n = f.fbq = function () {
+						n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+					};
+					if (!f._fbq) f._fbq = n;
+					n.push = n;
+					n.loaded = !0;
+					n.version = "2.0";
+					n.queue = [];
+					t = b.createElement(e);
+					t.async = !0;
+					t.src = "https://connect.facebook.net/en_US/fbevents.js";
+					s = b.getElementsByTagName(e)[0];
+					s.parentNode.insertBefore(t, s);
+				})(window, document, "script");
+
+				console.log("Pixel script inséré, initialisation...");
+
+				try{
+					fbq("init", "669075309377526");
+					console.log("fbq init envoyé");
+					fbq("track", "PageView");
+					console.log("fbq track PageView envoyé");
+					fbq('track', 'ViewContent');
+					console.log("fbq track ViewContent envoyé");
+					fbq("track", "Contact");
+					console.log("fbq track Contact envoyé");
+				} catch (error) {
+					console.error("Error initializing Facebook Pixel:", error);
+					return;
+				}
+
+				console.log("Facebook Pixel loaded");
+			}
+
+			$: {
+				if (typeof window !== 'undefined' && window.tarteaucitron !== 'undefined') {
+					setTimeout(() => {
+						const cookieValue = getCookie('tarteaucitron') || '';
+						const hasFacebookPixel = cookieValue.includes('!facebookpixel=true');
+						console.log('cookie tarteaucitron:', cookieValue, 'facebookpixel:', hasFacebookPixel);
+						if (hasFacebookPixel) {
+							console.log('Déclenchement de loadFbPixel()');
+							loadFbPixel();
+						} else {
+							console.log('Pixel Facebook non autorisé par le cookie');
+						}
+					}, 500);
+				}
+			}
     </script>
 </svelte:head>
 

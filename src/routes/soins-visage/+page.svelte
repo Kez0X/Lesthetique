@@ -11,7 +11,11 @@
         }
 
         function loadFbPixel() {
-            if (window.fbq) return;
+            if (window.fbq) {
+                fbq("track", "PageView");
+                return;
+            }
+
 
             !(function(f, b, e, v, n, t, s) {
                 if (f.fbq) return;
@@ -38,7 +42,6 @@
 
             if (typeof window !== 'undefined') {
                 setTimeout(() => {
-					console.log(window.tarteaucitron?.state?.facebookpixel);
                     if (window.tarteaucitron?.state?.facebookpixel === true) {
                         loadFbPixel();
                     }

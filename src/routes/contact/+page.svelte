@@ -14,6 +14,7 @@
             if (window.fbq) {
                 fbq("track", "Contact");
                 fbq('track', 'Lead');
+                fbq('track', 'Schedule');
 
                 return;
             }
