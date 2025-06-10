@@ -1,4 +1,4 @@
-<!-- <svelte:head>
+<svelte:head>
     <script src="https://cdn.jsdelivr.net/npm/tarteaucitronjs@latest/tarteaucitron.min.js"></script>
     <script>
         let tarteauReady = false;
@@ -85,7 +85,7 @@
         }, 100);
 
     </script>
-</svelte:head> -->
+</svelte:head>
 <script>
 	import '../app.css';
 	import Navbar from '$lib/navbar.svelte';

@@ -5,7 +5,7 @@
 	<meta name="google-site-verification" content="K9H81I_EzYQIRoguOVlhwiUmBY0jgxy2GawD07KDM8A" />
 
 	
-    <script async>
+    <script>
         function getCookie(name) {
             const value = `; ${document.cookie}`;
             const parts = value.split(`; ${name}=`);
@@ -93,7 +93,7 @@
 					}, 500);
 				}
 			}
-    </script>
+	</script>
 </svelte:head>
 
 <script>
