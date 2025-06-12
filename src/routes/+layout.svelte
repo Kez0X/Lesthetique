@@ -22,12 +22,13 @@
         orientation: "middle",
         showAlertSmall: false,
         showIcon: true,
+        adblocker: false,
+        AcceptAllCta: true,
         iconPosition: "BottomRight",
-        DenyAllCta: true,
         AcceptAllCta: true,
         highPrivacy: true,
-        handleBrowserDNTRequest: false,
-        mandatory: true
+        removeCredit: true,
+        moreInfoLink: true,
       });
 
       tarteaucitron.job = ['ads', 'analytics'];
@@ -79,7 +80,6 @@
           const current = tarteaucitron.cookie.read('tarteaucitron');
           if (previous && !current) {
             console.log('[Tarteaucitron] Cookie supprimé, réouverture du panneau');
-            openPanel();
             window.location.reload();
           }
           previous = current;
