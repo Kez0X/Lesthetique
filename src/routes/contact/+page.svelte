@@ -48,8 +48,6 @@
 					return;
 				}
 
-			}
-
 			$: {
 				if (typeof window !== 'undefined' && window.tarteaucitron !== 'undefined') {
 					setTimeout(() => {
