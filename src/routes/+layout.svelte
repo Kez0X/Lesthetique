@@ -7,48 +7,15 @@
                 tarteauReady = true;
                 clearInterval(interval);
 
-                tarteaucitron.services.facebookpixel = {
-                    key: "facebookpixel",
+                // Définition d’un service générique "ads"
+                tarteaucitron.services.ads = {
+                    key: "ads",
                     type: "ads",
-                    name: "Facebook Pixel",
-                    needConsent: true,
-                    cookies: ["_fbp"],
-                    js: function () {
-                        !(function(f, b, e, v, n, t, s) {
-                            if (f.fbq) return;
-                            n = f.fbq = function () {
-                                n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
-                            };
-                            if (!f._fbq) f._fbq = n;
-                            n.push = n;
-                            n.loaded = !0;
-                            n.version = "2.0";
-                            n.queue = [];
-                            t = b.createElement(e);
-                            t.async = !0;
-                            t.src = "https://connect.facebook.net/en_US/fbevents.js";
-                            s = b.getElementsByTagName(e)[0];
-                            s.parentNode.insertBefore(t, s);
-                        })(window, document, "script");
-
-                        try {
-                            fbq("init", "669075309377526");
-                            fbq("track", "PageView");
-                            console.log("Facebook Pixel initialisé via tarteaucitron");
-                        } catch (error) {
-                            console.error("Erreur lors de l'init du Pixel Facebook :", error);
-                        }
-                    },
-                    fallback: function () {}
-                };
-
-                tarteaucitron.services.gtm = {
-                    key: "gtm",
-                    type: "api",
-                    name: "Google Tag Manager",
+                    name: "Publicités",
                     needConsent: true,
                     cookies: ["_ga"],
                     js: function () {
+
                         (function(w, d, s, l, i) {
                             w[l] = w[l] || [];
                             w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
@@ -58,9 +25,9 @@
                             j.async = true;
                             j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
                             f.parentNode.insertBefore(j, f);
-                        })(window, document, 'script', 'dataLayer', 'GTM-TXSZ6PKN'); 
+                        })(window, document, 'script', 'dataLayer', 'GTM-PRV5CSBW');
                     },
-                    fallback: function () { return ''; }
+                    fallback: function () {}
                 };
 
                 tarteaucitron.init({
@@ -79,11 +46,9 @@
                 });
 
                 tarteaucitron.job = tarteaucitron.job || [];
-                tarteaucitron.job.push("facebookpixel");
-                tarteaucitron.job.push("gtm");
+                tarteaucitron.job.push("ads");
             }
         }, 100);
-
     </script>
 </svelte:head>
 <script>
