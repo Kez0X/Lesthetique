@@ -62,12 +62,42 @@
         tarteaucitron.job.push("ads");
         tarteaucitron.job.push("analytics");
 
-        // Vérifie toutes les 5 secondes si le cookie a été supprimé
+        let previousCookieState = document.cookie.includes('tarteaucitron=');
+
         setInterval(() => {
-          if (!document.cookie.includes('tarteaucitron=')) {
-            console.log('[Tarteaucitron] Cookie supprimé, réouverture du panneau');
-            tarteaucitron.userInterface.openPanel();
-          }
+        const currentState = document.cookie.includes('tarteaucitron=');
+
+        // Si le cookie était présent et qu’il ne l’est plus => relancer Tarteaucitron
+        if (previousCookieState && !currentState) {
+            console.warn('[Tarteaucitron] Cookie supprimé, réinitialisation de Tarteaucitron...');
+            
+            // Supprime toutes traces internes éventuelles
+            tarteaucitron.closePanel(); // ferme si déjà ouvert
+            tarteaucitron.cookie.clear(); // vide ses cookies internes si jamais (optionnel)
+
+            // Force une nouvelle initialisation complète
+            tarteaucitron.init({
+            privacyUrl: "/politique_de_confidentialite",
+            hashtag: "#tarteaucitron",
+            cookieName: "tarteaucitron",
+            orientation: "middle",
+            showAlertSmall: false,
+            showIcon: true,
+            iconPosition: "BottomRight",
+            DenyAllCta: true,
+            AcceptAllCta: true,
+            highPrivacy: true,
+            handleBrowserDNTRequest: false,
+            mandatory: true
+            });
+
+            // Recharge les services (sinon ils ne sont plus pris en compte)
+            tarteaucitron.job = tarteaucitron.job || [];
+            tarteaucitron.job.push("ads");
+            tarteaucitron.job.push("analytics");
+        }
+
+        previousCookieState = currentState;
         }, 5000);
       }
     }, 100);
