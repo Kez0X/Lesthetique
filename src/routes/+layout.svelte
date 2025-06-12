@@ -31,15 +31,7 @@
         moreInfoLink: true,
       });
 
-      tarteaucitron.job = ['ads', 'analytics'];
-    };
-
-    const interval = setInterval(() => {
-      if (window.tarteaucitron && !tarteauReady) {
-        tarteauReady = true;
-        clearInterval(interval);
-
-        // Déclaration des services
+      // Déclaration des services
         tarteaucitron.services.ads = {
           key: "ads",
           type: "ads",
@@ -71,6 +63,14 @@
           fallback: function() {}
         };
 
+      tarteaucitron.job = ['ads', 'analytics'];
+    };
+
+    const interval = setInterval(() => {
+      if (window.tarteaucitron && !tarteauReady) {
+        tarteauReady = true;
+        clearInterval(interval);
+
         // Initialisation initiale
         initTarteaucitron();
 
@@ -81,6 +81,7 @@
           if (previous && !current) {
             console.log('[Tarteaucitron] Cookie supprimé, réouverture du panneau');
             window.location.reload();
+            initTarteaucitron();
           }
           previous = current;
         }, 5000);
