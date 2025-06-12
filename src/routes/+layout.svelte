@@ -4,7 +4,7 @@
     let tarteauReady = false;
 
     function openPanel() {
-      const sel = '#tarteaucitronIcon';
+      const sel = '#tarteaucitronManager';
       const el = document.querySelector(sel);
       if (el) {
         el.click();
