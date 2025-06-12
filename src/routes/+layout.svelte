@@ -80,6 +80,7 @@
           if (previous && !current) {
             console.log('[Tarteaucitron] Cookie supprimé, réouverture du panneau');
             openPanel();
+            window.location.reload();
           }
           previous = current;
         }, 5000);
