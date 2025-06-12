@@ -71,10 +71,6 @@
         if (previousCookieState && !currentState) {
             console.warn('[Tarteaucitron] Cookie supprimé, réinitialisation de Tarteaucitron...');
             
-            // Supprime toutes traces internes éventuelles
-            tarteaucitron.closePanel(); // ferme si déjà ouvert
-            tarteaucitron.cookie.clear(); // vide ses cookies internes si jamais (optionnel)
-
             // Force une nouvelle initialisation complète
             tarteaucitron.init({
             privacyUrl: "/politique_de_confidentialite",
