@@ -2,7 +2,6 @@
     <title>Contact - L'EsthetiqueAA</title>
     <meta name="description" content="Contactez L'esthétique pour prendre rendez-vous et découvrir nos prestations." />
     <meta name="keywords" content="épilation bio, épilation à domicile, soins de beauté bio, épilation Oullins, épilation Saint-Genis-Laval, épilation Lyon, esthétique AA, l'esthétique AA, Esthetique AA, esthetique AA Oullins, esthetique à domicile">
-
      <script>
         function getCookie(name) {
             const value = `; ${document.cookie}`;
@@ -10,50 +9,63 @@
             if (parts.length === 2) return parts.pop().split(";").shift();
         }
 
-        function loadFbPixel() {
-            if (window.fbq) {
-                fbq("track", "Contact");
-                fbq('track', 'Lead');
-                fbq('track', 'Schedule');
+			function loadFbPixel() {
+				if (window.fbq) {
+					fbq("track", "PageView");
+					fbq('track', 'ViewContent');
+					fbq("track", "Contact");
+					return;
+				}
+			}
 
-                return;
-            }
+				console.log("Loading Facebook Pixel for the first time");
 
-            !(function(f, b, e, v, n, t, s) {
-                if (f.fbq) return;
-                n = f.fbq = function () {
-                    n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
-                };
-                if (!f._fbq) f._fbq = n;
-                n.push = n;
-                n.loaded = !0;
-                n.version = "2.0";
-                n.queue = [];
-                t = b.createElement(e);
-                t.async = !0;
-                t.src = "https://connect.facebook.net/en_US/fbevents.js";
-                s = b.getElementsByTagName(e)[0];
-                s.parentNode.insertBefore(t, s);
-            })(window, document, "script");
+				!(function(f, b, e, v, n, t, s) {
+					if (f.fbq) return;
+					n = f.fbq = function () {
+						n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+					};
+					if (!f._fbq) f._fbq = n;
+					n.push = n;
+					n.loaded = !0;
+					n.version = "2.0";
+					n.queue = [];
+					t = b.createElement(e);
+					t.async = !0;
+					t.src = "https://connect.facebook.net/en_US/fbevents.js";
+					s = b.getElementsByTagName(e)[0];
+					s.parentNode.insertBefore(t, s);
+				})(window, document, "script");
 
-            fbq("init", "669075309377526");
-            fbq("track", "Contact");
-            fbq('track', 'Lead');
-            fbq('track', 'Schedule');
-        }
 
-        $: {
+				try{
+					fbq("init", "669075309377526");
+					fbq("track", "Contact");
+                    fbq('track', 'Lead');
+                    fbq('track', 'Schedule');
+				} catch (error) {
+					console.error("Error initializing Facebook Pixel:", error);
+					return;
+				}
 
-            if (typeof window !== 'undefined') {
-                setTimeout(() => {
-					console.log(window.tarteaucitron?.state?.facebookpixel);
-                    if (window.tarteaucitron?.state?.facebookpixel === true) {
-                        loadFbPixel();
-                    }
-                }, 500);
-            }
-        }
-    </script>
+			}
+
+			$: {
+				if (typeof window !== 'undefined' && window.tarteaucitron !== 'undefined') {
+					setTimeout(() => {
+						const cookieValue = getCookie('tarteaucitron') || '';
+						const hasFacebookPixel = cookieValue.includes('!facebookpixel=true');
+						console.log('cookie tarteaucitron:', cookieValue, 'facebookpixel:', hasFacebookPixel);
+						if (hasFacebookPixel) {
+							console.log('Déclenchement de loadFbPixel()');
+							loadFbPixel();
+						} else {
+							console.log('Pixel Facebook non autorisé par le cookie');
+						}
+					}, 500);
+				}
+			}
+	</script>
 </svelte:head>
 
 <script>

@@ -12,30 +12,11 @@
             if (parts.length === 2) return parts.pop().split(";").shift();
         }
 
-        function loadFbPixel() {
-			console.log("Checking if Facebook Pixel is already loaded");
-            if (window.fbq) {
-				console.log("Facebook Pixel already loaded");
-                fbq("track", "PageView");
-				fbq('track', 'ViewContent');
-				fbq("track", "Contact");
-
-                return;
-            }
-
-			console.log("Loading Facebook Pixel for the first time");
-
-
 			function loadFbPixel() {
-				console.log("Checking if Facebook Pixel is already loaded");
 				if (window.fbq) {
-					console.log("Facebook Pixel already loaded, sending events");
 					fbq("track", "PageView");
-					console.log("fbq track PageView envoyé");
 					fbq('track', 'ViewContent');
-					console.log("fbq track ViewContent envoyé");
 					fbq("track", "Contact");
-					console.log("fbq track Contact envoyé");
 					return;
 				}
 			}
@@ -59,23 +40,17 @@
 					s.parentNode.insertBefore(t, s);
 				})(window, document, "script");
 
-				console.log("Pixel script inséré, initialisation...");
 
 				try{
 					fbq("init", "669075309377526");
-					console.log("fbq init envoyé");
 					fbq("track", "PageView");
-					console.log("fbq track PageView envoyé");
 					fbq('track', 'ViewContent');
-					console.log("fbq track ViewContent envoyé");
 					fbq("track", "Contact");
-					console.log("fbq track Contact envoyé");
 				} catch (error) {
 					console.error("Error initializing Facebook Pixel:", error);
 					return;
 				}
 
-				console.log("Facebook Pixel loaded");
 			}
 
 			$: {
