@@ -8,7 +8,7 @@
         tarteauReady = true;
         clearInterval(interval);
 
-        // Déclare les services une seule fois
+        // Services déclarés une seule fois
         tarteaucitron.services.ads = {
           key: "ads",
           type: "ads",
@@ -66,15 +66,23 @@
         // Initialisation au premier chargement
         initTarteaucitron();
 
+        const openTarteaucitronPanel = () => {
+          const icon = document.querySelector('#tarteaucitronBack');
+          if (icon) {
+            icon.click();
+          } else {
+            console.warn('Icône Tarteaucitron non trouvée');
+          }
+        };
+
         let previousCookie = tarteaucitron.cookie.read('tarteaucitron');
 
         setInterval(() => {
           const currentCookie = tarteaucitron.cookie.read('tarteaucitron');
 
-          // Si cookie supprimé, on réinitialise
           if (previousCookie && !currentCookie) {
-            console.warn('[Tarteaucitron] Cookie supprimé, réinitialisation du panneau de consentement...');
-            initTarteaucitron();
+            console.warn('[Tarteaucitron] Cookie supprimé, réouverture du panneau...');
+            openTarteaucitronPanel();
           }
 
           previousCookie = currentCookie;
