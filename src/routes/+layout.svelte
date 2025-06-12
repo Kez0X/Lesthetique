@@ -3,89 +3,85 @@
   <script>
     let tarteauReady = false;
 
+    function openPanel() {
+      const sel = '#tarteaucitronIcon';
+      const el = document.querySelector(sel);
+      if (el) {
+        el.click();
+        console.log('[Tarteaucitron] Panneau ouvert via', sel);
+      } else {
+        console.warn('[Tarteaucitron] Sélecteur non trouvé pour ouvrir le panneau');
+      }
+    }
+
+    const initTarteaucitron = () => {
+      tarteaucitron.init({
+        privacyUrl: "/politique_de_confidentialite",
+        hashtag: "#tarteaucitron",
+        cookieName: "tarteaucitron",
+        orientation: "middle",
+        showAlertSmall: false,
+        showIcon: true,
+        iconPosition: "BottomRight",
+        DenyAllCta: true,
+        AcceptAllCta: true,
+        highPrivacy: true,
+        handleBrowserDNTRequest: false,
+        mandatory: true
+      });
+
+      tarteaucitron.job = ['ads', 'analytics'];
+    };
+
     const interval = setInterval(() => {
       if (window.tarteaucitron && !tarteauReady) {
         tarteauReady = true;
         clearInterval(interval);
 
-        // Services déclarés une seule fois
+        // Déclaration des services
         tarteaucitron.services.ads = {
           key: "ads",
           type: "ads",
           name: "Publicités",
           needConsent: true,
           cookies: ["_ga"],
-          js: function () {
+          js: function() {
             (function(w, d, s, l, i) {
               w[l] = w[l] || [];
               w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
-              var f = d.getElementsByTagName(s)[0],
-                  j = d.createElement(s),
-                  dl = l != 'dataLayer' ? '&l=' + l : '';
+              const f = d.getElementsByTagName(s)[0];
+              const j = d.createElement(s);
+              const dl = l !== 'dataLayer' ? '&l=' + l : '';
               j.async = true;
               j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
               f.parentNode.insertBefore(j, f);
             })(window, document, 'script', 'dataLayer', 'GTM-PRV5CSBW');
           },
-          fallback: function () {}
+          fallback: function() {}
         };
-
+        
         tarteaucitron.services.analytics = {
           key: "analytics",
           type: "analytics",
           name: "Statistiques",
           needConsent: true,
           cookies: [],
-          js: function () {
-            // volontairement vide
-          },
-          fallback: function () {}
+          js: function() {},
+          fallback: function() {}
         };
 
-        const initTarteaucitron = () => {
-          tarteaucitron.init({
-            privacyUrl: "/politique_de_confidentialite",
-            hashtag: "#tarteaucitron",
-            cookieName: "tarteaucitron",
-            orientation: "middle",
-            showAlertSmall: false,
-            showIcon: true,
-            iconPosition: "BottomRight",
-            DenyAllCta: true,
-            AcceptAllCta: true,
-            highPrivacy: true,
-            handleBrowserDNTRequest: false,
-            mandatory: true
-          });
-
-          tarteaucitron.job = tarteaucitron.job || [];
-          tarteaucitron.job.push("ads");
-          tarteaucitron.job.push("analytics");
-        };
-
-        // Initialisation au premier chargement
+        // Initialisation initiale
         initTarteaucitron();
 
-        const openTarteaucitronPanel = () => {
-          const icon = document.querySelector('#tarteaucitronBack');
-          if (icon) {
-            icon.click();
-          } else {
-            console.warn('Icône Tarteaucitron non trouvée');
-          }
-        };
-
-        let previousCookie = tarteaucitron.cookie.read('tarteaucitron');
-
+        // Surveillance du cookie
+        let previous = tarteaucitron.cookie.read('tarteaucitron');
         setInterval(() => {
-          const currentCookie = tarteaucitron.cookie.read('tarteaucitron');
-
-          if (previousCookie && !currentCookie) {
-            console.warn('[Tarteaucitron] Cookie supprimé, réouverture du panneau...');
-            openTarteaucitronPanel();
+          const current = tarteaucitron.cookie.read('tarteaucitron');
+          if (previous && !current) {
+            console.log('[Tarteaucitron] Cookie supprimé, réouverture du panneau');
+            openPanel();
           }
-
-          previousCookie = currentCookie;
+          previous = current;
         }, 5000);
       }
     }, 100);
@@ -93,10 +89,10 @@
 </svelte:head>
 
 <script>
-  import '../app.css';
   import Navbar from '$lib/navbar.svelte';
   import Footer from '$lib/footer.svelte';
   import { injectAnalytics } from '@vercel/analytics/sveltekit';
+  import '../app.css';
 
   injectAnalytics();
 </script>
