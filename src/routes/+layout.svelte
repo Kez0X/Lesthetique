@@ -1,20 +1,10 @@
 <svelte:head>
   <script src="https://cdn.jsdelivr.net/npm/tarteaucitronjs@latest/tarteaucitron.min.js"></script>
   <script>
-    let tarteauReady = false;
+    let ready = false;
 
-    function openPanel() {
-      const sel = '#tarteaucitronManager';
-      const el = document.querySelector(sel);
-      if (el) {
-        el.click();
-        console.log('[Tarteaucitron] Panneau ouvert via', sel);
-      } else {
-        console.warn('[Tarteaucitron] Sélecteur non trouvé pour ouvrir le panneau');
-      }
-    }
-
-    const initTarteaucitron = () => {
+    // Initialisation Tarteaucitron
+    const initTAC = () => {
       tarteaucitron.init({
         privacyUrl: "/politique_de_confidentialite",
         hashtag: "#tarteaucitron",
@@ -22,69 +12,94 @@
         orientation: "middle",
         showAlertSmall: false,
         showIcon: true,
-        adblocker: false,
+        AdBlocker: false,
         AcceptAllCta: true,
+        DenyAllCta: true,
         iconPosition: "BottomRight",
-        AcceptAllCta: true,
         highPrivacy: true,
         removeCredit: true,
         moreInfoLink: true,
+        groupServices: true,
+        showDetailsOnClick: true,
+        serviceDefaultState: "wait",
       });
 
-      // Déclaration des services
-        tarteaucitron.services.ads = {
-          key: "ads",
-          type: "ads",
-          name: "Publicités",
-          needConsent: true,
-          cookies: ["_ga"],
-          js: function() {
-            (function(w, d, s, l, i) {
-              w[l] = w[l] || [];
-              w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
-              const f = d.getElementsByTagName(s)[0];
-              const j = d.createElement(s);
-              const dl = l !== 'dataLayer' ? '&l=' + l : '';
-              j.async = true;
-              j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-              f.parentNode.insertBefore(j, f);
-            })(window, document, 'script', 'dataLayer', 'GTM-PRV5CSBW');
-          },
-          fallback: function() {}
-        };
-        
-        tarteaucitron.services.analytics = {
-          key: "analytics",
-          type: "analytics",
-          name: "Statistiques",
-          needConsent: true,
-          cookies: [],
-          js: function() {},
-          fallback: function() {}
-        };
+      tarteaucitron.services.ads = {
+        key: "ads",
+        type: "ads",
+        name: "Publicités",
+        needConsent: true,
+        cookies: ["_ga"],
+        js: function() {
+          (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+            const f = d.getElementsByTagName(s)[0];
+            const j = d.createElement(s);
+            const dl = l !== 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+          })(window, document, 'script', 'dataLayer', 'GTM-PRV5CSBW');
+        },
+        fallback: function() {}
+      };
 
-      tarteaucitron.job = ['ads', 'analytics'];
+      tarteaucitron.services.analytics = {
+        key: "analytics",
+        type: "analytics",
+        name: "Statistiques",
+        needConsent: true,
+        cookies: [],
+        js: function() {},
+        fallback: function() {}
+      };
+
+      tarteaucitron.job = ['ads','analytics'];
     };
 
-    const interval = setInterval(() => {
-      if (window.tarteaucitron && !tarteauReady) {
-        tarteauReady = true;
-        clearInterval(interval);
+    // Ouvre le panneau complet via la méthode officielle
+    const openPanel = () => {
+      if (tarteaucitron.userInterface?.openPanel) {
+        tarteaucitron.userInterface.openPanel();
+        console.log('[TAC] Panneau complet ouvert');
+      } else {
+        console.warn('[TAC] openPanel non dispo, retry dans 100 ms');
+        setTimeout(openPanel, 100);
+      }
+    };
 
-        // Initialisation initiale
-        initTarteaucitron();
+    // Détecte la suppression du cookie ou du consentement
+    const checkAndReopen = () => {
+      const cookie = tarteaucitron.cookie.read('tarteaucitron');
+      const panelVisible = document.getElementById('tarteaucitron')?.style.display === 'block';
+      if (!cookie && !panelVisible) {
+        console.log('[TAC] Consentement supprimé, réinitialisation et panneau');
+        initTAC();
+        window.location.reload();
+      }
+    };
 
-        // Surveillance du cookie
-        let previous = tarteaucitron.cookie.read('tarteaucitron');
-        setInterval(() => {
-          const current = tarteaucitron.cookie.read('tarteaucitron');
-          if (previous && !current) {
-            console.log('[Tarteaucitron] Cookie supprimé, réouverture du panneau');
-            window.location.reload();
-            initTarteaucitron();
-          }
-          previous = current;
-        }, 5000);
+    // Écoute les événements liés à la suppression de consentement
+    const setupDetection = () => {
+      ['ads_disallowed','analytics_disallowed'].forEach(evt => {
+        document.addEventListener(evt, () => setTimeout(checkAndReopen, 100));
+      });
+      window.addEventListener('tac.close_panel', () => setTimeout(checkAndReopen, 100));
+    };
+
+    // Boucle principale : initialisation dès disponibilité de Tarteaucitron
+    const mainInterval = setInterval(() => {
+      if (window.tarteaucitron && !ready) {
+        ready = true;
+        clearInterval(mainInterval);
+
+        initTAC();
+        setupDetection();
+
+        window.addEventListener('load', openPanel);
+
+        setInterval(checkAndReopen, 5000);
       }
     }, 100);
   </script>
