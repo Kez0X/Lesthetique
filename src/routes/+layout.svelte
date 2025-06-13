@@ -75,8 +75,8 @@
       const panelVisible = document.getElementById('tarteaucitron')?.style.display === 'block';
       if (!cookie && !panelVisible) {
         console.log('[TAC] Consentement supprimé, réinitialisation et panneau');
-        initTAC();
         window.location.reload();
+        initTAC();
       }
     };
 
@@ -97,9 +97,7 @@
         initTAC();
         setupDetection();
 
-        window.addEventListener('load', openPanel);
-
-        setInterval(checkAndReopen, 5000);
+        setInterval(checkAndReopen, 10000);
       }
     }, 100);
   </script>
