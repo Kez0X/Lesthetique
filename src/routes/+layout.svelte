@@ -3,7 +3,7 @@
   <script>
     let ready = false;
 
-    // Déclaration DES SERVICES AVANT INIT !!
+    // Déclaration des services avant l'initialisation
     tarteaucitron.services.ads = {
       key: "ads",
       type: "ads",
@@ -38,6 +38,7 @@
       fallback: function () {}
     };
 
+    // Initialisation de Tarteaucitron
     const initTAC = () => {
       tarteaucitron.init({
         privacyUrl: "/politique_de_confidentialite",
@@ -58,39 +59,34 @@
         serviceDefaultState: "wait",
       });
 
-      // Important : le job doit être défini après init()
+      // Définition des services à activer
       tarteaucitron.job = ['ads', 'analytics'];
     };
 
+    // Fonction pour ouvrir le panneau
     const openPanel = () => {
-      const panelReady = () => document.getElementById('tarteaucitron');
-
-      if (!panelReady()) {
-        console.warn('[TAC] Panel pas encore prêt, retry dans 100 ms');
-        setTimeout(openPanel, 100);
-        return;
-      }
-
-      if (tarteaucitron.userInterface?.openPanel) {
+      const panel = document.getElementById('tarteaucitron');
+      if (panel && tarteaucitron.userInterface?.openPanel) {
         tarteaucitron.userInterface.openPanel();
         console.log('[TAC] Panneau complet ouvert');
       } else {
-        console.warn('[TAC] userInterface.openPanel non dispo, retry dans 100 ms');
+        console.warn('[TAC] Panel non disponible, tentative dans 100 ms');
         setTimeout(openPanel, 100);
       }
     };
 
-
+    // Vérification et réouverture du panneau si nécessaire
     const checkAndReopen = () => {
       const cookie = tarteaucitron.cookie.read('tarteaucitron');
       const panelVisible = document.getElementById('tarteaucitron')?.style.display === 'block';
       if (!cookie && !panelVisible) {
-        console.log('[TAC] Consentement supprimé, réinitialisation et panneau');
+        console.log('[TAC] Consentement supprimé, réinitialisation et ouverture du panneau');
         initTAC();
         openPanel();
       }
     };
 
+    // Configuration des détecteurs d'événements
     const setupDetection = () => {
       ['ads_disallowed', 'analytics_disallowed'].forEach(evt => {
         document.addEventListener(evt, () => setTimeout(checkAndReopen, 10000));
@@ -98,6 +94,7 @@
       window.addEventListener('tac.close_panel', () => setTimeout(checkAndReopen, 10000));
     };
 
+    // Intervalle principal pour l'initialisation
     const mainInterval = setInterval(() => {
       if (window.tarteaucitron && !ready) {
         ready = true;
@@ -109,6 +106,7 @@
     }, 100);
   </script>
 </svelte:head>
+
 
 
 <script>
