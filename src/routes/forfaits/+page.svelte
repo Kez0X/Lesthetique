@@ -3,6 +3,10 @@
     <meta name="description" content="Découvrez nos forfaits personnalisés pour des soins du visage et du corps à domicile. Offrez-vous des moments de bien-être à Oullins, Saint-Genis-Laval et les environs." />
     <meta name="keywords" content="épilation bio, épilation à domicile, soins de beauté bio, épilation Oullins, épilation Saint-Genis-Laval, épilation Lyon, esthetique AA, l'esthétique AA, L'Esthétique AA, Esthetique AA, esthetique AA Oullins, l'esthetiqueAA Oullins, L'EsthetiqueAA Oullins, Esthetique AA Oullins, esthetique à domicile, esthetique AA domicile, l'esthétique AA, esthétique AA, Esthétique AA, L'Esthetique AA, Esthétique AA">
 
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-PRV5CSBW');</script>
 </svelte:head>
 
 <script>
@@ -15,6 +19,9 @@
         { name: "Forfait beauté des pieds", time: "≈ 2h", price: "95€", description : "Soins des pieds & nettoyage de peau personnalisé"}
     ];
 </script>
+
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PRV5CSBW"
+height="0" width="0" title="" style="display:none;visibility:hidden"></iframe></noscript>
 
 <div class="forfaits-page">
     <div class="header-section" style="background-image: url({ForfaitsImage})">

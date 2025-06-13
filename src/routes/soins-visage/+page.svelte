@@ -3,6 +3,12 @@
     <meta name="description" content="Découvrez nos soins du visage à base de produits bio de la marque ClaireJoie. Offrez à votre peau un moment de douceur et de bien-être avec nos soins personnalisés, disponibles à domicile à Oullins, Saint-Genis-Laval, Sainte-Foy-lès-Lyon, et alentours." />
     <meta name="keywords" content="épilation bio, épilation à domicile, soins de beauté bio, épilation Oullins, épilation Saint-Genis-Laval, épilation Lyon, esthetique AA, l'esthétique AA, L'Esthétique AA, Esthetique AA, esthetique AA Oullins, l'esthetiqueAA Oullins, L'EsthetiqueAA Oullins, Esthetique AA Oullins, esthetique à domicile, esthetique AA domicile, l'esthétique AA, esthétique AA, Esthétique AA, L'Esthetique AA, Esthétique AA">
 
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-PRV5CSBW');</script>
+	<!-- End Google Tag Manager -->
 </svelte:head>
 
 <script>
@@ -14,6 +20,10 @@
         { name: "Relaxant", time: "1h", price: "50€", description : "Massage relaxant" }
     ];
 </script>
+
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PRV5CSBW"
+height="0" width="0" title="" style="display:none;visibility:hidden"></iframe></noscript>
+
 <div class="soins-visages-page">
     <div class="header-section" style="background-image: url({SoinsVisagesImage})">
         <div class="overlay"></div>

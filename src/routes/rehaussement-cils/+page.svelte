@@ -3,6 +3,11 @@
     <meta name="description" content="Sublimez votre regard avec nos services de rehaussement de cils à domicile. Intervention professionnelle et produits de qualité, disponibles à Oullins, Saint-Genis-Laval, Sainte-Foy-lès-Lyon, et environs." />
     <meta name="keywords" content="épilation bio, épilation à domicile, soins de beauté bio, épilation Oullins, épilation Saint-Genis-Laval, épilation Lyon, esthetique AA, l'esthétique AA, L'Esthétique AA, Esthetique AA, esthetique AA Oullins, l'esthetiqueAA Oullins, L'EsthetiqueAA Oullins, Esthetique AA Oullins, esthetique à domicile, esthetique AA domicile, l'esthétique AA, esthétique AA, Esthétique AA, L'Esthetique AA, Esthétique AA">
 
+    <!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-PRV5CSBW');</script>
 </svelte:head>
 
 <script>
@@ -13,6 +18,9 @@
         { name: "Sans teinture", time: "45 min", price: "45€" }
     ];
 </script>
+
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PRV5CSBW"
+height="0" width="0" title="" style="display:none;visibility:hidden"></iframe></noscript>
 
 <div class="rehaussement-cils-page">
     <div class="header-section" style="background-image: url({RehaussementCilsImage})">

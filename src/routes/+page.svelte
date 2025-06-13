@@ -3,6 +3,13 @@
 	<meta name="description" content="..." />
 	<meta name="keywords" content="..." />
 	<meta name="google-site-verification" content="K9H81I_EzYQIRoguOVlhwiUmBY0jgxy2GawD07KDM8A" />
+
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-PRV5CSBW');</script>
+	<!-- End Google Tag Manager -->
 </svelte:head>
 
 <script>
@@ -16,6 +23,9 @@
 	import { page } from '$app/stores';
 	import Brochure from '$lib/images/Beige Organic Beauty and Spa Brochure.pdf';
 </script>
+
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PRV5CSBW"
+height="0" width="0" title="" style="display:none;visibility:hidden"></iframe></noscript>
 
 <div class="page-home">
 	<div class="home-page-container">
