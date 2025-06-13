@@ -9,6 +9,10 @@
 	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 	})(window,document,'script','dataLayer','GTM-PRV5CSBW');</script>
 	<!-- End Google Tag Manager -->
+
+
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PRV5CSBW"
+    height="0" width="0" title="" style="display:none;visibility:hidden"></iframe></noscript>
 </svelte:head>
 
 <script>
@@ -21,8 +25,6 @@
     ];
 </script>
 
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PRV5CSBW"
-height="0" width="0" title="" style="display:none;visibility:hidden"></iframe></noscript>
 
 <div class="soins-visages-page">
     <div class="header-section" style="background-image: url({SoinsVisagesImage})">

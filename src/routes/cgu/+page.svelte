@@ -2,52 +2,13 @@
     <title>CGU - L'esthétique</title>
     <meta name="description" content="Découvrez nos services d'épilation réalisés avec des cires bio certifiées." />
 
-         <script>
-        function getCookie(name) {
-            const value = `; ${document.cookie}`;
-            const parts = value.split(`; ${name}=`);
-            if (parts.length === 2) return parts.pop().split(";").shift();
-        }
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-PRV5CSBW');</script>
 
-        function loadFbPixel() {
-            if (window.fbq) {
-                fbq("track", "PageView");
-                return;
-            }
-
-            !(function(f, b, e, v, n, t, s) {
-                if (f.fbq) return;
-                n = f.fbq = function () {
-                    n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
-                };
-                if (!f._fbq) f._fbq = n;
-                n.push = n;
-                n.loaded = !0;
-                n.version = "2.0";
-                n.queue = [];
-                t = b.createElement(e);
-                t.async = !0;
-                t.src = "https://connect.facebook.net/en_US/fbevents.js";
-                s = b.getElementsByTagName(e)[0];
-                s.parentNode.insertBefore(t, s);
-            })(window, document, "script");
-
-            fbq("init", "669075309377526");
-            fbq("track", "PageView");
-        }
-
-        $: {
-
-            if (typeof window !== 'undefined') {
-                setTimeout(() => {
-					console.log(window.tarteaucitron?.state?.facebookpixel);
-                    if (window.tarteaucitron?.state?.facebookpixel === true) {
-                        loadFbPixel();
-                    }
-                }, 500);
-            }
-        }
-    </script>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PRV5CSBW"
+height="0" width="0" title="" style="display:none;visibility:hidden"></iframe></noscript>
 </svelte:head>
 
 <div class="section-about">

@@ -77,9 +77,9 @@
             Sainte-Foy-lès-Lyon, je suis à votre service pour vous offrir un moment de détente à domicile. 
             Hâte de partager ce moment beauté avec vous ! 🌸
           </p>
-          <button class="construction-btn" on:click={() => window.location.href = '/contact'}>
+          <a class="construction-btn" href = '/contact'>
             <b>Prendre rendez-vous 😊</b>
-          </button>
+          </a>
           <p class="description">
             Paiement au début de la séance – (cartes ou espèces, pas de chèques)  
             <br>Réservé uniquement aux femmes.
@@ -94,9 +94,9 @@
             Que vous habitiez à La Mulatière, Tassin ou Brignais, je mets tout en œuvre pour vous garantir un moment de détente, 
             qu'il s'agisse de soins des mains, d'épilations ou de massages. Prenons le temps ensemble de célébrer votre beauté ! ✨
           </p>
-          <button class="construction-btn" on:click={() => window.location.href = '/contact'}>
+          <a class="construction-btn" href = '/contact'>
             <b>Prendre rendez-vous 😊</b>
-          </button>
+          </a>
           <p class="description">
             Paiement au début de la séance – (cartes ou espèces, pas de chèques)  
             <br>Réservé uniquement aux femmes.

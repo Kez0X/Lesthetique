@@ -10,6 +10,9 @@
 	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 	})(window,document,'script','dataLayer','GTM-PRV5CSBW');</script>
 	<!-- End Google Tag Manager -->
+
+		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PRV5CSBW"
+	height="0" width="0" title="" style="display:none;visibility:hidden"></iframe></noscript>
 </svelte:head>
 
 <script>
@@ -24,8 +27,7 @@
 	import Brochure from '$lib/images/Beige Organic Beauty and Spa Brochure.pdf';
 </script>
 
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PRV5CSBW"
-height="0" width="0" title="" style="display:none;visibility:hidden"></iframe></noscript>
+
 
 <div class="page-home">
 	<div class="home-page-container">
@@ -44,12 +46,12 @@ height="0" width="0" title="" style="display:none;visibility:hidden"></iframe></
 					</p>
 
 					<div class="button">
-						<button class="construction-btn" on:click={() => window.location.href = '#prestations'}>
+						<a class="construction-btn" href = '#prestations'>
 							<b>Découvrir les prestations ✨</b>
-						</button>
-						<button class="construction-btn" on:click={() => window.location.href = '/contact'}>
+						</a>
+						<a class="construction-btn" href = '/contact'>
 							<b>Prendre rendez-vous 💄</b>
-						</button>
+						</a>
 					</div>
 
 					<p class="follow-us-localisation">

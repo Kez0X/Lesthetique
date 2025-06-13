@@ -6,10 +6,12 @@
 	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 	})(window,document,'script','dataLayer','GTM-PRV5CSBW');</script>
+
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PRV5CSBW"
+height="0" width="0" title="" style="display:none;visibility:hidden"></iframe></noscript>
 </svelte:head>
 
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PRV5CSBW"
-height="0" width="0" title="" style="display:none;visibility:hidden"></iframe></noscript>
+
 
 <div class="section-about">
     <h1>Politique de Confidentialité</h1>
