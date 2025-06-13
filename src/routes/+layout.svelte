@@ -63,14 +63,23 @@
     };
 
     const openPanel = () => {
+      const panelReady = () => document.getElementById('tarteaucitron');
+
+      if (!panelReady()) {
+        console.warn('[TAC] Panel pas encore prêt, retry dans 100 ms');
+        setTimeout(openPanel, 100);
+        return;
+      }
+
       if (tarteaucitron.userInterface?.openPanel) {
         tarteaucitron.userInterface.openPanel();
         console.log('[TAC] Panneau complet ouvert');
       } else {
-        console.warn('[TAC] openPanel non dispo, retry dans 100 ms');
+        console.warn('[TAC] userInterface.openPanel non dispo, retry dans 100 ms');
         setTimeout(openPanel, 100);
       }
     };
+
 
     const checkAndReopen = () => {
       const cookie = tarteaucitron.cookie.read('tarteaucitron');
