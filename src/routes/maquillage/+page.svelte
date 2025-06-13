@@ -8,8 +8,6 @@
 	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 	})(window,document,'script','dataLayer','GTM-PRV5CSBW');</script>
 
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PRV5CSBW"
-height="0" width="0" title="" style="display:none;visibility:hidden"></iframe></noscript>
 </svelte:head>
 <script>
     import OnglerieImage from '$lib/images/onglerie.png';
@@ -20,7 +18,8 @@ height="0" width="0" title="" style="display:none;visibility:hidden"></iframe></
     ];
 </script>
 
-
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PRV5CSBW"
+height="0" width="0" title="" style="display:none;visibility:hidden"></iframe></noscript>
 
 <div class="onglerie-page">
     <!-- Image de fond et titre -->

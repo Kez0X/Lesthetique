@@ -11,8 +11,6 @@
 	<!-- End Google Tag Manager -->
 
 
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PRV5CSBW"
-    height="0" width="0" title="" style="display:none;visibility:hidden"></iframe></noscript>
 </svelte:head>
 
 <script>
@@ -24,6 +22,9 @@
         { name: "Relaxant", time: "1h", price: "50€", description : "Massage relaxant" }
     ];
 </script>
+
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PRV5CSBW"
+    height="0" width="0" title="" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 <div class="soins-visages-page">

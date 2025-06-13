@@ -154,7 +154,7 @@
   };
 
   // Démarrer l'initialisation lorsque la page est prête
-  if (document.readyState === 'complete' || document.readyState === 'interactive') {
+  if ((document.readyState === 'complete' || document.readyState === 'interactive')) {
     setTimeout(initializeTAC, 0);
   } else {
     document.addEventListener('DOMContentLoaded', initializeTAC);
