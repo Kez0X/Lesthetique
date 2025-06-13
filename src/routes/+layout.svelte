@@ -63,17 +63,28 @@
       tarteaucitron.job = ['ads', 'analytics'];
     };
 
-    // Fonction pour ouvrir le panneau
-    const openPanel = () => {
-      const panel = document.getElementById('tarteaucitron');
-      if (panel && tarteaucitron.userInterface?.openPanel) {
-        tarteaucitron.userInterface.openPanel();
-        console.log('[TAC] Panneau complet ouvert');
-      } else {
-        console.warn('[TAC] Panel non disponible, tentative dans 100 ms');
-        setTimeout(openPanel, 100);
-      }
+   const openPanel = () => {
+      let attempts = 0;
+      const maxAttempts = 50; // Limite le nombre de tentatives
+      const interval = 100; // Délai entre chaque tentative en ms
+
+      const tryOpen = () => {
+        const panel = document.getElementById('tarteaucitron');
+        if (panel && panel.style.display === 'block') {
+          tarteaucitron.userInterface.openPanel();
+          console.log('[TAC] Panneau complet ouvert');
+        } else if (attempts < maxAttempts) {
+          attempts++;
+          console.warn(`[TAC] Tentative ${attempts}/${maxAttempts} - Panneau non disponible, nouvelle tentative dans ${interval} ms`);
+          setTimeout(tryOpen, interval);
+        } else {
+          console.error('[TAC] Impossible d\'ouvrir le panneau, maximum de tentatives atteint');
+        }
+      };
+
+      tryOpen();
     };
+
 
     // Vérification et réouverture du panneau si nécessaire
     const checkAndReopen = () => {
