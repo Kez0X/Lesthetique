@@ -42,7 +42,7 @@
     hashtag: "#tarteaucitron",
     cookieName: "tarteaucitron",
     orientation: "middle",
-    showAlertSmall: true, // Activer le petit bandeau
+    showAlertSmall: true,
     showIcon: true,
     AdBlocker: false,
     AcceptAllCta: true,
@@ -57,12 +57,64 @@
     readmoreLink: "/politique-de-cookies"
   };
 
+  // Fonction pour envoyer l'événement cookie_choose à GTM
+  const sendCookieChoiceEvent = (choice) => {
+    if (window.dataLayer) {
+      window.dataLayer.push({
+        event: 'cookie_choose',
+        cookie_choice: choice
+      });
+      console.log('[GTM] Event cookie_choose envoyé avec le choix:', choice);
+    } else {
+      console.error('[GTM] dataLayer non disponible');
+    }
+  };
+
+  // Détection du choix de l'utilisateur
+  const monitorCookieChoice = () => {
+    // Écoute les changements sur le cookie tarteaucitron
+    let lastCookieValue = tarteaucitron.cookie.read();
+
+    const checkCookieChange = () => {
+      const currentCookieValue = tarteaucitron.cookie.read();
+      
+      if (currentCookieValue !== lastCookieValue) {
+        console.log('[TAC] Changement de cookie détecté:', currentCookieValue);
+        lastCookieValue = currentCookieValue;
+        
+        // Envoyer l'événement seulement si c'est un nouveau choix (pas la première lecture)
+        if (currentCookieValue) {
+          sendCookieChoiceEvent(currentCookieValue);
+        }
+      }
+    };
+
+    // Vérifier périodiquement les changements
+    setInterval(checkCookieChange, 1000);
+
+    // Écouter les événements de tarteaucitron
+    if (typeof tarteaucitron.userInterface !== 'undefined') {
+      tarteaucitron.userInterface.responder = function (type, service) {
+        if (type === 'allow' || type === 'deny' || type === 'acceptAll' || type === 'denyAll') {
+          setTimeout(() => {
+            const choice = tarteaucitron.cookie.read();
+            sendCookieChoiceEvent(choice);
+          }, 500); // Petit délai pour s'assurer que le cookie est bien mis à jour
+        }
+      };
+    }
+  };
+
   // Initialisation robuste de tarteaucitron
   const initTAC = () => {
     try {
       tarteaucitron.init(tacConfig);
       tarteaucitron.job = ['ads', 'analytics'];
       console.log('[TAC] Initialisation réussie');
+      
+      // Démarrer la surveillance des choix de cookies
+      monitorCookieChoice();
+      
       return true;
     } catch (e) {
       console.error('[TAC] Erreur lors de l\'initialisation:', e);
@@ -70,7 +122,7 @@
     }
   };
 
-  // Fonction pour ouvrir le panel COMPLET de manière robuste (uniquement quand nécessaire)
+  // Fonction pour ouvrir le panel COMPLET de manière robuste
   const openFullPanelSafely = () => {
     const maxAttempts = 10;
     const interval = 300;
@@ -144,8 +196,6 @@
   const initializeTAC = () => {
     if (window.tarteaucitron) {
       if (initTAC()) {
-        // On ne force pas l'ouverture du panel complet au chargement
-        // Seul le petit bandeau s'affichera (configuré via showAlertSmall: true)
         setupCookieMonitoring();
       }
     } else {
