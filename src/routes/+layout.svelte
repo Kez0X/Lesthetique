@@ -1,5 +1,5 @@
 <svelte:head>
-<script src="https://cdn.jsdelivr.net/npm/tarteaucitronjs@latest/tarteaucitron.min.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/tarteaucitronjs@latest/tarteaucitron.min.js"></script>
 <script>
   // Déclaration des services avant l'initialisation
   tarteaucitron.services.ads = {
@@ -210,7 +210,7 @@
     document.addEventListener('DOMContentLoaded', initializeTAC);
     window.addEventListener('load', initializeTAC);
   }
-</script>
+</script> -->
 </svelte:head>
 
 
