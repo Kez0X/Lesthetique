@@ -61,9 +61,6 @@
 		<a href="/soins-visage" class="menu-item" style="background-image: url({Soins});" on:click={toggleMenu}>
 			<div class="menu-item-back">Soins Visages</div>
 		</a>
-		<a href="/rehaussement-cils" class="menu-item" style="background-image: url({Rehaussement});" on:click={toggleMenu}>
-			<div class="menu-item-back">Réhaussement de Cils</div>
-		</a>
 		<a href="/forfaits" class="menu-item" style="background-image: url({Forfaits});" on:click={toggleMenu}>
 			<div class="menu-item-back">Forfaits</div>
 		</a>

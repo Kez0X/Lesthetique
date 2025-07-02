@@ -49,15 +49,6 @@
 		  ]
 	   },
 	   {
-		  title: "REHAUSSEMENT DE CILS",
-		  backgroundImage: rehaussementCils,
-		  link: "/rehaussement-cils",
-		  prestations: [
-			 { name: "Avec teinture", price: "50€" },
-			 { name: "Sans teinture", price: "45€" },
-		  ]
-	   },
-	   {
 		  title: "FORFAITS",
 		  backgroundImage: forfaits,
 		  link: "/forfaits",
