@@ -71,9 +71,17 @@
 		<!-- Lien de contact direct en bas du menu -->
 		<div class="contact-estheticiennes">
 			<div class="social-icons">
-				<a href="https://www.facebook.com/profile.php?id=61563897359229"><img src={Facebook} alt="Facebook"></a>
-				<a href="https://www.instagram.com/lesthetiqueaa.69">
+				<a href="https://www.instagram.com/lesthetiqueaa.69" title="Nous contacter sur Instagram" >
 					<img src={Instagram} alt="Instagram">
+				</a>
+				<a href="https://www.facebook.com/profile.php?id=61563897359229" title="Nous contacter sur Facebook">
+						<img src={Facebook} alt="Facebook" />
+				</a>
+				<a href="/contact" title="Contact" on:click={toggleMenu}>
+					<span class="material-icons" style="font-size:40px">call</span>
+				</a>
+				<a href="https://www.treatwell.fr/salon/l-esthetique-aa-estheticiennes-a-domicile/" target="_blank" rel="noopener" title="Réserver sur Treatwell">
+					<span class="material-icons" style="font-size:40px">spa</span>
 				</a>
 			</div>
 			<a href="/contact" on:click={toggleMenu}>Contacter les esthéticiennes</a>
@@ -84,11 +92,12 @@
 <style>
 	/* Styles généraux de la navbar */
 	.navbar {
+		margin-top : 40px;
 		width: 100%;
 		height: 70px;
 		background-color: rgba(255, 255, 255, 0.904);
 		position: sticky;
-		top: 0;
+		top: 40px;
 		box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 		z-index: 10;
 		display: flex;
@@ -144,8 +153,10 @@
 
 	/* Menu latéral glissant depuis la droite */
 	.menu-content {
+		z-index : 13;
+		padding-bottom: 40px;
 		position: fixed;
-		top: 0;
+		top: 40px;
 		right: 0;
 		width: 80%;
 		max-width: 400px;
@@ -231,21 +242,29 @@
 	}
 
 	.social-icons {
-		justify-items: center;
-		text-align: center;
+		display: flex;
+		justify-content: center;
 		padding-bottom: 10px;
 	}
 
 	.social-icons a {
 		margin: 0 10px;
+		color: #f5c6cb;
+		font-size: 1.8rem;
+		transition: color 0.2s;
 	}
+
+	.social-icons a:hover {
+		color: #721c24;
+	}
+
 
 	.social-icons img {
 		width: 40px;
 	}
 
 	.contact-estheticiennes a {
-		color: #333;
+		color: #f5c6cb;
 		text-decoration: underline;
 	}
 

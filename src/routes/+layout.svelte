@@ -1,3 +1,6 @@
+<svelte:head>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+</svelte:head>
 <script>
 	import Navbar from '$lib/navbar.svelte';
 	import Promotion from '$lib/promotion.svelte';
@@ -9,8 +12,8 @@
 </script>
 
 <div class="app">
+  <Promotion />
 	<Navbar />
 	<slot />
 	<Footer />
-	<Promotion />
 </div>

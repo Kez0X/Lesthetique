@@ -9,10 +9,10 @@
 <style>
 	.promo-banner {
 		position: fixed;
-		bottom: 0;
+		top: 0;
 		left: 0;
 		width: 100%;
-		background-color: #ffffff;
+		background-color: #f5c6cb;
 		color: #721c24;
 		text-align: center;
 		font-weight: bold;
@@ -20,6 +20,7 @@
 		font-size: 1em;
 		overflow: hidden;
 		z-index: 1000;
+        max-height : 40px;
 	}
 
 	.scrolling-text {
@@ -39,9 +40,7 @@
 
 	@media (max-width: 768px) {
 		.promo-banner {
-			background-color: #f5c6cb;
 			font-size: 0.9em;
-			padding: 10px 10px;
 		}
 	}
 </style>
