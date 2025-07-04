@@ -42,6 +42,7 @@ height="0" width="0" title="" style="display:none;visibility:hidden"></iframe></
     <img src={Petale6} class="bg-deco deco8" alt="" aria-hidden="true" />
 
     <div class="contact-page">
+        <h2 class="estheticienne">Esthéticiennes à domicile</h2>
         <h1>Contactez-nous</h1>
         <p>Joignez-nous par appel, SMS ou via les réseaux sociaux.</p>
 
@@ -95,6 +96,12 @@ height="0" width="0" title="" style="display:none;visibility:hidden"></iframe></
         color: #d45a72;
         margin-bottom: 20px;
         font-weight: bold;
+    }
+
+    .estheticienne{
+        font-size: 2.5em;
+        font-weight: bold;
+        font-family: 'Dancing Script', cursive;
     }
 
     /* Paragraphes généraux */
