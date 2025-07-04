@@ -96,7 +96,7 @@
 		height: 70px;
 		background-color: rgba(255, 255, 255, 0.904);
 		position: sticky;
-		top: 39px;
+		top: 37px;
 		box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 		z-index: 10;
 		display: flex;
@@ -155,7 +155,7 @@
 		z-index : 13;
 		padding-bottom: 40px;
 		position: fixed;
-		top: 39px;
+		top: 37px;
 		right: 0;
 		width: 80%;
 		max-width: 400px;
