@@ -20,7 +20,7 @@
 		font-size: 1em;
 		overflow: hidden;
 		z-index: 1000;
-        max-height : 40px;
+        max-height : 42px;
 	}
 
 	.scrolling-text {
@@ -41,6 +41,7 @@
 	@media (max-width: 768px) {
 		.promo-banner {
 			font-size: 0.9em;
+            height : 100%;
 		}
 	}
 </style>
