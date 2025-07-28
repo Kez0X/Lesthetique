@@ -1,5 +1,5 @@
 <script>
-	export let text = "🌸 -15% premier rendez-vous soin visage ou épilation jusqu'au 26 juillet 🌸";
+	export let text = "🌸 Profitez de l'été pour prendre soin de vous ! 🌸 Découvrez nos différentes prestations pour passer un été rayonnant ! 🌸";
 </script>
 
 <div class="promo-banner">
