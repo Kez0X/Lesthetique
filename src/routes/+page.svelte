@@ -57,8 +57,8 @@
 					<p class="follow-us-localisation">Déplacements possibles dans les communes voisines, n'hésitez pas à nous contacter pour en savoir plus.</p>
 
 					<div class="social-icons">
-						<a href="https://www.facebook.com/share/HbRySNxzmWmYTA8G/" target="_blank"><img src={Facebook} alt="Facebook" /></a>
-						<a href="https://www.instagram.com/anaisdelice.estheticienne69" target="_blank"><img src={Instagram} alt="Instagram" /></a>
+						<a href="https://www.facebook.com/share/1Cf9dfYztH/?mibextid=wwXIfr" target="_blank"><img src={Facebook} alt="Facebook" /></a>
+						<a href="https://www.instagram.com/lesthetiqueaa.69/" target="_blank"><img src={Instagram} alt="Instagram" /></a>
 					</div>
 					<p class="follow-us">📲 Retrouvez-nous sur les réseaux sociaux</p>
 				</div>

@@ -1,5 +1,5 @@
 <script>
-	export let text = "🌸 Profitez de l'été pour prendre soin de vous ! 🌸 Découvrez nos différentes prestations pour passer un été rayonnant ! 🌸";
+	export let text = "🌸🍂 Profitez de l'automne pour prendre soin de vous ! 🍂🌸 Découvrez nos soins du visage, massages relaxants et prestations beauté pour un automne tout en douceur. 🍁✨ Prenez rendez-vous dès aujourd’hui et offrez-vous un moment de bien-être ! 🌸";
 </script>
 
 <div class="promo-banner">
@@ -26,7 +26,7 @@
 	.scrolling-text {
 		display: inline-block;
 		white-space: nowrap;
-		animation: scroll-left 15s linear infinite;
+		animation: scroll-left 20s linear infinite;
 	}
 
 	@keyframes scroll-left {

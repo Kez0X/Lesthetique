@@ -54,7 +54,7 @@
         </a>
 
         <div class="social-icons">
-            <a href="https://www.facebook.com/profile.php?id=61563897359229" aria-label="Facebook"><img src={FacebookIcon} alt="Facebook" /></a>
+            <a href="https://www.facebook.com/share/1Cf9dfYztH/?mibextid=wwXIfr" aria-label="Facebook"><img src={FacebookIcon} alt="Facebook" /></a>
             <a href="https://www.instagram.com/lesthetiqueaa.69" aria-label="Instagram"><img src={InstagramIcon} alt="Instagram" /></a>
         </div>
 

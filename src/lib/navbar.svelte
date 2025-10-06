@@ -74,7 +74,7 @@
 				<a href="https://www.instagram.com/lesthetiqueaa.69" title="Nous contacter sur Instagram" >
 					<img src={Instagram} alt="Instagram">
 				</a>
-				<a href="https://www.facebook.com/profile.php?id=61563897359229" title="Nous contacter sur Facebook">
+				<a href="https://www.facebook.com/share/1Cf9dfYztH/?mibextid=wwXIfr" title="Nous contacter sur Facebook">
 						<img src={Facebook} alt="Facebook" />
 				</a>
 				<a href="/contact" title="Contact" on:click={toggleMenu}>
